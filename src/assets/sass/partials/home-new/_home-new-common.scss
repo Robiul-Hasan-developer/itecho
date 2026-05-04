@@ -30,6 +30,14 @@
     font-size: clamp(2.5rem, 0.7133rem + 3.5vw, 3.5rem);  // min:40px and max:56px
 }
 
+
+.text-new-neutral-40 {
+    color: #DFE0E4;
+}
+
+
+
+
 .home-dark body {
     @extend .bg-brand-neutral;
 }

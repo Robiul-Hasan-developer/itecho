@@ -1288,6 +1288,10 @@ input:focus, input:focus-visible {
     background-color: hsl(var(--white)/0.06);
 }
 
+.bg-white-20 {
+    background-color: #ffffff33;
+}
+
 .tw-bg-filter {
     backdrop-filter: blur(23.700001px);
 }
@@ -7904,6 +7908,10 @@ svg.radial-progress circle.incomplete {
 
 .display-5 {
     font-size: clamp(2.5rem, 0.7133rem + 3.5vw, 3.5rem);
+}
+
+.text-new-neutral-40 {
+    color: #DFE0E4;
 }
 
 /* Text color start */
