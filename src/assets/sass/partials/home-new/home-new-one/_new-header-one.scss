@@ -1,0 +1,16 @@
+/* new header one css start */
+.menu-white {
+    .nav-menu__link {
+        color: #fff;
+    }
+
+    .nav-menu__item:hover .nav-menu__link {
+        color: var(--text-brand-secondary) !important;
+    }
+
+    .nav-menu__item:hover .nav-menu__link::before {
+        color: inherit !important;
+    }
+}
+
+/* new header one css end */

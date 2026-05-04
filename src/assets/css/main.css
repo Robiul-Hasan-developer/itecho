@@ -7894,6 +7894,10 @@ svg.radial-progress circle.incomplete {
     --body-font: "DM Sans", sans-serif;
 }
 
+:root {
+    --text-brand-secondary: #FF9921;
+}
+
 .display-1 {
     font-size: clamp(3.75rem, 0.2885rem + 7.2115vw, 7.5rem);
 }
@@ -7928,7 +7932,7 @@ svg.radial-progress circle.incomplete {
 }
 
 .text-brand-secondary {
-    color: #FF9921;
+    color: var(--text-brand-secondary);
 }
 
 .hover-text-brand:hover {
@@ -7940,7 +7944,7 @@ svg.radial-progress circle.incomplete {
 }
 
 .hover-text-brand-secondary:hover {
-    color: #FF9921;
+    color: var(--text-brand-secondary);
 }
 
 /* Text color end */
@@ -7954,7 +7958,7 @@ svg.radial-progress circle.incomplete {
 }
 
 .bg-brand-secondary {
-    background-color: #FF9921;
+    background-color: var(--text-brand-secondary);
 }
 
 .bg-brand-one {
@@ -7975,6 +7979,20 @@ svg.radial-progress circle.incomplete {
     font-family: "Phosphor-Fill";
 }
 
+/* new header one css start */
+.menu-white .nav-menu__link {
+    color: #fff;
+}
+
+.menu-white .nav-menu__item:hover .nav-menu__link {
+    color: var(--text-brand-secondary) !important;
+}
+
+.menu-white .nav-menu__item:hover .nav-menu__link::before {
+    color: inherit !important;
+}
+
+/* new header one css end */
 /* ================================== rtl css start ================================== */
 .text-start {
     text-align: start !important;
