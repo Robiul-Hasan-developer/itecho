@@ -111,7 +111,7 @@
       function () {
         $(this).siblings().removeClass("active");
         $(this).addClass("active");
-      }
+      },
     );
 
     // Cursor start
@@ -208,7 +208,7 @@
         "danger",
         "Deleted",
         "You deleted successfully!",
-        "ph-bold ph-trash"
+        "ph-bold ph-trash",
       );
     });
     // ========================= Delete Item Js End ===================
@@ -225,7 +225,7 @@
         "success",
         "Success",
         "Form submitted successfully!",
-        "ph-fill ph-check-circle"
+        "ph-fill ph-check-circle",
       );
     });
     // ========================= Form Submit Js End ===================
@@ -250,25 +250,6 @@
       once: false,
     });
     // ========================= AOS Js End ===========================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // ========================= Animated Radial Progress Js Start ===================
     function animateProgress() {
@@ -299,7 +280,6 @@
     animateProgress(); // Run on page load
     // ========================= Animated Radial Progress Js End ===================
 
-
     // ====================== Marquee Js Start ========================
     if ($(".marquee_left").length) {
       $(".marquee_left").marquee({
@@ -315,7 +295,6 @@
     }
     // ====================== Marquee Js End ========================
 
-
     // ========================= magnific Popup Js Start =====================
     $(".play-button").magnificPopup({
       type: "iframe",
@@ -323,7 +302,6 @@
       mainClass: "mfp-fade",
     });
     // ========================= magnific Popup Js End =====================
-
 
     // ================================ Floating Progress js start =================================
     const progressContainers = document.querySelectorAll(".progress-container");
@@ -360,7 +338,7 @@
       },
       {
         threshold: 0.5, // Adjust this value as needed (0.5 means half the section needs to be visible)
-      }
+      },
     );
 
     // Start observing all progress containers
@@ -369,29 +347,26 @@
     });
     // ================================ Floating Progress js End =================================
 
-
-
     // =========================  Search Bar 9 Js Start ==============
-      $(".open-search").on("click", function () {
-        $(".search_popup").addClass("search-opened");
-        $(".search-popup-overlay").addClass("search-popup-overlay-open");
-      });
-      $(".search_close_btn").on("click", function () {
-        $(".search_popup").removeClass("search-opened");
-        $(".search-popup-overlay").removeClass("search-popup-overlay-open");
-      });
-      $(".search-popup-overlay").on("click", function () {
-        $(".search_popup").removeClass("search-opened");
-        $(this).removeClass("search-popup-overlay-open");
-      });
-      // =========================  Search Bar 9 Js End ==============
-
+    $(".open-search").on("click", function () {
+      $(".search_popup").addClass("search-opened");
+      $(".search-popup-overlay").addClass("search-popup-overlay-open");
+    });
+    $(".search_close_btn").on("click", function () {
+      $(".search_popup").removeClass("search-opened");
+      $(".search-popup-overlay").removeClass("search-popup-overlay-open");
+    });
+    $(".search-popup-overlay").on("click", function () {
+      $(".search_popup").removeClass("search-opened");
+      $(this).removeClass("search-popup-overlay-open");
+    });
+    // =========================  Search Bar 9 Js End ==============
 
     // ================================= Brand slider Start =========================
-    var brandSlider = new Swiper('.brand-slider', {
+    var brandSlider = new Swiper(".brand-slider", {
       autoplay: {
         delay: 2000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
       autoplay: true,
       speed: 1500,
@@ -399,32 +374,30 @@
       loop: true,
       slidesPerView: 6,
       breakpoints: {
-          300: {
-              slidesPerView: 2,
-          },
-          575: {
-              slidesPerView: 3,
-          },
-          768: {
-              slidesPerView: 4,
-          },
-          992: {
-              slidesPerView: 5,
-          },
-          1200: {
-              slidesPerView: 6,
-          },
-      }
+        300: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        992: {
+          slidesPerView: 5,
+        },
+        1200: {
+          slidesPerView: 6,
+        },
+      },
     });
     // ================================= Brand slider End =========================
 
-
-
     // ================================= Brand about slider Start =========================
-    var aboutbrandSlider = new Swiper('.about-brand__slider', {
+    var aboutbrandSlider = new Swiper(".about-brand__slider", {
       autoplay: {
         delay: 2000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
       autoplay: true,
       speed: 1500,
@@ -432,25 +405,24 @@
       loop: true,
       slidesPerView: 4,
       breakpoints: {
-          300: {
-            slidesPerView: 2,
-          },
-          575: {
-            slidesPerView: 3,
-          },
-          768: {
-            slidesPerView: 4,
-          },
-      }
+        300: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+      },
     });
     // ================================= Brand about slider End =========================
 
-
     // ================================= Brand slider Two Start =========================
-    var BrandTwoSlider = new Swiper('.brand-two-slider', {
+    var BrandTwoSlider = new Swiper(".brand-two-slider", {
       autoplay: {
         delay: 2000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
       autoplay: true,
       speed: 1500,
@@ -458,31 +430,30 @@
       loop: true,
       slidesPerView: 6,
       breakpoints: {
-          300: {
-              slidesPerView: 2,
-          },
-          575: {
-              slidesPerView: 3,
-          },
-          768: {
-              slidesPerView: 4,
-          },
-          992: {
-              slidesPerView: 5,
-          },
-          1200: {
-              slidesPerView: 6,
-          },
-      }
+        300: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        992: {
+          slidesPerView: 5,
+        },
+        1200: {
+          slidesPerView: 6,
+        },
+      },
     });
     // ================================= Brand slider Two End =========================
-
 
     // ================================ portfolio slider start ==============================
     var PortfolioSwiperSlider = new Swiper(".portfolio-swiper-slider", {
       autoplay: {
         delay: 2000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
       autoplay: true,
       speed: 1500,
@@ -500,10 +471,9 @@
         992: {
           slidesPerView: 3,
         },
-      }
+      },
     });
     // ================================ portfolio slider end ==============================
-
 
     // ============================ testimonial js start ============================
     var TestimonialSlider = new Swiper(".testimonial-slider", {
@@ -545,9 +515,8 @@
     });
     // ============================ testimonial js end ============================
 
-
     // ============================ testimonial four js start ============================
-      var testimonialFourSlider = new Swiper(".testimonial-four__slider", {
+    var testimonialFourSlider = new Swiper(".testimonial-four__slider", {
       speed: 2000,
       grabCursor: true,
       loop: true,
@@ -559,7 +528,7 @@
       },
     });
 
-      var testimonialFourSlider = new Swiper(".testimonial-four__slider", {
+    var testimonialFourSlider = new Swiper(".testimonial-four__slider", {
       speed: 2000,
       grabCursor: true,
       loop: true,
@@ -571,9 +540,6 @@
       },
     });
     // ============================ testimonial four js end ============================
-
-
-
 
     // ============================ company projects js start =====================
     var companyProjectsSlider = new Swiper(".company-projects__slider", {
@@ -599,11 +565,9 @@
         1199: {
           slidesPerView: 4,
         },
-      }
+      },
     });
     // ============================ company projects js end =====================
-
-
 
     // ============================ testimonial about js start ========================
     var testimonialAboutSlider = new Swiper(".testimonial-about__slider", {
@@ -630,9 +594,6 @@
       },
     });
     // ============================ testimonial about js end ========================
-
-
-
 
     // Service slider
     var swiper = new Swiper(".Service-slider-active", {
@@ -687,8 +648,6 @@
       },
     });
 
-
-
     // ========================== service five slider ============================
     var servicefiveslider = new Swiper(".service-five__slider", {
       spaceBetween: 30,
@@ -714,21 +673,34 @@
         992: {
           slidesPerView: 3,
         },
-      }
+      },
     });
     // ========================== service five end ============================
 
+    // ========================== Custom Language select with flag js start ============================
+    const selected = document.querySelector(".select-selected");
+    const items = document.querySelector(".select-items");
 
+    // Toggle dropdown
+    selected.addEventListener("click", () => {
+      items.style.display = items.style.display === "block" ? "none" : "block";
+    });
 
+    // Select option
+    document.querySelectorAll(".select-items div").forEach((option) => {
+      option.addEventListener("click", function () {
+        selected.querySelector("span").innerHTML = this.innerHTML;
+        items.style.display = "none";
+      });
+    });
 
-
-
-
-
-
-
-
-
+    // Close if clicked outside
+    document.addEventListener("click", function (e) {
+      if (!document.querySelector(".select-box").contains(e.target)) {
+        items.style.display = "none";
+      }
+    });
+    // ========================== Custom Language select with flag js end ============================
 
     // ========================= Counter Up Js End ===================
     const counterUp = window.counterUp.default;
@@ -789,7 +761,6 @@
     }
   });
   // ========================= Header Sticky Js End===================
-
 
   // ========================= Header Sticky two Js Start ==============
   $(window).on("scroll", function () {

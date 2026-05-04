@@ -8012,6 +8012,62 @@ svg.radial-progress circle.incomplete {
 }
 
 /* new header one css end */
+/* ====================================== Custom Language select with flag css start ============================== */
+.select-box {
+    position: relative;
+    width: 200px;
+}
+
+.select-selected {
+    background: #fff;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.select-selected img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.select-items {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 100%;
+    top: 110%;
+    left: 0;
+    z-index: 99;
+    border-radius: 8px;
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.select-items div {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.select-items div:hover {
+    background-color: #f1f1f1;
+}
+
+.select-items img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.select-arrow-active {
+    border-color: #333;
+}
+
+/* ====================================== Custom Language select with flag css end ============================== */
 /* ================================== rtl css start ================================== */
 .text-start {
     text-align: start !important;
