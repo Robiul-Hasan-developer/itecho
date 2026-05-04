@@ -4555,6 +4555,10 @@ input:focus, input:focus-visible {
     max-width: 1550px;
 }
 
+.max-w-1560-px {
+    max-width: 1560px;
+}
+
 .max-w-1660-px {
     max-width: 1660px;
 }
@@ -7927,6 +7931,18 @@ svg.radial-progress circle.incomplete {
     color: #FF9921;
 }
 
+.hover-text-brand:hover {
+    color: #0E59F2;
+}
+
+.hover-text-brand-light:hover {
+    color: #6766FF;
+}
+
+.hover-text-brand-secondary:hover {
+    color: #FF9921;
+}
+
 /* Text color end */
 /* BG color start */
 .bg-brand {
@@ -7955,6 +7971,10 @@ svg.radial-progress circle.incomplete {
 
 /* BG color end */
 /* Home new style css end */
+.hover-icon-fill:hover i::before {
+    font-family: "Phosphor-Fill";
+}
+
 /* ================================== rtl css start ================================== */
 .text-start {
     text-align: start !important;

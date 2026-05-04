@@ -55,6 +55,18 @@
 .text-brand-secondary {
     color: #FF9921;
 }
+
+.hover-text-brand:hover {
+    color: #0E59F2;
+}
+
+.hover-text-brand-light:hover {
+    color: #6766FF;
+}
+
+.hover-text-brand-secondary:hover {
+    color: #FF9921;
+}
 /* Text color end */
 
 
@@ -87,3 +99,8 @@
 
 
 /* Home new style css end */
+
+
+.hover-icon-fill:hover i::before {
+    font-family: 'Phosphor-Fill';
+}
