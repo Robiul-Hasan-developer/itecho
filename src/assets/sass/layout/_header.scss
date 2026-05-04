@@ -165,12 +165,33 @@
   transform: scale(0);
   margin-right: -50px;
 }
+
 .link-group {
   &:hover {
     .button-icon-two {
       transform: scale(0);
       margin-left: -50px;
     }
+
+    .button-icon-one {
+      transform: scale(1);
+      margin-right: 0;
+    }
+  }
+}
+
+.link-group.style-two {
+  .button-icon-one {
+    transform: scale(0);
+    margin-right: -36px;
+  }
+
+  &:hover {
+    .button-icon-two {
+      transform: scale(0);
+      margin-left: -36px;
+    }
+
     .button-icon-one {
       transform: scale(1);
       margin-right: 0;

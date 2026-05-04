@@ -7131,6 +7131,21 @@ input:focus, input:focus-visible {
     margin-right: 0;
 }
 
+.link-group.style-two .button-icon-one {
+    transform: scale(0);
+    margin-right: -36px;
+}
+
+.link-group.style-two:hover .button-icon-two {
+    transform: scale(0);
+    margin-left: -36px;
+}
+
+.link-group.style-two:hover .button-icon-one {
+    transform: scale(1);
+    margin-right: 0;
+}
+
 /* Header Menu and Submenu Css End */
 /* ================================= Header Css End =========================== */
 /* Mega menu css start */
@@ -7933,6 +7948,10 @@ svg.radial-progress circle.incomplete {
 
 .text-brand-secondary {
     color: var(--text-brand-secondary);
+}
+
+.text-brand-neutral {
+    color: #070220;
 }
 
 .hover-text-brand:hover {
