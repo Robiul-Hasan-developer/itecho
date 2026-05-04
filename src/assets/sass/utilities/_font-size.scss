@@ -1,0 +1,56 @@
+/* Font Size Class Start */
+.text {
+  &-inherit {
+      font-size: inherit;
+  }
+}
+
+@each $property, $value in $font-sizes {
+  .tw-text-#{$property} {
+    font-size: $value;
+  }
+}  
+/* Font Size Class End */
+
+
+@each $property, $value in $spaces {
+    .tw-text-#{$property} {
+      font-size: $value;
+    }
+}  
+
+.tw-text-100-px {
+  font-size: clamp(2rem, -3.1727rem + 10.7765vw, 6.25rem);
+}
+.tw-text-36-px {
+  font-size: clamp(1.375rem, 0.6801rem + 1.9337vw, 2.25rem);
+}
+.tw-text-42-px {
+  font-size: clamp(1.5rem, 0.1307rem + 2.8526vw, 2.625rem);
+}
+.tw-text-60-px {
+  font-size: clamp(1.875rem, 0.1421rem + 3.6101vw, 3.75rem);
+}
+.tw-text-32-px {
+  font-size: clamp(1.375rem, 0.6143rem + 1.5848vw, 2rem);
+}
+.tw-text-70-px {
+  font-size: clamp(3rem, 1.3265rem + 3.4865vw, 4.375rem);
+}
+.tw-text-78-px {
+  font-size: clamp(2.375rem, 0.0645rem + 4.8135vw, 4.875rem);
+}
+.tw-text-122-px {
+  font-size: clamp(2.25rem, -2.7175rem + 10.349vw, 7.625rem);
+}
+.tw-text-200-px {
+  font-size: clamp(3.75rem, -2.7679rem + 13.579vw, 12.5rem);
+}
+.tw-text-160-px {
+  font-size: clamp(3.75rem, -0.9057rem + 9.6993vw, 10rem);
+}
+.tw-text-280-px {
+  font-size: clamp(3.75rem, -7.5926rem + 23.6305vw, 17.5rem);
+}
+
+/* Font Size Class End */

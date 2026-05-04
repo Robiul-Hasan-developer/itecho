@@ -1,0 +1,47 @@
+/* Marquee css start */
+.marquee {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.js-marquee-wrapper {
+    display: flex;
+    gap: 64px;
+}
+
+.js-marquee {
+    display: flex;
+    gap: 64px;
+    min-width: max-content;
+}
+
+.cta-four .js-marquee-wrapper {
+    gap: 24px;
+}
+
+.cta-four .js-marquee {
+    gap: 24px;
+}
+
+/* Marquee css end */
+
+
+
+.nav-faq {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 652px) {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

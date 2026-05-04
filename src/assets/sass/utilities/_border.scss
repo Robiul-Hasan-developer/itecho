@@ -1,0 +1,58 @@
+// border
+@each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      .border-#{$color}-#{$shade} {
+        border-color: var(--#{$color}-#{$shade}) !important;
+      }
+    }
+}
+
+// hover border
+@each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      .hover-border-#{$color}-#{$shade} {
+        &:hover {
+            border-color: var(--#{$color}-#{$shade}) !important;
+        }
+      }
+    }
+  }
+
+// focus border
+@each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      .focus-border-#{$color}-#{$shade} {
+        &:focus {
+            border-color: var(--#{$color}-#{$shade}) !important;
+        }
+      }
+    }
+  }
+
+  .tw-border {
+    &-dashed {
+      border-style: dashed !important;
+    }
+  }
+  
+  .border-transparent {
+    border-color: transparent !important;
+  }
+
+  .tw-focus-shadow-none:focus {
+    box-shadow: none;
+  }
+  .tw-border-black-eight {
+    border: 1px solid #00000014
+  }
+
+  .tw-border-deshad {
+    border: 1px dashed #0E59F2;
+    width: 99px;
+    height: 99px;
+  }
+
+
+  .tw-clip-path-one {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  }

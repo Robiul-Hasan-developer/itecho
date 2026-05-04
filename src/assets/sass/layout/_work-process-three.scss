@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Flexbox Helpers
+   ========================================================================== */
+.service-wrapper.style-three .service-card .service-card-items .items-content-wrap, .service-wrapper .custom-container .service-slider-content .swiper-wrapper .swiper-slide .thumb-teb-content, .service-wrapper .custom-container .section-title .content-right, .professional-wrapper .experience-content-wrap .experience-list-item, .about-wrapper.style-three .about-counter .about-counter-wrap, .section-top-title .content-right, .blog-card.card-2 .blog-card-content .meta-cta, .blog-card.card-2, .blog-card {
+  display: flex;
+  align-items: center;
+}
+
+.team-wrapper .custom-container .team-slider .team-slider-active .thumb-content ul, .project-wrapper.style-three .bf-btn-wrap, .professional-wrapper .experience-content-wrap .icon, .professional-wrapper .skill-content-wrap ul li .progress-counter, .professional-wrapper .skill-content-wrap ul li .icon, .advantage-wrapper .advantage-items-wrap .advantage-item .throwable-wrapper .icon, .achievement-wrapper .achievement-items-wrap .achievement-item .achievement-item-content .achievement-btn, .about-wrapper.style-two .about-bottom-content .about-btn, .footer-wrapper.style-two .footer-main-content .footer-nav, .footer-wrapper .footer-top-content .footer-button, .testimonial-card .middle-content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-wrapper.style-three .service-card .service-card-items, .service-wrapper.style-two .nav .nav-link, .service-wrapper .custom-container .section-title, .professional-wrapper .skill-content-wrap ul li, .inner-wrapper.style-three .inner-container, .achievement-wrapper .achievement-items-wrap .achievement-item .achievement-item-content, .about-wrapper.style-three .about-right-content .about-bottom-content, .footer-wrapper.style-two .footer-top-content, .footer-wrapper .footer-top-content, .section-top-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inner-wrapper.style-two .custom-container .inner-cta, .advantage-wrapper .advantage-items-wrap .advantage-item .throwable-wrapper, .about-wrapper.style-three .about-right-content, .about-wrapper .about-banner-img .about-thumb-cta, .blog-card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-wrapper .custom-container .service-slider-content .swiper-wrapper .swiper-slide .thumb-teb-content p {
+  display: flex;
+  flex-direction: row;
+}
+
+.mr-auto {
+  margin-left: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}

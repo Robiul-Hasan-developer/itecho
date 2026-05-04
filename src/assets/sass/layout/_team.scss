@@ -1,0 +1,14 @@
+// ======================== team css start ========================
+.team-two-card-icon {
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.team-two-card:hover {
+    .team-two-card-icon {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+// ======================== team css end ========================

@@ -1,0 +1,39 @@
+.tw-line-h-92-px {
+    line-height: clamp(3.125rem, 1.1696rem + 4.0737vw, 5.75rem);
+}
+.tw-line-h-44-px {
+    line-height: clamp(1.375rem, -0.6137rem + 4.1431vw, 2.75rem);
+}
+.tw-line-h-27-px {
+    line-height: 27px;
+}
+.tw-line-h-60-px {
+    line-height: clamp(1.875rem, -0.4071rem + 4.7544vw, 3.75rem);
+}
+.tw-line-h-104-px {
+    line-height: clamp(2rem, -2.1588rem + 8.6643vw, 6.5rem);
+}
+.tw-line-h-130-px {
+    line-height: clamp(3.75rem, -0.2933rem + 8.4236vw, 8.125rem);
+}
+.tw-line-h-145-px {
+    line-height: clamp(2.8125rem, -2.9637rem + 12.0337vw, 9.0625rem);
+}
+.tw-line-h-210-px {
+    line-height: 210px;
+    @media (max-width: 1499px) {
+        line-height: 170px;
+    }
+    @media (max-width: 1299px) {
+        line-height: 140px;
+    }
+    @media (max-width: 1099px) {
+        line-height: 110px;
+    }
+    @media (max-width: 992px) {
+        line-height: 90px;
+    }
+    @media (max-width: 768px) {
+        line-height: 55px;
+    }
+}

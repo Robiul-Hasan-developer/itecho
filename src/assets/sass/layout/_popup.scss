@@ -1,0 +1,23 @@
+.play-button::before {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 70px;
+    background: #FFFFFF4D;
+    border-radius: 50%;
+    z-index: -1;
+    -webkit-animation: animate 2.3s ease-out infinite;
+    animation: animate 2.3s ease-out infinite;
+}
+
+.play-button-two::before {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 70px;
+    background: #0e59f280;
+    border-radius: 50%;
+    z-index: -1;
+    -webkit-animation: animate 2.3s ease-out infinite;
+    animation: animate 2.3s ease-out infinite;
+}

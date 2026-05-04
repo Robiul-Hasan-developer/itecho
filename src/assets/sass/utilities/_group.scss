@@ -1,0 +1,131 @@
+/* ======================== Group Css Start ======================== */
+.group {
+  &:hover {
+    .group-hover-text {
+      &-white {
+        color: hsl(var(--white)) !important;
+      }
+      &-main-600 {
+        color: var(--main-600) !important;
+      }
+      &-main-two-600 {
+        color: var(--main-two-600) !important;
+      }
+    }
+    .group-hover-bg {
+      &-white {
+        background-color: hsl(var(--white)) !important;
+      }
+      &-black {
+        background-color: #000 !important;
+      }
+      &-white-15 {
+        background-color: #FFFFFF26 !important;
+      }
+      &-main-600 {
+        background-color: var(--main-600) !important;
+      }
+      &-neutral-800 {
+        background-color: #232323 !important;
+      }
+      &-gradient-one {
+        background: linear-gradient(131.31deg, #0B163F 12.26%, #0D1C5D 48.46%, #301996 91.93%) !important;
+      }
+    }
+    .group-hover-border {
+      &-white {
+        border: 1px solid #fff !important;
+      }
+      &-white-15 {
+        border: 1px solid #FFFFFF26 !important;
+      }
+      &-main-600 {
+        border: 1px solid var(--main-600) !important;
+      }
+      &-none {
+        border: none !important;
+      }
+    }
+  }
+  &-hover-text-transition {
+    transition: inherit;
+  }
+}
+
+.tw-invisible {
+  visibility: hidden;
+}
+.tw-hidden {
+  overflow: hidden;
+}
+.tw-hidden-media {
+  @media (max-width: 768px) {
+    overflow: hidden;
+    opacity: 0;
+  }
+}
+.tw-opacity-0 {
+  opacity: 0;
+}
+.tw-d-block {
+  display: block;
+}
+.tw-d-none {
+  display: none;
+}
+
+
+.group-item {
+  &:hover {
+    .group-hover-item-visible {
+      visibility: visible;
+    }
+    .group-hover-item-visible {
+      overflow: visible;
+    }
+    .group-hover-item-hidden {
+      overflow: hidden;
+    }
+    .group-hover-item-opacity-1 {
+      opacity: 1 !important;
+    }
+    .group-hover-item-opacity-0 {
+      opacity: 0 !important;
+    }
+    .group-hover-item-mt-0 {
+      margin-top: 0;
+    }
+    .group-hover-item-pb-0 {
+      padding-bottom: 0;
+    }
+    .group-hover-item-scale-12 {
+      transform: scale(1.2);
+    }
+    .group-hover-item-scale-1 {
+      transform: scale(1);
+    }
+    .group-hover-item-translate-x-0 {
+      transform: translateX(0);
+    }
+    .group-hover-item-d-block {
+      display: block !important;
+    }
+    .group-hover-item-d-none {
+      display: none !important;
+    }
+    .group-hover-item-text-main-600 {
+      color: var(--main-600) !important;
+    }
+    .group-hover-item-text-invert-white {
+      filter: brightness(0) invert(1);
+    }
+    .group-hover-item-text-invert-black {
+      filter: brightness(0) invert(0);
+    }
+    .group-hover-item-py-24-px {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+}
+/* ======================== Group Css End ======================== */

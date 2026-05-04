@@ -1,0 +1,80 @@
+/* hover bg class start */
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} {
+      background-color: var(--#{$color}-#{$shade}) !important;
+    }
+  }
+}
+
+// hover background
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .hover-bg-#{$color}-#{$shade} {
+      &:hover {
+        background-color: var(--#{$color}-#{$shade}) !important;
+      }
+    }
+  }
+}
+
+.hover-bg-white {
+  &:hover {
+    background-color: hsl(var(--white)) !important;
+  }
+}
+
+.bg-white {
+  &-08 {
+    background-color: hsl(var(--white) / 0.08);
+  }
+  &-13 {
+    background-color: hsl(var(--white) / 0.13);
+  }
+  &-7 {
+    background-color: hsl(var(--white) / 0.7);
+  }
+  &-06 {
+    background-color: hsl(var(--white) / 0.06);
+  }
+}
+.tw-bg-filter {
+  backdrop-filter: blur(23.700001px);
+}
+
+.bg-gradent-service {
+  background: linear-gradient(131.31deg, #0B163F 12.26%, #0D1C5D 48.46%, #301996 91.93%);
+}
+.tw-bg-service-two {
+  background-color: #0B163F !important;
+}
+
+.tw-bg-gradient-two {
+  background: linear-gradient(180deg, #211E3B 0%, #23159A 100%);
+}
+
+.tw-bg-white-10-persent {
+  background-color: #c1abab00;
+}
+.tw-bg-gradient-three {
+  background: linear-gradient(120deg, #0E59F2 0%, #FFFFFF 100%);
+  height: 70px;
+  width: 5px;
+}
+.tw-bg-main-three {
+  background-color: #0A165E;
+}
+.tw-bg-main-60 {
+  background-color: #0e59f2b8;
+}
+
+
+.tw-bg-gradient-four {
+  background: linear-gradient(180deg, rgba(14, 89, 242, 0) 0%, #0E59F2 100%);
+}
+
+.tw-bg-main-10 {
+  background-color: #0E59F21A;
+}
+
+/* hover bg class end */
