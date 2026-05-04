@@ -1,7 +1,39 @@
-/* Home new style css start */
+/* ============================== Home new style css start ========================= */
+.font-size-style-new:root {
+    --heading-one: clamp(2.25rem, 0.7133rem + 3.5vw, 3rem);
+    --heading-two: clamp(2rem, 0.7133rem + 3.5vw, 2.5rem);
+    --heading-three: clamp(1.75rem, 0.3353rem + 2.5vw, 2rem);
+    --heading-four: clamp(1.25rem, 0.5569rem + 2vw, 1.5rem);
+    --heading-five: 1.25rem;
+    --heading-six: 1rem;
+    --gradient-main: linear-gradient(90deg, #FF4E8D 0%, #AF35E7 50%, #4C82FC 100%);
+    --body-font: "DM Sans", sans-serif;
+}
+
+.display-1 {
+    font-size: clamp(3.75rem, 0.2885rem + 7.2115vw, 7.5rem); // min:60px and max:120px
+}
+
+.display-2 {
+    font-size: clamp(3.25rem, 1.6346rem + 3.3654vw, 5rem); // min:52px and max:80px
+}
+
+.display-3 {
+    font-size: clamp(3rem, 1.6154rem + 2.8846vw, 4.5rem); // min:48px and max:72px
+}
+
+.display-4 {
+    font-size: clamp(2.75rem, 1.5962rem + 2.4038vw, 4rem); // min:44px and max:64px
+}
+
+.display-5 {
+    font-size: clamp(2.5rem, 0.7133rem + 3.5vw, 3.5rem);  // min:40px and max:56px
+}
+
 .home-dark body {
     @extend .bg-brand-neutral;
 }
+
 
 /* Text color start */
 .text-brand {

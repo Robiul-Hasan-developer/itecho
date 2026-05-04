@@ -6814,6 +6814,25 @@ input:focus, input:focus-visible {
         line-height: 55px;
     }
 }
+
+.hover-common-underline {
+    background-image: linear-gradient(currentColor, currentColor), linear-gradient(currentColor, currentColor);
+    background-size: 0 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s linear;
+    -webkit-transition: all 0.4s ease 0.3s ease-out;
+    -moz-transition: all 0.4s ease 0.3s ease-out;
+    -ms-transition: all 0.4s ease 0.3s ease-out;
+    -o-transition: all 0.4s ease 0.3s ease-out;
+    transition: all 0.4s ease 0.3s ease-out;
+    display: inline;
+}
+
+.hover-common-underline:hover {
+    background-size: 0 1px, 100% 1px;
+}
+
 /* ================================= preload Css Start =========================== */
 .loader-mask {
     position: fixed;
@@ -7855,7 +7874,38 @@ svg.radial-progress circle.incomplete {
     width: fit-content;
 }
 
-/* Home new style css start */
+/* ============================== Home new style css start ========================= */
+.font-size-style-new:root {
+    --heading-one: clamp(2.25rem, 0.7133rem + 3.5vw, 3rem);
+    --heading-two: clamp(2rem, 0.7133rem + 3.5vw, 2.5rem);
+    --heading-three: clamp(1.75rem, 0.3353rem + 2.5vw, 2rem);
+    --heading-four: clamp(1.25rem, 0.5569rem + 2vw, 1.5rem);
+    --heading-five: 1.25rem;
+    --heading-six: 1rem;
+    --gradient-main: linear-gradient(90deg, #FF4E8D 0%, #AF35E7 50%, #4C82FC 100%);
+    --body-font: "DM Sans", sans-serif;
+}
+
+.display-1 {
+    font-size: clamp(3.75rem, 0.2885rem + 7.2115vw, 7.5rem);
+}
+
+.display-2 {
+    font-size: clamp(3.25rem, 1.6346rem + 3.3654vw, 5rem);
+}
+
+.display-3 {
+    font-size: clamp(3rem, 1.6154rem + 2.8846vw, 4.5rem);
+}
+
+.display-4 {
+    font-size: clamp(2.75rem, 1.5962rem + 2.4038vw, 4rem);
+}
+
+.display-5 {
+    font-size: clamp(2.5rem, 0.7133rem + 3.5vw, 3.5rem);
+}
+
 /* Text color start */
 .text-brand {
     color: #0E59F2;
