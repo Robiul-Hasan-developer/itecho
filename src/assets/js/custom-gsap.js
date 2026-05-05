@@ -358,7 +358,6 @@ if ($(".split-reveal").length) {
 }
 // **************************** split Reveal js End ****************************
 
-
 //**************************** Move on cursor hover js Start ****************************
 document.addEventListener("mousemove", parallax);
 function parallax(e) {
@@ -370,7 +369,6 @@ function parallax(e) {
   });
 }
 //**************************** Move on cursor hover js End ****************************
-
 
 // **************************** item rotate on scroll js start ****************************
 if ($(".item-rotate-on-scroll").length > 0) {
@@ -395,6 +393,24 @@ if ($(".item-rotate-on-scroll").length > 0) {
 }
 // **************************** item rotate on scroll js End ****************************
 
+// **************************** item to right on scroll js Start ****************************
+if ($(".text-to-right").length > 0) {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".text-to-right",
+      start: "bottom 56%",
+      end: "bottom 0%",
+      scrub: true,
+      invalidateOnRefresh: true,
+      markers: false,
+    },
+  }).to(".text-to-right", {
+    x: 40, // move right
+    duration: 2,
+    ease: "power1.inOut",
+  });
+}
+// **************************** item to right on scroll js End ****************************
 
 /* **************************************************************************** 
                           Custom GSAP js start 

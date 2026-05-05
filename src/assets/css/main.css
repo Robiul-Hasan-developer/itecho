@@ -4622,6 +4622,15 @@ input:focus, input:focus-visible {
         max-width: 300px;
     }
 }
+
+.max-w-17-percent {
+    max-width: 17%;
+}
+
+.max-w-70-percent {
+    max-width: 70%;
+}
+
 /* Max width Css Class End */
 /* Overlay Start */
 .overlay {
@@ -7904,7 +7913,7 @@ svg.radial-progress circle.incomplete {
 }
 
 .display-1 {
-    font-size: clamp(3.75rem, 0.2885rem + 7.2115vw, 7.5rem);
+    font-size: clamp(4rem, 2.0366rem + 5.4634vw, 7.5rem);
 }
 
 .display-2 {
@@ -8008,10 +8017,6 @@ svg.radial-progress circle.incomplete {
 }
 /* new header one css end */
 /* New banner one css start */
-.banner-bottom-title {
-    margin-inline-start: 140px;
-}
-
 .stroke-black {
     -webkit-text-stroke: 1.5px #000;
 }
