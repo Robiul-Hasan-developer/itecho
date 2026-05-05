@@ -12,5 +12,9 @@
         color: inherit !important;
     }
 }
-
+@media (min-width: 424px) {
+    .d-xs-flex {
+        display: flex !important;
+    }
+}
 /* new header one css end */

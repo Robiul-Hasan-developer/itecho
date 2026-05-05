@@ -1865,6 +1865,10 @@ input:focus, input:focus-visible {
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
+.border-white-20 {
+    border-color: #FFFFFF33 !important;
+}
+
 /* Colors class start */
 .text-main-50 {
     color: var(--main-50);
@@ -2052,6 +2056,10 @@ input:focus, input:focus-visible {
 
 .text-main-two-10 {
     color: #23232380;
+}
+
+.hover-text-black:hover {
+    color: #000 !important;
 }
 
 /* Colors class End */
@@ -8015,6 +8023,11 @@ svg.radial-progress circle.incomplete {
     color: inherit !important;
 }
 
+@media (min-width: 424px) {
+    .d-xs-flex {
+        display: flex !important;
+    }
+}
 /* new header one css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
