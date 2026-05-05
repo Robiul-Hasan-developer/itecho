@@ -6835,6 +6835,10 @@ input:focus, input:focus-visible {
     }
 }
 
+.tw-leading-11 {
+    line-height: 1.1;
+}
+
 .hover-common-underline {
     background-image: linear-gradient(currentColor, currentColor), linear-gradient(currentColor, currentColor);
     background-size: 0 1px, 0 1px;
@@ -8029,6 +8033,16 @@ svg.radial-progress circle.incomplete {
     }
 }
 /* new header one css end */
+/* New banner one css start */
+.banner-bottom-title {
+    margin-inline-start: 140px;
+}
+
+.stroke-black {
+    -webkit-text-stroke: 1.5px #000;
+}
+
+/* New banner one css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;
