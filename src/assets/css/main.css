@@ -6406,6 +6406,10 @@ input:focus, input:focus-visible {
     z-index: 999;
 }
 
+.tw-z-9999 {
+    z-index: 9999;
+}
+
 /* Z index css End */
 /* ======================== Animation Css Start ==================================== */
 /* Raw animations start here */
@@ -8015,7 +8019,7 @@ svg.radial-progress circle.incomplete {
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;
-    width: 200px;
+    width: 130px;
 }
 
 .select-selected {
