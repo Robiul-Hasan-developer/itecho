@@ -677,6 +677,80 @@
     });
     // ========================== service five end ============================
 
+    // ================================= new brand one slider slider Start =========================
+    // var brandSlider = new Swiper(".new-brand-one-slider", {
+    //   autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: false,
+    //   },
+    //   autoplay: true,
+    //   speed: 1500,
+    //   grabCursor: true,
+    //   loop: true,
+    //   slidesPerView: 6,
+    //   pagination: {
+    //     el: ".new-brand-one-slider-pagination",
+    //   },
+    //   breakpoints: {
+    //     300: {
+    //       slidesPerView: 2,
+    //     },
+    //     575: {
+    //       slidesPerView: 3,
+    //     },
+    //     768: {
+    //       slidesPerView: 4,
+    //     },
+    //     992: {
+    //       slidesPerView: 5,
+    //     },
+    //     1200: {
+    //       slidesPerView: 6,
+    //     },
+    //   },
+    // });
+    var brandSlider = new Swiper(".new-brand-one-slider", {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      speed: 1500,
+      grabCursor: true,
+      loop: true,
+
+      slidesPerView: 6,
+      slidesPerGroup: 2,
+
+      pagination: {
+        el: ".new-brand-one-slider-pagination",
+        clickable: true,
+      },
+
+      breakpoints: {
+        300: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+        },
+        575: {
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 4,
+          slidesPerGroup: 2,
+        },
+        992: {
+          slidesPerView: 5,
+          slidesPerGroup: 2,
+        },
+        1200: {
+          slidesPerView: 6,
+          slidesPerGroup: 2, // keeps 3 dots
+        },
+      },
+    });
+    // ================================= new brand one slider slider End =========================
+
     // ========================== Custom Language select with flag js start ============================
     if ($(".select-selected").length) {
       const selected = document.querySelector(".select-selected");
