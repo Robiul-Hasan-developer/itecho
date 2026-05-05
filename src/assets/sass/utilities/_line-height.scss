@@ -19,23 +19,9 @@
 .tw-line-h-145-px {
     line-height: clamp(2.8125rem, -2.9637rem + 12.0337vw, 9.0625rem);
 }
-.tw-line-h-210-px {
-    line-height: 210px;
-    @media (max-width: 1499px) {
-        line-height: 170px;
-    }
-    @media (max-width: 1299px) {
-        line-height: 140px;
-    }
-    @media (max-width: 1099px) {
-        line-height: 110px;
-    }
-    @media (max-width: 992px) {
-        line-height: 90px;
-    }
-    @media (max-width: 768px) {
-        line-height: 55px;
-    }
+
+.tw-leading-75 {
+    line-height: 0.75;
 }
 
 

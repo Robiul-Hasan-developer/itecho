@@ -778,7 +778,11 @@
 </div>
 <!-- ==================== Mobile Menu End Here ==================== -->
 
-<!-- =============================== New top header one start ================================ -->
+
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+        
+        <!-- =============================== New top header one start ================================ -->
 <div class="new-top-header-one tw-py-3 bg-brand-two">
     <div class="container max-w-1560-px">
         <div class="d-flex align-items-center tw-gap-6 justify-content-between">
@@ -857,8 +861,8 @@
     </div>
 </div>
 <!-- =============================== New top header one end ================================ -->
-
-<!-- ==================== Header Start Here ==================== -->
+        
+        <!-- ==================== Header Start Here ==================== -->
 <header class="header bg-brand-one tw-transition-all tw-z-99">
     <div class="container max-w-1560-px">
         <nav class="d-flex align-items-center justify-content-between position-relative">
@@ -1507,20 +1511,38 @@
     </div>
 </header>
 <!-- ==================== Header End Here ==================== -->
-
-<!-- ============================ New Banner one section start ================================ -->
-<section class="new-banner-one py-120 position-relative z-1">
+        
+        <!-- ============================ New Banner one section start ================================ -->
+<section class="new-banner-one position-relative z-1">
     <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
         <img src="assets/images/bg/new-banner-bg.png" alt="Banner BG" class="w-100 h-100 object-fit-cover">
     </div>
+    <div class="position-absolute top-50 translate-middle-y start-0 z-n1">
+        <img src="assets/images/shape/round-trinagle-shape.png" alt="Shape" data-speed=".6">
+    </div>
     
     <div class="container max-w-1560-px">
-        <div class="">
-            <h1 class="display-1 fw-bold text-white tw-leading-11">
-                <span class="text-brand-secondary text-decoration-underline fw-medium">Next-Gen</span> <span class="stroke-black">IT</span>
-                <br>
-                <span class="banner-bottom-title stroke-black">AI Solutions</span>
-            </h1>
+        <div class="position-relative py-120">
+            <div class="max-w-950-px">
+                <h1 class="display-1 fw-bold text-white tw-leading-11">
+                    <span class="text-brand-secondary text-decoration-underline fw-medium">Next-Gen</span> <span class="stroke-black">IT</span>
+                    <br>
+                    <span class="banner-bottom-title stroke-black">AI Solutions</span>
+                </h1>
+    
+                <div class="tw-mt-17 d-flex justify-content-evenly">
+                    <div class="">
+                        <span class="tw-w-px h-100 bg-brand-secondary"></span>
+                    </div>
+                    <div class="">
+                        <img src="assets/images/shape/arrow-down-big-icon.png" alt="Arrow Big Icon" class="move-on-cursor-hover tw-duration-200" data-value="2">
+                    </div>
+                </div>
+                <div class="tw-pt-15 tw-mt-5">
+                    <p class="text-white tw-text-lg max-w-500-px">We deliver advanced AI-powered IT solutions that help businesses automate processes, analyze data, and make smarter decisions.</p>
+                </div>
+    
+            </div>
         </div>
     </div>
 </section>
@@ -1529,14 +1551,14 @@
 
 
 
-<div class="bg-neutral-20 tw-p-15 tw-mt-15">
-    <div class="tw-p-15 bg-brand-one">
-        <div class="tw-p-15 bg-brand-two"></div>
-    </div>
-</div>
+        <div class="bg-neutral-20 tw-p-15 tw-mt-15">
+            <div class="tw-p-15 bg-brand-one">
+                <div class="tw-p-15 bg-brand-two"></div>
+            </div>
+        </div>
 
 
-<!-- ==================== Footer Start Here ==================== -->
+        <!-- ==================== Footer Start Here ==================== -->
 <footer class="d-flex align-items-center justify-content-center w-100">
   <div class="footer bg-gradent-service position-relative z-1 mt-auto max-w-1890-px w-100 tw-mb-5 tw-rounded-bottom-left-right">
     <img src="assets/images/shape/service-shape1.png" alt="shape" class="position-absolute bottom-0 tw-start-0 z-n1">
@@ -1716,6 +1738,9 @@
 <!-- ==================== Footer End Here ==================== -->
 
 
+    </div>
+</div>
+
 <!-- Jquery js -->
 <script src="assets/js/jquery-3.7.1.min.js"></script>
 <!-- phosphor Js -->
@@ -1726,11 +1751,7 @@
 <script src="assets/js/aos.js"></script>
 
 <!-- GSAP js -->
-<script src="assets/js/gsap.min.js"></script>
-<!-- SplitText -->
-<script src="assets/js/SplitText.min.js"></script>
-<!-- Scroll Trigger -->
-<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/gsap-plugin.js"></script>
 <!-- Marquee -->
 <script src="assets/js/marquee-main.js"></script>
 <!-- swiper bundel -->

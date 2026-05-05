@@ -4529,6 +4529,10 @@ input:focus, input:focus-visible {
     max-width: 870px;
 }
 
+.max-w-950-px {
+    max-width: 950px;
+}
+
 .max-w-1030-px {
     max-width: 1030px;
 }
@@ -6801,38 +6805,8 @@ input:focus, input:focus-visible {
     line-height: clamp(2.8125rem, -2.9637rem + 12.0337vw, 9.0625rem);
 }
 
-.tw-line-h-210-px {
-    line-height: 210px;
-}
-
-@media (max-width: 1499px) {
-    .tw-line-h-210-px {
-        line-height: 170px;
-    }
-}
-
-@media (max-width: 1299px) {
-    .tw-line-h-210-px {
-        line-height: 140px;
-    }
-}
-
-@media (max-width: 1099px) {
-    .tw-line-h-210-px {
-        line-height: 110px;
-    }
-}
-
-@media (max-width: 992px) {
-    .tw-line-h-210-px {
-        line-height: 90px;
-    }
-}
-
-@media (max-width: 768px) {
-    .tw-line-h-210-px {
-        line-height: 55px;
-    }
+.tw-leading-75 {
+    line-height: 0.75;
 }
 
 .tw-leading-11 {

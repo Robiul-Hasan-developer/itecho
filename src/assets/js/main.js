@@ -678,28 +678,31 @@
     // ========================== service five end ============================
 
     // ========================== Custom Language select with flag js start ============================
-    const selected = document.querySelector(".select-selected");
-    const items = document.querySelector(".select-items");
+    if ($(".select-selected").length) {
+      const selected = document.querySelector(".select-selected");
+      const items = document.querySelector(".select-items");
 
-    // Toggle dropdown
-    selected.addEventListener("click", () => {
-      items.style.display = items.style.display === "block" ? "none" : "block";
-    });
-
-    // Select option
-    document.querySelectorAll(".select-items div").forEach((option) => {
-      option.addEventListener("click", function () {
-        selected.querySelector("span").innerHTML = this.innerHTML;
-        items.style.display = "none";
+      // Toggle dropdown
+      selected.addEventListener("click", () => {
+        items.style.display =
+          items.style.display === "block" ? "none" : "block";
       });
-    });
 
-    // Close if clicked outside
-    document.addEventListener("click", function (e) {
-      if (!document.querySelector(".select-box").contains(e.target)) {
-        items.style.display = "none";
-      }
-    });
+      // Select option
+      document.querySelectorAll(".select-items div").forEach((option) => {
+        option.addEventListener("click", function () {
+          selected.querySelector("span").innerHTML = this.innerHTML;
+          items.style.display = "none";
+        });
+      });
+
+      // Close if clicked outside
+      document.addEventListener("click", function (e) {
+        if (!document.querySelector(".select-box").contains(e.target)) {
+          items.style.display = "none";
+        }
+      });
+    }
     // ========================== Custom Language select with flag js end ============================
 
     // ========================= Counter Up Js End ===================

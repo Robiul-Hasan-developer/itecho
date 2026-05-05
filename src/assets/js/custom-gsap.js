@@ -5,97 +5,17 @@
 var tl = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-// **************************** Nav Menu js Start ****************************
-// let mm = gsap.matchMedia();
-
-// mm.add("(min-width: 992px)", () => {
-//   gsap.from('.nav-menu__item', {
-//     opacity: 0,
-//     duration: .4,
-//     y: -20,
-//     stagger: .12,
-//   });
-// });
-// **************************** Nav Menu js End ****************************
-
-// // **************************** Custom Cursor Js Start ****************************
-// var body = document.body;
-// var cursor = document.querySelector(".cursor");
-// var dot = document.querySelector(".dot");
-// var cursorSmalls = document.querySelectorAll(".cursor-small");
-// var cursorBigs = document.querySelectorAll(".cursor-big");
-
-// body.addEventListener("mousemove", function (event) {
-//   gsap.to(cursor, {
-//     x: event.x,
-//     y: event.y,
-//     duration: 1.5,
-//     delay: 0.1,
-//     visibility: "visible",
-//     ease: "expo.out",
-//   });
-// });
-
-// body.addEventListener("mousemove", function (event) {
-//   gsap.to(dot, {
-//     x: event.x,
-//     y: event.y,
-//     duration: 1,
-//     visibility: "visible",
-//     ease: "expo.out",
-//   });
-// });
-
-// // Small Cursor
-// cursorSmalls.forEach((cursorSmall) => {
-//   cursorSmall.addEventListener("mouseenter", function () {
-//     gsap.to(dot, {
-//       scale: 8,
-//       backgroundColor: "#fff",
-//     });
-//     gsap.to(cursor, {
-//       visibility: "hidden",
-//       opacity: 0,
-//     });
-//   });
-
-//   cursorSmall.addEventListener("mouseleave", function () {
-//     gsap.to(dot, {
-//       scale: 1,
-//       backgroundColor: "#fff",
-//     });
-//     gsap.to(cursor, {
-//       visibility: "visible",
-//       opacity: 1,
-//     });
-//   });
-// });
-
-// // Big Cursor
-// cursorBigs.forEach((cursorBig) => {
-//   cursorBig.addEventListener("mouseenter", function () {
-//     gsap.to(dot, {
-//       scale: 30,
-//       backgroundColor: "#fff",
-//     });
-//     gsap.to(cursor, {
-//       visibility: "hidden",
-//       opacity: 0,
-//     });
-//   });
-
-//   cursorBig.addEventListener("mouseleave", function () {
-//     gsap.to(dot, {
-//       scale: 1,
-//       backgroundColor: "#fff",
-//     });
-//     gsap.to(cursor, {
-//       visibility: "visible",
-//       opacity: 1,
-//     });
-//   });
-// });
-// // **************************** Custom Cursor Js End ****************************
+// **************************** Smooth Scroll js Start ****************************
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+if ($("#smooth-wrapper").length && $("#smooth-content").length) {
+  ScrollSmoother.create({
+    smooth: 2.35,
+    effects: true,
+    smoothTouch: 0.15,
+    ignoreMobileResize: true,
+  });
+}
+// **************************** Smooth Scroll js End ****************************
 
 // **************************** Custom Cursor Js Start ****************************
 var body = document.body;
@@ -240,34 +160,6 @@ mmm.add("(max-width: 991px)", () => {
 // **************************** Mobile Menu js End ****************************
 
 // **************************** Custom Split text Js Start ****************************
-// if ($(".splitTextStyleOne").length > 0) {
-//   let character = gsap.utils.toArray(".splitTextStyleOne");
-//   character.forEach((character) => {
-//     let split_char = new SplitText(character, {
-//       type: "chars, words",
-//       lineThreshold: 0.3,
-//     });
-//     const tl2 = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: character,
-//         start: "top 90%",
-//         end: "bottom 60%",
-//         scrub: false,
-//         markers: false,
-//         toggleActions: "play none none none",
-//       },
-//     });
-//     tl2.from(split_char.chars, {
-//       autoAlpha: 0,
-//       x: 40,
-//       duration: 0.3,
-//       opacity: 0,
-//       stagger: 0.03,
-//       ease: "back.out(1.7)",
-//     });
-//   });
-// }
-
 if ($(".splitTextStyleOne").length) {
   let staggerAmount = 0.03,
     translateXValue = 20,
@@ -369,12 +261,12 @@ class Button {
 
     const xTransformer = gsap.utils.pipe(
       gsap.utils.mapRange(0, width, 0, 100),
-      gsap.utils.clamp(0, 100)
+      gsap.utils.clamp(0, 100),
     );
 
     const yTransformer = gsap.utils.pipe(
       gsap.utils.mapRange(0, height, 0, 100),
-      gsap.utils.clamp(0, 100)
+      gsap.utils.clamp(0, 100),
     );
 
     return {
@@ -465,6 +357,18 @@ if ($(".split-reveal").length) {
   });
 }
 // **************************** split Reveal js End ****************************
+
+//**************************** Move on cursor hover js Start ****************************
+document.addEventListener("mousemove", parallax);
+function parallax(e) {
+  document.querySelectorAll(".move-on-cursor-hover").forEach(function (move) {
+    var movingValue = move.getAttribute("data-value");
+    var x = (e.clientX * movingValue) / 250;
+    var y = (e.clientY * movingValue) / 250;
+    move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+  });
+}
+//**************************** Move on cursor hover js End ****************************
 
 /* **************************************************************************** 
                           Custom GSAP js start 
