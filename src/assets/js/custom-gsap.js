@@ -358,6 +358,7 @@ if ($(".split-reveal").length) {
 }
 // **************************** split Reveal js End ****************************
 
+
 //**************************** Move on cursor hover js Start ****************************
 document.addEventListener("mousemove", parallax);
 function parallax(e) {
@@ -369,6 +370,31 @@ function parallax(e) {
   });
 }
 //**************************** Move on cursor hover js End ****************************
+
+
+// **************************** item rotate on scroll js start ****************************
+if ($(".item-rotate-on-scroll").length > 0) {
+  gsap.utils.toArray(".item-rotate-on-scroll").forEach((item) => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "bottom 95%",
+          end: "bottom 1%",
+          scrub: true,
+          invalidateOnRefresh: true,
+          markers: false,
+        },
+      })
+      .to(item, {
+        rotate: 360,
+        y: "80%",
+        ease: "none",
+      });
+  });
+}
+// **************************** item rotate on scroll js End ****************************
+
 
 /* **************************************************************************** 
                           Custom GSAP js start 
