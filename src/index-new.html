@@ -1644,7 +1644,9 @@
 <!-- ============================== Brand section end ============================== -->
 
         <!-- =========================== New why choose us one section start ================================= -->
-<section class="new-why-choose-one py-120">
+<section class="new-why-choose-one py-120 position-relative z-1 overflow-hidden">
+    <img src="assets/images/shape/new-why-choose-one-bg-shape.png" alt="Shape Image" class="position-absolute end-0 bottom-0 z-n1">
+    
     <div class="container">
         <div class="tw-mb-15">
             <div class="row gy-4">
@@ -1671,8 +1673,9 @@
         </div>
 
         <div class="row gy-4">
-            <div class="col-lg-4">
-                <div class="border border-white-20 tw-p-3 tw-rounded-xl position-relative overflow-hidden z-1 h-100 d-flex flex-column justify-content-between">
+            <div class="col-lg-4" data-speed="1.1">
+                <div
+                    class="border border-white-20 tw-p-3 tw-rounded-xl position-relative overflow-hidden z-1 h-100 d-flex flex-column justify-content-between">
                     <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
                         <img src="assets/images/shape/new-why-choose-one-bg1.png" alt="Shape"
                             class="w-100 h-100 object-fit-cover">
@@ -1766,23 +1769,43 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-speed="1.1">
                 <div
-                    class="border border-white-20 tw-p-3 tw-rounded-xl position-relative overflow-hidden z-1 item-overlay-gradient group group-item h-100">
+                    class="border border-white-20 tw-p-3 tw-rounded-xl position-relative overflow-hidden z-1 item-overlay-gradient group group-item h-100 item-overlay-gradient-radial">
                     <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
                         <img src="assets/images/thumbs/new-why-choose-one-bg-img2.png" alt="Image"
                             class="w-100 h-100 object-fit-cover group-hover-item-scale-12 tw-duration-500">
                     </div>
 
-                    <div class="d-flex flex-column align-items-start justify-content-between tw-p-5 z-1 position-relative h-100">
+                    <div
+                        class="d-flex flex-column align-items-start justify-content-between tw-p-5 z-1 position-relative h-100">
                         <h2 class="h3 text-white tw-mb-4">Robotic Automation</h2>
-                        <p class="text-white fw-medium max-w-280-px text-end ms-auto">Clients-focused data are centric energistically
+                        <p class="text-white fw-medium max-w-280-px text-end ms-auto">Clients-focused data are centric
+                            energistically
                             communicate
                             into installed done.</p>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="tw-mt-10 d-flex justify-content-center">
+            <div class="custom-fade-animation" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
+                <a href="contact.html"
+                    class="link-group style-two d-inline-flex align-items-center gap-sm-2 gap-0 group group-item bg-main-600 text-white tw-p-2 rounded-pill group-hover-bg-white overflow-hidden">
+                    <span
+                        class="button-icon-two bg-white text-brand tw-w-9 tw-h-9 rounded-circle d-flex justify-content-center align-items-center tw-duration-500">
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </span>
+                    <span class="fw-bold h6 tw-duration-500 text-white d-sm-flex d-none">
+                        Browse Our Services
+                    </span>
+                    <span
+                        class="button-icon-one bg-white text-brand tw-w-9 tw-h-9 rounded-circle d-flex justify-content-center align-items-center tw-duration-500">
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
         </div>
 
     </div>
