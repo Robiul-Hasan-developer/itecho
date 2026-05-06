@@ -10,6 +10,14 @@
     --body-font: "DM Sans", sans-serif;
 }
 
+.nunito-font {
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+    &:root {
+        --body-font: "Nunito", sans-serif;
+    }
+}
+
 :root {
     --text-brand-secondary: #FF9921;
 }
@@ -31,7 +39,7 @@
 }
 
 .display-5 {
-    font-size: clamp(2.5rem, 0.7133rem + 3.5vw, 3.5rem);  // min:40px and max:56px
+    font-size: clamp(2.5rem, 0.7133rem + 3.5vw, 3.5rem); // min:40px and max:56px
 }
 
 
@@ -75,6 +83,7 @@
 .hover-text-brand-secondary:hover {
     color: var(--text-brand-secondary);
 }
+
 /* Text color end */
 
 
