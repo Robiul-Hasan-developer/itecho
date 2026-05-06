@@ -280,6 +280,12 @@
     background-color: #0E59F2;
 }
 
+.active-icon-brand-secondary .accordion-button[aria-expanded=true] .accordion-arrow {
+    background-color: var(--text-brand-secondary) !important;
+    border-color: var(--text-brand-secondary) !important;
+    color: #000 !important;
+}
+
 /* ========================== Button Css Start =============== */
 .button__label {
     position: relative;
@@ -7956,6 +7962,10 @@ svg.radial-progress circle.incomplete {
     color: #DFE0E4;
 }
 
+.text-new-neutral-70 {
+    color: #A6AAB5;
+}
+
 /* Text color start */
 .text-brand {
     color: #0E59F2;
@@ -8220,7 +8230,12 @@ svg.radial-progress circle.incomplete {
 }
 
 .text-stroke:hover {
-    -webkit-text-stroke: 1px #ffffffbc;
+    -webkit-text-stroke: 1px #ffffff96;
+}
+
+.before-arrow-none .accordion-button[aria-expanded=true]::after,
+.before-arrow-none .accordion-button[aria-expanded=false]::after {
+    display: none;
 }
 
 /* New FAQ section end */

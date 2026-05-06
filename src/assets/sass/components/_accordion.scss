@@ -1,33 +1,41 @@
-/* =========================== Accordion Css start ============================= */ 
+/* =========================== Accordion Css start ============================= */
 .common-accordion {
     .accordion-item {
         &:not(:last-child) {
-            margin-block-end:20px;
+            margin-block-end: 20px;
         }
     }
+
     &:first-of-type .accordion-button.collapsed {
-        border-radius: 5px;  
+        border-radius: 5px;
     }
+
     &:last-of-type .accordion-button.collapsed {
-        border-radius: 5px;  
+        border-radius: 5px;
     }
-    .accordion-button { 
+
+    .accordion-button {
         &::after {
             background-image: none;
         }
+
         &:focus {
             box-shadow: none;
         }
+
         &:not(.collapsed) {
             background-color: transparent !important;
             box-shadow: none;
             color: var(--main-600);
+
             &::after {
                 background-image: none;
                 color: var(--main-600);
             }
         }
-        &[aria-expanded="true"], &[aria-expanded="false"] {
+
+        &[aria-expanded="true"],
+        &[aria-expanded="false"] {
             &::after {
                 font-family: "Phosphor";
                 font-weight: 900;
@@ -40,11 +48,13 @@
                 inset-inline-end: 30px;
                 height: unset;
                 text-align: center;
+
                 @media (max-width: 991px) {
                     inset-inline-end: 20px;
                 }
             }
         }
+
         &[aria-expanded="false"] {
             &::after {
                 content: "\f107";
@@ -53,6 +63,7 @@
         }
     }
 }
+
 /* ================================= Accordion Css End =========================== */
 
 
@@ -62,10 +73,12 @@
 .accordion-item {
     border: none;
 }
+
 .accordion-button {
     border: 1px solid #D9D9D9;
     border-radius: 12px;
 }
+
 .accordion-button:not(.collapsed) {
     color: #fff;
     background-color: #232323;
@@ -89,10 +102,24 @@
     background-image: none;
     transition: .4s;
 }
+
 .accordion-button:not(.collapsed)::after {
     background-image: none;
     content: "\E32A";
     font-family: "Phosphor";
     color: #fff;
     background-color: #0E59F2;
+}
+
+
+.active-icon-brand-secondary {
+    .accordion-button {
+        &[aria-expanded="true"] {
+            .accordion-arrow {
+                background-color: var(--text-brand-secondary) !important;
+                border-color: var(--text-brand-secondary) !important;
+                color: #000 !important;
+            }
+        }
+    }
 }

@@ -3,8 +3,18 @@
     color: transparent;
     -webkit-text-stroke: 1px #FFFFFF33;
     transition: .5s;
+
     &:hover {
-        -webkit-text-stroke: 1px #ffffffbc;
+        -webkit-text-stroke: 1px #ffffff96;
     }
 }
+
+
+.before-arrow-none {
+    .accordion-button[aria-expanded=true]::after,
+    .accordion-button[aria-expanded=false]::after {
+        display: none;
+    }
+}
+
 /* New FAQ section end */
