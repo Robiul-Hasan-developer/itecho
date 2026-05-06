@@ -319,47 +319,102 @@ if ($(".item-rotate-on-scroll").length > 0) {
 
 // **************************** item to right on scroll js Start ****************************
 if ($(".text-to-right").length > 0) {
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".text-to-right",
-      start: "bottom 56%",
-      end: "bottom 0%",
-      scrub: true,
-      invalidateOnRefresh: true,
-      markers: false,
-    },
-  }).to(".text-to-right", {
-    x: 40, // move right
-    duration: 2,
-    ease: "power1.inOut",
-  });
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".text-to-right",
+        start: "bottom 56%",
+        end: "bottom 0%",
+        scrub: true,
+        invalidateOnRefresh: true,
+        markers: false,
+      },
+    })
+    .to(".text-to-right", {
+      x: 40, // move right
+      duration: 2,
+      ease: "power1.inOut",
+    });
 }
 // **************************** item to right on scroll js End ****************************
 
-
 // **************************** Custom Split text Js Start js start ****************************
-	document.querySelectorAll(".splitTextStyleOne").forEach(title => {
-		const split = new SplitText(title, { type: "chars" });
+document.querySelectorAll(".splitTextStyleOne").forEach((title) => {
+  const split = new SplitText(title, { type: "chars" });
 
-		split.chars.forEach(char => char.classList.add("char"));
+  split.chars.forEach((char) => char.classList.add("char"));
 
-		gsap.to(split.chars, {
-			scrollTrigger: {
-			trigger: title,
-			start: "top 80%",
-			},
-			duration: .8,
-			clipPath: "inset(0% 0% 0% 0%)",
-			x: 0,
-			opacity: 1,
-			ease: "power4.out",
-			stagger: 0.03
-		});
-	});
+  gsap.to(split.chars, {
+    scrollTrigger: {
+      trigger: title,
+      start: "top 80%",
+    },
+    duration: 0.8,
+    clipPath: "inset(0% 0% 0% 0%)",
+    x: 0,
+    opacity: 1,
+    ease: "power4.out",
+    stagger: 0.03,
+  });
+});
 // **************************** Custom Split text Js Start js end ****************************
 
+// **************************** Text Reveal js Start ****************************
+function text_reveal() {
+  const split_2 = new SplitText(".text-reveal", { type: "lines" });
+  split_2.lines.forEach((target) => {
+    gsap.to(target, {
+      backgroundPositionX: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: target,
+        scrub: 1,
+        start: "top 85%",
+        end: "bottom center",
+      },
+    });
+  });
+}
 
+$(function () {
+  text_reveal();
+});
+// **************************** Text Reveal js Start ****************************
 
+// **************************** Text Reveal with Wave js Start ****************************
+function tp_scrollBg($wrap) {
+  $wrap = $wrap || jQuery("body");
+  $wrap.find(".text-reveal-wave").each(function () {
+    var $el = jQuery(this);
+    var tpSplit = new SplitText($el[0], { type: "words, chars" });
+    jQuery(tpSplit.words).children().first().addClass("tp-first-char");
+    gsap.fromTo(
+      tpSplit.chars,
+      {
+        position: "relative",
+        display: "inline-block",
+        opacity: 0.2,
+        x: -5,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: $el[0],
+          toggleActions: "play pause reverse pause",
+          start: "top 70%",
+          end: "top 40%",
+          scrub: 0.7,
+        },
+      },
+    );
+  });
+}
+window.addEventListener("DOMContentLoaded", function () {
+  tp_scrollBg();
+});
+// **************************** Text Reveal with Wave js End ****************************
 
 /* **************************************************************************** 
                           Custom GSAP js start 

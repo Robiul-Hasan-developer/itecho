@@ -8004,6 +8004,16 @@ svg.radial-progress circle.incomplete {
     clip-path: inset(0 100% 0 0);
 }
 
+.text-reveal > div {
+    background-image: linear-gradient(to right, #e0eeee 50%, #383C3E 50%);
+    padding: 10px 0;
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 /* ============================= splitTextStyleOne css end ============================= */
 /* new header one css start */
 .menu-white .nav-menu__link {
