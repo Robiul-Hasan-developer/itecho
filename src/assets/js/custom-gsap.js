@@ -159,82 +159,6 @@ mmm.add("(max-width: 991px)", () => {
 });
 // **************************** Mobile Menu js End ****************************
 
-// **************************** Custom Split text Js Start ****************************
-if ($(".splitTextStyleOne").length) {
-  let staggerAmount = 0.03,
-    translateXValue = 20,
-    delayValue = 0.1,
-    easeType = "power2.out",
-    animatedTextElements = document.querySelectorAll(".splitTextStyleOne");
-
-  animatedTextElements.forEach((element) => {
-    let animationSplitText = new SplitText(element, { type: "chars, words" });
-    gsap.from(animationSplitText.chars, {
-      duration: 1,
-      delay: delayValue,
-      x: translateXValue,
-      autoAlpha: 0,
-      stagger: staggerAmount,
-      ease: easeType,
-      scrollTrigger: { trigger: element, start: "top 85%" },
-    });
-  });
-}
-
-if ($(".splitTextStyleTwo").length) {
-  let animatedTextElements = document.querySelectorAll(".splitTextStyleTwo");
-
-  animatedTextElements.forEach((element) => {
-    //Reset if needed
-    if (element.animation) {
-      element.animation.progress(1).kill();
-      element.split.revert();
-    }
-
-    element.split = new SplitText(element, {
-      type: "lines,words,chars",
-      linesClass: "split-line",
-    });
-    gsap.set(element, { perspective: 400 });
-
-    gsap.set(element.split.chars, {
-      opacity: 0,
-      x: "50",
-    });
-
-    element.animation = gsap.to(element.split.chars, {
-      scrollTrigger: { trigger: element, start: "top 90%" },
-      x: "0",
-      y: "0",
-      rotateX: "0",
-      opacity: 1,
-      duration: 1,
-      ease: Back.easeOut,
-      stagger: 0.02,
-    });
-  });
-}
-
-if ($(".splitTextStyleThree").length) {
-  let staggerAmount = 0.05,
-    translateXValue = 0,
-    delayValue = 0.5,
-    animatedTextElements = document.querySelectorAll(".splitTextStyleThree");
-
-  animatedTextElements.forEach((element) => {
-    let animationSplitText = new SplitText(element, { type: "chars, words" });
-    gsap.from(animationSplitText.words, {
-      duration: 1,
-      delay: delayValue,
-      x: 20,
-      autoAlpha: 0,
-      stagger: staggerAmount,
-      scrollTrigger: { trigger: element, start: "top 85%" },
-    });
-  });
-}
-// **************************** Custom Split text Js End ****************************
-
 // **************************** Position Aware button hover js start ****************************
 class Button {
   constructor(buttonElement) {
@@ -411,6 +335,31 @@ if ($(".text-to-right").length > 0) {
   });
 }
 // **************************** item to right on scroll js End ****************************
+
+
+// **************************** Custom Split text Js Start js start ****************************
+	document.querySelectorAll(".splitTextStyleOne").forEach(title => {
+		const split = new SplitText(title, { type: "chars" });
+
+		split.chars.forEach(char => char.classList.add("char"));
+
+		gsap.to(split.chars, {
+			scrollTrigger: {
+			trigger: title,
+			start: "top 80%",
+			},
+			duration: .8,
+			clipPath: "inset(0% 0% 0% 0%)",
+			x: 0,
+			opacity: 1,
+			ease: "power4.out",
+			stagger: 0.03
+		});
+	});
+// **************************** Custom Split text Js Start js end ****************************
+
+
+
 
 /* **************************************************************************** 
                           Custom GSAP js start 

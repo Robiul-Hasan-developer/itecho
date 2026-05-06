@@ -7997,6 +7997,14 @@ svg.radial-progress circle.incomplete {
     font-family: "Phosphor-Fill";
 }
 
+/* ============================= splitTextStyleOne css start ============================= */
+.splitTextStyleOne .char {
+    display: inline-block;
+    transform-origin: left center;
+    clip-path: inset(0 100% 0 0);
+}
+
+/* ============================= splitTextStyleOne css end ============================= */
 /* new header one css start */
 .menu-white .nav-menu__link {
     color: #fff;
