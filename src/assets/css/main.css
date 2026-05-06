@@ -8070,6 +8070,10 @@ svg.radial-progress circle.incomplete {
     background-color: var(--text-brand-secondary);
 }
 
+.new-brand-one-slider .swiper-slide.swiper-slide-blank {
+    display: none;
+}
+
 /* ============================= New brand slider one css end ============================== */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
