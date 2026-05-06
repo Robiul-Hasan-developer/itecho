@@ -122,4 +122,8 @@
             }
         }
     }
+
+    .accordion-item:has(.accordion-button[aria-expanded=true]) {
+        background: #1D1934 !important;
+    }
 }

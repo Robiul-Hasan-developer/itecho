@@ -286,6 +286,10 @@
     color: #000 !important;
 }
 
+.active-icon-brand-secondary .accordion-item:has(.accordion-button[aria-expanded=true]) {
+    background: #1D1934 !important;
+}
+
 /* ========================== Button Css Start =============== */
 .button__label {
     position: relative;
@@ -5385,6 +5389,10 @@ input:focus, input:focus-visible {
     padding: clamp(1rem, -6.1013rem + 9.4763vw, 2.25rem);
 }
 
+.tw-p-42-px {
+    padding: clamp(1.5rem, 0.0938rem + 4.5vw, 2.625rem);
+}
+
 .tw-p-48-px {
     padding: clamp(1.5rem, -12.1677rem + 32.9177vw, 3rem);
 }
@@ -6828,6 +6836,10 @@ input:focus, input:focus-visible {
     line-height: 1.1;
 }
 
+.tw-leading-1 {
+    line-height: 1;
+}
+
 .tw-leading-06 {
     line-height: 0.6;
 }
@@ -8231,6 +8243,12 @@ svg.radial-progress circle.incomplete {
 
 .text-stroke:hover {
     -webkit-text-stroke: 1px #ffffff96;
+}
+
+.text-gradient-dark {
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .before-arrow-none .accordion-button[aria-expanded=true]::after,

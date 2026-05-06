@@ -1814,16 +1814,16 @@
         
         <!-- =============================== New FAQ section start =================================== -->
 <section class="new-faq-one py-120 position-relative z-1 overflow-hidden">
-    <div class="position-absolute z-n1 top-0 start-0">
+    <div class="position-absolute z-n1 z-n1 top-0 start-0">
         <img src="assets/images/shape/corner-left-shape.png" alt="corner shape">
     </div>
-    <div class="position-absolute z-n1 bottom-0 end-0">
+    <div class="position-absolute z-n1 z-n1 bottom-0 end-0">
         <img src="assets/images/shape/corner-right-shape.png" alt="corner shape">
     </div>
-    <div class="position-absolute top-50 translate-middle-y start-0 max-w-17-percent">
+    <div class="position-absolute z-n1 top-50 translate-middle-y start-0 max-w-17-percent">
         <img src="assets/images/shape/new-faq-one-element1.png" alt="Element" data-speed=".7">
     </div>
-    <div class="position-absolute top-50 translate-middle-y end-0 max-w-17-percent">
+    <div class="position-absolute z-n1 top-50 translate-middle-y end-0 max-w-17-percent">
         <img src="assets/images/shape/new-faq-one-element2.png" alt="Element" data-speed="1.3">
     </div>
 
@@ -1846,7 +1846,7 @@
                 <div class="col-lg-8">
                     <div class="position-relative">
                         <h2
-                            class="display-1 fw-bold text-stroke position-absolute bottom-100 start-0 tw-leading-0 tw-mb-5">
+                            class="display-1 fw-bold text-stroke position-absolute bottom-100 start-0 tw-leading-1 tw-mb-5">
                             Services</h2>
                         <p class="text-white tw-text-lg text-reveal tw-leading-06 fw-normal">We offer a comprehensive
                             range of IT and AI-powered services designed to help businesses innovate, scale, and succeed
@@ -1859,33 +1859,36 @@
 
         <div class="">
             <div class="accordion common-accordion before-arrow-none active-icon-brand-secondary" id="accordionExample">
-                <div class="accordion-item rounded-0 bg-transparent tw-p-10 border-bottom border-white-20">
+                <div class="accordion-item rounded-0 bg-transparent tw-p-42-px border-bottom border-white-20 mb-0">
                     <h2 class="accordion-header h4">
                         <button
                             class="accordion-button bg-transparent rounded-0 p-0 d-flex align-items-center justify-content-between tw-gap-4 border-0 group group-item"
                             type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                             aria-controls="collapseOne">
                             <span class="d-flex align-items-center tw-gap-74-px">
-                                <span class="h3 text-new-neutral-70">01</span>
-                                <span class="h2 text-white text-reveal-wave">Cloud & DevOps Solutions</span>
+                                <span class="h3 text-new-neutral-70 d-md-inline-block d-none">01</span>
+                                <span class="h2 text-white text-reveal-wave line-clamp-1">Cloud & DevOps Solutions</span>
                             </span>
                             <span
-                                class="accordion-arrow tw-w-13 tw-h-13 d-flex align-items-center justify-content-center rounded-circle border border-white-20 tw-text-2xl text-white group-hover-border-white tw-duration-500 bg-brand-one">
+                                class="accordion-arrow tw-w-13 tw-h-13 d-flex align-items-center justify-content-center rounded-circle border border-white-20 tw-text-2xl text-white group-hover-border-white tw-duration-500 bg-brand-one flex-shrink-0">
                                 <i class="ph ph-arrow-up-right"></i>
                             </span>
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body tw-mt-10">
-                            <div class="d-flex align-items-center tw-gap-42-px">
-                                <div
-                                    class="image-double-animation clip-animation overflow-hidden position-relative d-block h-100 tw-rounded-lg">
-                                    <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image" data-animate="true"
-                                        class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
-                                    <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
-                                        class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                        <div class="accordion-body tw-pt-10 pb-0 ps-0 pe-0">
+                            <div class="d-flex tw-gap-42-px flex-lg-nowrap flex-wrap">
+                                <div class="flex-shrink-0 d-flex">
+                                    <div
+                                        class="image-double-animation clip-animation overflow-hidden position-relative d-block h-100 tw-rounded-lg">
+                                        <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
+                                            data-animate="true"
+                                            class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                                        <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
+                                            class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                                    </div>
                                 </div>
-                                <div class="">
+                                <div class="align-self-center">
                                     <p class="text-white">We build intelligent AI models that analyze data, identify
                                         patterns, and automate decision-making processes. Our machine learning solutions
                                         help businesses gain deeper insights, improve accuracy, and unlock new growth
@@ -1905,134 +1908,208 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="accordion-item bg-neutral-100">
+
+
+
+                <!-- Item 02 -->
+                <div class="accordion-item rounded-0 bg-transparent tw-p-42-px border-bottom border-white-20 mb-0">
                     <h2 class="accordion-header h4">
-                        <button class="accordion-button h4 collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            What products can I customize?
+                        <button
+                            class="accordion-button bg-transparent rounded-0 p-0 d-flex align-items-center justify-content-between tw-gap-4 border-0 group group-item"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            <span class="d-flex align-items-center tw-gap-74-px">
+                                <span class="h3 text-new-neutral-70 d-md-inline-block d-none">02</span>
+                                <span class="h2 text-white text-reveal-wave line-clamp-1">Web Application Development</span>
+                            </span>
+                            <span
+                                class="accordion-arrow tw-w-13 tw-h-13 d-flex align-items-center justify-content-center rounded-circle border border-white-20 tw-text-2xl text-white group-hover-border-white tw-duration-500 bg-brand-one flex-shrink-0">
+                                <i class="ph ph-arrow-up-right"></i>
+                            </span>
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p class="text-body-6 tw-text-lg">This store is a demonstration of a luxury
-                                brand
-                                using the Stiletto Shopify theme. Products and imagery for this demo.
-                            </p>
+                        <div class="accordion-body tw-pt-10 pb-0 ps-0 pe-0">
+                            <div class="d-flex tw-gap-42-px flex-lg-nowrap flex-wrap">
+                                <div class="flex-shrink-0 d-flex">
+                                    <div
+                                        class="image-double-animation clip-animation overflow-hidden position-relative d-block h-100 tw-rounded-lg">
+                                        <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
+                                            data-animate="true"
+                                            class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                                        <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
+                                            class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                                    </div>
+                                </div>
+                                <div class="align-self-center">
+                                    <p class="text-white">We develop scalable and high-performance web applications
+                                        tailored to business needs using modern frameworks and clean architecture.</p>
+                                    <div class="tw-mt-8 d-flex align-items-center tw-gap-2 flex-wrap">
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">React</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">Next.js</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">API</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">Performance</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item bg-neutral-100">
+
+                <!-- Item 03 -->
+                <div class="accordion-item rounded-0 bg-transparent tw-p-42-px border-bottom border-white-20 mb-0">
                     <h2 class="accordion-header h4">
-                        <button class="accordion-button h4 collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            How are your T-shirts printed?
+                        <button
+                            class="accordion-button bg-transparent rounded-0 p-0 d-flex align-items-center justify-content-between tw-gap-4 border-0 group group-item"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            <span class="d-flex align-items-center tw-gap-74-px">
+                                <span class="h3 text-new-neutral-70 d-md-inline-block d-none">03</span>
+                                <span class="h2 text-white text-reveal-wave line-clamp-1">Mobile App Solutions</span>
+                            </span>
+                            <span
+                                class="accordion-arrow tw-w-13 tw-h-13 d-flex align-items-center justify-content-center rounded-circle border border-white-20 tw-text-2xl text-white group-hover-border-white tw-duration-500 bg-brand-one flex-shrink-0">
+                                <i class="ph ph-arrow-up-right"></i>
+                            </span>
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p class="text-body-6 tw-text-lg">This store is a demonstration of a luxury
-                                brand
-                                using the Stiletto Shopify theme. Products and imagery for this demo.
-                            </p>
+                        <div class="accordion-body tw-pt-10 pb-0 ps-0 pe-0">
+                            <div class="d-flex tw-gap-42-px flex-lg-nowrap flex-wrap">
+                                <div class="flex-shrink-0 d-flex">
+                                    <div
+                                        class="image-double-animation clip-animation overflow-hidden position-relative d-block h-100 tw-rounded-lg">
+                                        <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
+                                            data-animate="true"
+                                            class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                                        <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
+                                            class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                                    </div>
+                                </div>
+                                <div class="align-self-center">
+                                    <p class="text-white">Our mobile app solutions deliver seamless user experiences
+                                        with fast performance and modern UI for both Android and iOS platforms.</p>
+                                    <div class="tw-mt-8 d-flex align-items-center tw-gap-2 flex-wrap">
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">Flutter</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">React
+                                            Native</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">iOS</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">Android</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item bg-neutral-100">
+
+                <!-- Item 04 -->
+                <div class="accordion-item rounded-0 bg-transparent tw-p-42-px border-bottom border-white-20 mb-0">
                     <h2 class="accordion-header h4">
-                        <button class="accordion-button h4 collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            What is the best Print Shop material?
+                        <button
+                            class="accordion-button bg-transparent rounded-0 p-0 d-flex align-items-center justify-content-between tw-gap-4 border-0 group group-item"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            <span class="d-flex align-items-center tw-gap-74-px">
+                                <span class="h3 text-new-neutral-70 d-md-inline-block d-none">04</span>
+                                <span class="h2 text-white text-reveal-wave line-clamp-1">UI/UX Design Strategy</span>
+                            </span>
+                            <span
+                                class="accordion-arrow tw-w-13 tw-h-13 d-flex align-items-center justify-content-center rounded-circle border border-white-20 tw-text-2xl text-white group-hover-border-white tw-duration-500 bg-brand-one flex-shrink-0">
+                                <i class="ph ph-arrow-up-right"></i>
+                            </span>
                         </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p class="text-body-6 tw-text-lg">This store is a demonstration of a luxury
-                                brand
-                                using the Stiletto Shopify theme. Products and imagery for this demo.
-                            </p>
+                        <div class="accordion-body tw-pt-10 pb-0 ps-0 pe-0">
+                            <div class="d-flex tw-gap-42-px flex-lg-nowrap flex-wrap">
+                                <div class="flex-shrink-0 d-flex">
+                                    <div
+                                        class="image-double-animation clip-animation overflow-hidden position-relative d-block h-100 tw-rounded-lg">
+                                        <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
+                                            data-animate="true"
+                                            class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                                        <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
+                                            class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                                    </div>
+                                </div>
+                                <div class="align-self-center">
+                                    <p class="text-white">We design user-centered interfaces that are visually engaging
+                                        and optimized for usability to improve customer satisfaction.</p>
+                                    <div class="tw-mt-8 d-flex align-items-center tw-gap-2 flex-wrap">
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">Figma</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">Wireframe</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">Prototype</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">UX
+                                            Research</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item bg-neutral-100">
+
+                <!-- Item 05 -->
+                <div class="accordion-item rounded-0 bg-transparent tw-p-42-px border-bottom border-white-20 mb-0">
                     <h2 class="accordion-header h4">
-                        <button class="accordion-button h4 collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            What is the best T-shirt material?
+                        <button
+                            class="accordion-button bg-transparent rounded-0 p-0 d-flex align-items-center justify-content-between tw-gap-4 border-0 group group-item"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                            aria-controls="collapseFive">
+                            <span class="d-flex align-items-center tw-gap-74-px">
+                                <span class="h3 text-new-neutral-70 d-md-inline-block d-none">05</span>
+                                <span class="h2 text-white text-reveal-wave line-clamp-1">Digital Marketing & SEO</span>
+                            </span>
+                            <span
+                                class="accordion-arrow tw-w-13 tw-h-13 d-flex align-items-center justify-content-center rounded-circle border border-white-20 tw-text-2xl text-white group-hover-border-white tw-duration-500 bg-brand-one flex-shrink-0">
+                                <i class="ph ph-arrow-up-right"></i>
+                            </span>
                         </button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p class="text-body-6 tw-text-lg">This store is a demonstration of a luxury
-                                brand
-                                using the Stiletto Shopify theme. Products and imagery for this demo.
-                            </p>
+                        <div class="accordion-body tw-pt-10 pb-0 ps-0 pe-0">
+                            <div class="d-flex tw-gap-42-px flex-lg-nowrap flex-wrap">
+                                <div class="flex-shrink-0 d-flex">
+                                    <div
+                                        class="image-double-animation clip-animation overflow-hidden position-relative d-block h-100 tw-rounded-lg">
+                                        <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
+                                            data-animate="true"
+                                            class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                                        <img src="assets/images/thumbs/new-faq-one-img.png" alt="Image"
+                                            class="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img">
+                                    </div>
+                                </div>
+                                <div class="align-self-center">
+                                    <p class="text-white">We boost your online presence with data-driven marketing
+                                        strategies, SEO optimization, and targeted campaigns.</p>
+                                    <div class="tw-mt-8 d-flex align-items-center tw-gap-2 flex-wrap">
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">SEO</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">Marketing</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">Ads</a>
+                                        <a href="javascript:void(0)"
+                                            class="border border-white-20 tw-py-1 tw-px-4 bg-brand-one hover-bg-white hover-text-heading tw-text-sm fw-medium text-white rounded-pill">Growth</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item bg-neutral-100">
-                    <h2 class="accordion-header h4">
-                        <button class="accordion-button h4 collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            How long will my package take to arrive?
-                        </button>
-                    </h2>
-                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p class="text-body-6 tw-text-lg">This store is a demonstration of a luxury
-                                brand
-                                using the Stiletto Shopify theme. Products and imagery for this demo.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item bg-neutral-100">
-                    <h2 class="accordion-header h4">
-                        <button class="accordion-button h4 collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            How long does delivery take?
-                        </button>
-                    </h2>
-                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p class="text-body-6 tw-text-lg">This store is a demonstration of a luxury
-                                brand
-                                using the Stiletto Shopify theme. Products and imagery for this demo.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item bg-neutral-100">
-                    <h2 class="accordion-header h4">
-                        <button class="accordion-button h4 collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            Types of products do you print?
-                        </button>
-                    </h2>
-                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p class="text-body-6 tw-text-lg">This store is a demonstration of a luxury
-                                brand
-                                using the Stiletto Shopify theme. Products and imagery for this demo.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item bg-neutral-100">
-                    <h2 class="accordion-header h4">
-                        <button class="accordion-button h4 collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            How are your design printed?
-                        </button>
-                    </h2>
-                    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p class="text-body-6 tw-text-lg">This store is a demonstration of a luxury
-                                brand
-                                using the Stiletto Shopify theme. Products and imagery for this demo.
-                            </p>
-                        </div>
-                    </div>
-                </div> -->
+
+
             </div>
         </div>
     </div>

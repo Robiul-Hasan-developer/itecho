@@ -10,6 +10,13 @@
 }
 
 
+.text-gradient-dark {
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 .before-arrow-none {
     .accordion-button[aria-expanded=true]::after,
     .accordion-button[aria-expanded=false]::after {
