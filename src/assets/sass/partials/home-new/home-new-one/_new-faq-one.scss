@@ -1,0 +1,10 @@
+/* New FAQ section start */
+.text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px #FFFFFF33;
+    transition: .5s;
+    &:hover {
+        -webkit-text-stroke: 1px #ffffffbc;
+    }
+}
+/* New FAQ section end */

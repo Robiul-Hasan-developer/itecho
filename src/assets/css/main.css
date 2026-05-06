@@ -6822,6 +6822,18 @@ input:focus, input:focus-visible {
     line-height: 1.1;
 }
 
+.tw-leading-06 {
+    line-height: 0.6;
+}
+
+.tw-leading-none {
+    line-height: none;
+}
+
+.tw-leading-0 {
+    line-height: 0;
+}
+
 .hover-common-underline {
     background-image: linear-gradient(currentColor, currentColor), linear-gradient(currentColor, currentColor);
     background-size: 0 1px, 0 1px;
@@ -7921,7 +7933,7 @@ svg.radial-progress circle.incomplete {
 }
 
 .display-1 {
-    font-size: clamp(4rem, 2.0366rem + 5.4634vw, 7.5rem);
+    font-size: clamp(4rem, 2.0366rem + 5.4634vw, 10rem);
 }
 
 .display-2 {
@@ -8200,6 +8212,18 @@ svg.radial-progress circle.incomplete {
 }
 
 /* new why choose one css end*/
+/* New FAQ section start */
+.text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px #FFFFFF33;
+    transition: 0.5s;
+}
+
+.text-stroke:hover {
+    -webkit-text-stroke: 1px #ffffffbc;
+}
+
+/* New FAQ section end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;
