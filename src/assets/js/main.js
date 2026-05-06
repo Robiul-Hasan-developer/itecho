@@ -709,6 +709,7 @@
     //     },
     //   },
     // });
+    
     var brandSlider = new Swiper(".new-brand-one-slider", {
       autoplay: {
         delay: 2000,
@@ -717,7 +718,7 @@
       speed: 1500,
       grabCursor: true,
       loop: true,
-
+      loopFillGroupWithBlank: true,
       slidesPerView: 6,
       slidesPerGroup: 2,
 
@@ -725,6 +726,8 @@
         el: ".new-brand-one-slider-pagination",
         clickable: true,
       },
+      freeMode: true,
+      freeModeMomentum: false,
 
       breakpoints: {
         300: {
