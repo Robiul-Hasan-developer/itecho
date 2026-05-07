@@ -2612,6 +2612,10 @@ input:focus, input:focus-visible {
     height: 92px;
 }
 
+.tw-h-96-px {
+    height: 96px;
+}
+
 .tw-h-100-px {
     height: 100px;
 }
