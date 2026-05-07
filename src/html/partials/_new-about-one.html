@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="tw-p-60-px tw-rounded-2xl bg-gradient-black-left-right">
+                    <div class="tw-p-60-px tw-rounded-2xl bg-gradient-black-left-right position-relative z-1">
                         <div class="d-flex align-items-center tw-gap-2">
                             <span class="d-flex tw-text-2xl text-brand-secondary">
                                 <i class="ph-bold ph-sparkle"></i>
@@ -79,7 +79,7 @@
                     <div class="h-100 w-100"></div>
                 </div>
                 <div class="col-lg-7">
-                    <div class="border-top border-white-20 d-flex flex-sm-row flex-column">
+                    <div class="border-top border-white-20 d-flex flex-sm-row flex-column position-relative z-1">
                         <div class="tw-pt-15 w-280-px flex-shrink-0 tw-pe-11 tw-ps-6">
                             <div class="d-flex items-content-wrap tw-gap-5 justify-content-center">
                                 <div class="">
@@ -135,5 +135,10 @@
             </div>
         </div>
     </div>
+
+    @@include('../partials/_new-counter-one.html', {
+        'sectionClass': 'pt-120'
+    })
+
 </section>
 <!-- ============================ New About section end ================================== -->

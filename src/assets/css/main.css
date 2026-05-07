@@ -2295,6 +2295,10 @@ input:focus, input:focus-visible {
     opacity: 0.1;
 }
 
+.pointer-event-none {
+    pointer-events: none;
+}
+
 /* ================================= Classes Css End =========================== */
 /* Font Size Class Start */
 .text-inherit {
@@ -2460,6 +2464,10 @@ input:focus, input:focus-visible {
 
 .tw-text-122-px {
     font-size: clamp(2.25rem, -2.7175rem + 10.349vw, 7.625rem);
+}
+
+.tw-text-100-px {
+    font-size: clamp(4.75rem, 2.0366rem + 3.4634vw, 6.25rem);
 }
 
 .tw-text-200-px {
@@ -8177,6 +8185,10 @@ svg.radial-progress circle.incomplete {
     -webkit-text-stroke: 1.5px #000;
 }
 
+.stroke-black-1-px {
+    -webkit-text-stroke: 1px #000;
+}
+
 /* New banner one css end */
 /* ============================= New brand slider one css start ============================== */
 .swiper-pagination-bullet {
@@ -8292,7 +8304,7 @@ svg.radial-progress circle.incomplete {
         position: absolute;
         inset-inline-end: 56%;
         top: 0;
-        z-index: -1;
+        z-index: 1;
         height: 100%;
     }
 }
@@ -8305,7 +8317,7 @@ svg.radial-progress circle.incomplete {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    max-width: 140px;
+    width: 140px;
     line-height: 0.8;
 }
 
