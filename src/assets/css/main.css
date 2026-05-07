@@ -8413,6 +8413,33 @@ svg.radial-progress circle.incomplete {
 }
 
 /* hover slide animation css end */
+.title-image-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 58px;
+    border-radius: 14px;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    top: -4px;
+}
+
+.title-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.title-image-wrapper:hover .title-image {
+    transform: scale(1.08);
+}
+
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;
