@@ -8283,11 +8283,18 @@ svg.radial-progress circle.incomplete {
 }
 
 .new-about-one-content-left {
-    position: absolute;
-    inset-inline-end: 56%;
-    top: 0;
     padding-inline-start: 100px;
-    z-index: -1;
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .new-about-one-content-left {
+        position: absolute;
+        inset-inline-end: 56%;
+        top: 0;
+        z-index: -1;
+        height: 100%;
+    }
 }
 
 .text-white-bg-img {
