@@ -8010,6 +8010,10 @@ svg.radial-progress circle.incomplete {
     color: #DFE0E4;
 }
 
+.text-new-neutral-50 {
+    color: #C1C4CC;
+}
+
 .text-new-neutral-70 {
     color: #A6AAB5;
 }
@@ -8380,6 +8384,29 @@ svg.radial-progress circle.incomplete {
         scale: 1.02;
     }
 }
+
+.hover-slide-animation {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.hover-slide-animation::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(130deg, rgba(118, 96, 255, 0) 0%, rgba(118, 96, 255, 0.02) 15%, rgba(118, 96, 255, 0.08) 30%, rgba(118, 96, 255, 0.22) 50%, rgba(255, 255, 255, 0.08) 65%, rgba(118, 96, 255, 0.12) 80%, rgba(118, 96, 255, 0.02) 92%, rgba(118, 96, 255, 0) 100%);
+    transform: translateX(-100%);
+    transition: transform 1.2s ease;
+    pointer-events: none;
+}
+
+.hover-slide-animation:hover::after {
+    transform: translateX(100%);
+}
+
 /* New how it work one css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
