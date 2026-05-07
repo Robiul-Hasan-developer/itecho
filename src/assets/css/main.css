@@ -3879,6 +3879,10 @@ input:focus, input:focus-visible {
     }
 }
 
+.tw--ms-20-px {
+    margin-inline-start: -20px;
+}
+
 .tw-mt--12-px {
     margin-block-start: -12px;
 }
@@ -6027,6 +6031,10 @@ input:focus, input:focus-visible {
     transform: scale(1.02);
 }
 
+.hover-scale-14:hover {
+    transform: scale(1.4);
+}
+
 /* Active Scale Css End */
 /* Hide Scroll bar Css For Custom Modal */
 .scroll-hide {
@@ -6443,6 +6451,10 @@ input:focus, input:focus-visible {
 
 .tw-z-9999 {
     z-index: 9999;
+}
+
+.tw-hover-z-4:hover {
+    z-index: 4 !important;
 }
 
 /* Z index css End */
@@ -8257,6 +8269,24 @@ svg.radial-progress circle.incomplete {
 }
 
 /* New FAQ section end */
+/* new about one css start*/
+.bg-gradient-black-left-right {
+    background: linear-gradient(270deg, rgba(7, 2, 32, 0) 0%, rgba(7, 2, 32, 0.4) 62.49%, rgba(7, 2, 32, 0.95) 74.21%, #070220 100%);
+}
+
+.text-white-bg-img {
+    background-image: url("../images/bg/counter-text-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 112px;
+    line-height: 0.8;
+}
+
+/* new about one css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;

@@ -1,0 +1,20 @@
+/* new about one css start*/
+.bg-gradient-black-left-right {
+    background: linear-gradient(270deg, rgba(7, 2, 32, 0) 0%, rgba(7, 2, 32, 0.4) 62.49%, rgba(7, 2, 32, 0.95) 74.21%, #070220 100%);
+}
+
+
+
+.text-white-bg-img {
+    background-image: url("../images/bg/counter-text-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 112px;
+    line-height: 0.8;
+}
+
+/* new about one css end */
