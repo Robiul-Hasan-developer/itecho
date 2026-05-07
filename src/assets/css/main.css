@@ -4361,6 +4361,10 @@ input:focus, input:focus-visible {
     max-height: 100vh;
 }
 
+.tw-max-h-97-px {
+    max-height: 97px;
+}
+
 /* Max Height Css Class End */
 /* Max width Css Class Start */
 .max-w-13-px {
@@ -7963,19 +7967,19 @@ svg.radial-progress circle.incomplete {
 }
 
 .display-1 {
-    font-size: clamp(4rem, 2.0366rem + 5.4634vw, 10rem);
+    font-size: clamp(4rem, 2.0366rem + 7.4634vw, 10rem);
 }
 
 .display-2 {
-    font-size: clamp(3.25rem, 1.6346rem + 3.3654vw, 5rem);
+    font-size: clamp(3.25rem, 1.6346rem + 5.3654vw, 5rem);
 }
 
 .display-3 {
-    font-size: clamp(3rem, 1.6154rem + 2.8846vw, 4.5rem);
+    font-size: clamp(3rem, 1.6154rem + 4.8846vw, 4.5rem);
 }
 
 .display-4 {
-    font-size: clamp(2.75rem, 1.5962rem + 2.4038vw, 4rem);
+    font-size: clamp(2.75rem, 1.5962rem + 3.4038vw, 4rem);
 }
 
 .display-5 {
@@ -8274,6 +8278,14 @@ svg.radial-progress circle.incomplete {
     background: linear-gradient(270deg, rgba(7, 2, 32, 0) 0%, rgba(7, 2, 32, 0.4) 62.49%, rgba(7, 2, 32, 0.95) 74.21%, #070220 100%);
 }
 
+.new-about-one-content-left {
+    position: absolute;
+    inset-inline-end: 56%;
+    top: 0;
+    padding-inline-start: 100px;
+    z-index: -1;
+}
+
 .text-white-bg-img {
     background-image: url("../images/bg/counter-text-bg.jpg");
     background-position: center;
@@ -8282,8 +8294,12 @@ svg.radial-progress circle.incomplete {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    max-width: 112px;
+    max-width: 140px;
     line-height: 0.8;
+}
+
+.writing-mode-rl {
+    writing-mode: sideways-rl;
 }
 
 /* new about one css end */
