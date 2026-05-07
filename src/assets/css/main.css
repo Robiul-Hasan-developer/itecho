@@ -2482,6 +2482,10 @@ input:focus, input:focus-visible {
     font-size: clamp(3.75rem, -7.5926rem + 23.6305vw, 17.5rem);
 }
 
+.tw-text-160-px {
+    font-size: 160px;
+}
+
 /* Font Size Class End */
 .font-heading {
     font-family: var(--heading-font);
@@ -8350,7 +8354,7 @@ svg.radial-progress circle.incomplete {
     transform-origin: bottom left;
     transform-style: preserve-3d;
     will-change: transform;
-    margin-bottom: -10px;
+    margin-bottom: -24px;
     filter: drop-shadow(0 20px 40px rgba(110, 120, 255, 0.25));
     animation: robotHandFloat 4s ease-in-out infinite alternate, robotHandRotate 5s ease-in-out infinite alternate, robotHandScale 3.5s ease-in-out infinite alternate;
 }
@@ -8384,7 +8388,8 @@ svg.radial-progress circle.incomplete {
         scale: 1.02;
     }
 }
-
+/* New how it work one css end */
+/* hover slide animation css start */
 .hover-slide-animation {
     position: relative;
     overflow: hidden;
@@ -8407,7 +8412,7 @@ svg.radial-progress circle.incomplete {
     transform: translateX(100%);
 }
 
-/* New how it work one css end */
+/* hover slide animation css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;

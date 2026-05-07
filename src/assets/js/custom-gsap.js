@@ -784,43 +784,43 @@ cards.forEach((card, index) => {
 
 
 // **************************** Magnetic hover effect js start ****************************
-// const magneticCards = gsap.utils.toArray(".magnetic-card-item");
+const magneticCards = gsap.utils.toArray(".magnetic-item");
 
-// magneticCards.forEach((magneticCard) => {
+magneticCards.forEach((magneticCard) => {
 
-//   magneticCard.addEventListener("mousemove", (e) => {
+  magneticCard.addEventListener("mousemove", (e) => {
 
-//     const rect = magneticCard.getBoundingClientRect();
+    const rect = magneticCard.getBoundingClientRect();
 
-//     const x = e.clientX - rect.left;
-//     const y = e.clientY - rect.top;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-//     const moveX = (x - rect.width / 2) * 0.12;
-//     const moveY = (y - rect.height / 2) * 0.12;
+    const moveX = (x - rect.width / 2) * 0.12;
+    const moveY = (y - rect.height / 2) * 0.12;
 
-//     gsap.to(magneticCard, {
-//       x: moveX,
-//       y: moveY,
-//       rotateY: moveX * 0.12,
-//       rotateX: -moveY * 0.12,
-//       duration: 1,
-//       ease: "power3.out",
-//     });
+    gsap.to(magneticCard, {
+      x: moveX,
+      y: moveY,
+      rotateY: moveX * 0.12,
+      rotateX: -moveY * 0.12,
+      duration: 1,
+      ease: "power3.out",
+    });
 
-//   });
+  });
 
-//   magneticCard.addEventListener("mouseleave", () => {
-//     gsap.to(magneticCard, {
-//       x: 0,
-//       y: 0,
-//       rotateY: 0,
-//       rotateX: 0,
-//       duration: 1.4,
-//       ease: "elastic.out(1, 0.4)",
-//     });
-//   });
+  magneticCard.addEventListener("mouseleave", () => {
+    gsap.to(magneticCard, {
+      x: 0,
+      y: 0,
+      rotateY: 0,
+      rotateX: 0,
+      duration: 1.4,
+      ease: "elastic.out(1, 0.4)",
+    });
+  });
 
-// });
+});
 // **************************** Magnetic hover effect js end ****************************
 
 

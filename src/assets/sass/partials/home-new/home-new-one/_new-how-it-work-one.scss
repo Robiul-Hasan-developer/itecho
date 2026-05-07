@@ -10,7 +10,7 @@
     transform-origin: bottom left;
     transform-style: preserve-3d;
     will-change: transform;
-    margin-bottom: -10px;
+    margin-bottom: -24px;
     filter: drop-shadow(0 20px 40px rgba(110, 120, 255, 0.25));
     animation: robotHandFloat 4s ease-in-out infinite alternate,
         robotHandRotate 5s ease-in-out infinite alternate,
@@ -47,9 +47,9 @@
     }
 }
 
+/* New how it work one css end */
 
-
-
+/* hover slide animation css start */
 .hover-slide-animation {
     position: relative;
     overflow: hidden;
@@ -80,5 +80,4 @@
 .hover-slide-animation:hover::after {
     transform: translateX(100%);
 }
-
-/* New how it work one css end */
+/* hover slide animation css end */
