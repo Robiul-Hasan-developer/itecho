@@ -566,7 +566,7 @@ if ($(".custom-fade-animation").length > 0) {
 
 //**************************** On scroll side item coming js Start ****************************
 mmm.add("(min-width: 1024px)", () => {
-  if (document.querySelectorAll(".come-from-right-item-section").length > 0) {
+  if (document.querySelectorAll(".come-from-right-item-section, .come-from-right-item-wrapper").length > 0) {
     const boxes = document.querySelectorAll(".come-from-right-item");
     gsap.from(boxes, {
       x: "100%",
@@ -714,6 +714,26 @@ headings.forEach((heading) => {
   });
 });
 // **************************** Text hover animation js End ****************************
+
+
+// **************************** Robot hand js Start ****************************
+if ($(".robot-hand-wrapper").length) {
+  gsap.from(".robot-hand-wrapper", {
+    scrollTrigger: {
+      trigger: ".robot-hand-wrapper",
+      start: "top 85%",
+      end: "top 30%",
+      scrub: 1.5,
+      markers: false,
+    },
+    x: -200,
+    opacity: 0,
+    rotate: -10,
+    ease: "power3.out",
+  });
+}
+// **************************** Robot hand js End ****************************
+
 
 /* **************************************************************************** 
                           Custom GSAP js start 

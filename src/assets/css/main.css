@@ -4661,6 +4661,10 @@ input:focus, input:focus-visible {
     max-width: 28%;
 }
 
+.max-w-38-percent {
+    max-width: 38%;
+}
+
 .max-w-70-percent {
     max-width: 70%;
 }
@@ -8330,6 +8334,53 @@ svg.radial-progress circle.incomplete {
 }
 
 /* new about one css end */
+/* New how it work one css start */
+.robot-hand-wrapper {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.robot-hand-img {
+    transform-origin: 15% 85%;
+    max-width: 100%;
+    transform-origin: bottom left;
+    transform-style: preserve-3d;
+    will-change: transform;
+    margin-bottom: -10px;
+    filter: drop-shadow(0 20px 40px rgba(110, 120, 255, 0.25));
+    animation: robotHandFloat 4s ease-in-out infinite alternate, robotHandRotate 5s ease-in-out infinite alternate, robotHandScale 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes robotHandFloat {
+    0% {
+        transform: translate(0px, 10px) rotate(-4deg);
+    }
+
+    100% {
+        transform: translate(12px, -10px) rotate(4deg);
+    }
+}
+
+@keyframes robotHandRotate {
+    0% {
+        rotate: x(0deg) y(0deg);
+    }
+
+    100% {
+        rotate: x(-3deg) y(4deg);
+    }
+}
+
+@keyframes robotHandScale {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.02;
+    }
+}
+/* New how it work one css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;
