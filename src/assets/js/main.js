@@ -824,10 +824,10 @@
     // ========================= Counter Up Js End ===================
 
     // ========================== Add Attribute For Bg Image Js Start ====================
-    // $(".background-img").css('background', function () {
-    //   var bg = ('url(' + $(this).data("background-image") + ')');
-    //   return bg;
-    // });
+    $(".background-img").css('background', function () {
+      var bg = ('url(' + $(this).data("background-image") + ')');
+      return bg;
+    });
     // ========================== Add Attribute For Bg Image Js End =====================
   });
   // ==========================================

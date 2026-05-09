@@ -824,6 +824,134 @@ magneticCards.forEach((magneticCard) => {
 // **************************** Magnetic hover effect js end ****************************
 
 
+
+
+
+
+
+
+
+	// ================================ portfolio-2-animation start ================================
+	if (window.matchMedia("(min-width: 1400px)").matches) {
+		gsap.to(".as-portfolio-2-bg-color .circle", {
+			scrollTrigger: {
+				trigger: ".as-portfolio-2-bg-color",
+				start: "bottom-=300 bottom",
+				end: "bottom bottom",
+				scrub: true,
+				markers: false,
+			},
+			width: "300vh",
+			height: "300vh",
+			ease: "none",
+		});
+
+		gsap.to(".as-portfolio-2-pin", {
+			scrollTrigger: {
+				trigger: ".as-portfolio-2-height",
+				start: "top 10%",
+				end: "2900px",
+				pin: ".as-portfolio-2-pin",
+				pinSpacing: false,
+				markers: false,
+			},
+		});
+
+		var portfolio2ani23 = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".as-portfolio-2-sec-title",
+				start: "bottom+=400 bottom",
+				end: "bottom +100px",
+				toggleActions: "play none none reverse",
+				scrub: true,
+				markers: false,
+			},
+		});
+
+		portfolio2ani23.from(".as-portfolio-2-main-wrap", {
+			scale: 0.25,
+			yPercent: -70,
+			x: 40,
+		});
+
+		var portfolio2ani = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".as-portfolio-2-height",
+				start: "top 10%",
+				end: "2900px",
+				toggleActions: "play none none reverse",
+				scrub: true,
+				markers: false,
+			},
+		});
+
+		portfolio2ani.to(
+			".as-portfolio-2-item:nth-of-type(1) .as-portfolio-2-item-content",
+			{
+				opacity: 0,
+				duration: 0.5,
+			}
+		);
+		portfolio2ani.to(".as-portfolio-2-item:nth-of-type(1)", {
+			height: 0,
+		});
+		portfolio2ani.to(
+			".as-portfolio-2-sm-item-scroll",
+			{
+				y: -488,
+			},
+			"<"
+		);
+		portfolio2ani.to(
+			".as-portfolio-2-item:nth-of-type(2) .as-portfolio-2-item-content",
+			{
+				opacity: 0,
+				duration: 0.5,
+			}
+		);
+		portfolio2ani.to(".as-portfolio-2-item:nth-of-type(2)", {
+			height: 0,
+		});
+		portfolio2ani.to(
+			".as-portfolio-2-sm-item-scroll",
+			{
+				y: -976,
+			},
+			"<"
+		);
+
+		var portfolio2ani2 = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".as-portfolio-2-height",
+				start: "top 40%",
+				end: "bottom bottom",
+				toggleActions: "play none none reverse",
+				markers: false,
+			},
+		});
+		portfolio2ani2.from(".as-portfolio-2-sm-item", {
+			opacity: 0,
+			duration: 0.7,
+		});
+
+		var portfolio2ani24 = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".as-portfolio-2-height",
+				start: "top 80%",
+				end: "bottom bottom",
+				toggleActions: "play none none reverse",
+				markers: false,
+			},
+		});
+		portfolio2ani24.from(".as-portfolio-2-item-content", {
+			opacity: 0,
+			duration: 0.3,
+		});
+	}
+	// ================================ portfolio-2-animation end ================================
+
+
+
 /* **************************************************************************** 
                           Custom GSAP js start 
 ****************************************************************************  */
