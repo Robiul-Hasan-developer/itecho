@@ -8619,41 +8619,16 @@ svg.radial-progress circle.incomplete {
 }
 
 .as-portfolio-2-item-content {
-    max-width: 1560px;
+    max-width: 1296px;
+    height: 404px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
     position: relative;
     z-index: 2;
-}
-
-@media (max-width: 767px) {
-    .as-portfolio-2-item-content {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-.as-portfolio-2-item-content .title {
-    font-size: 80px;
-    font-weight: 700;
-    color: #fff;
-    max-width: 490px;
-    line-height: 1;
-    transition: all 0.4s var(--as-cube-1);
-}
-
-.as-portfolio-2-item-content .title:hover {
-    color: #000;
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-    .as-portfolio-2-item-content .title {
-        font-size: 24px;
-    }
+    gap: 20px;
 }
 
 .as-portfolio-2-item-content .right-content {
@@ -8683,17 +8658,9 @@ svg.radial-progress circle.incomplete {
     color: #fff;
 }
 
-.as-portfolio-2-item:nth-child(2) {
-    z-index: -1;
-}
-
-.as-portfolio-2-item:nth-child(3) {
-    z-index: -2;
-}
-
 .as-portfolio-2-sm-item {
-    max-width: 508px;
-    height: 488px;
+    max-width: 856px;
+    height: 500px;
     border-radius: 12px;
     overflow: hidden;
     position: absolute;
@@ -8736,6 +8703,15 @@ svg.radial-progress circle.incomplete {
 .as-portfolio-2-item-img img {
     height: inherit;
     object-fit: cover;
+}
+
+.title-max-width {
+    max-width: 416px;
+}
+
+.desc-max-width {
+    max-width: 306px;
+    align-self: flex-end;
 }
 
 .bg-cover {
