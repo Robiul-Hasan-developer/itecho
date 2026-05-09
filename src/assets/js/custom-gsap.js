@@ -812,7 +812,7 @@ magneticCards.forEach((magneticCard) => {
 // **************************** Magnetic hover effect js end ****************************
 
 // ================================ Project showcase start ================================
-if (window.matchMedia("(min-width: 1400px)").matches) {
+if (window.matchMedia("(min-width: 992px)").matches) {
   gsap.to(".as-portfolio-2-pin", {
     scrollTrigger: {
       trigger: ".as-portfolio-2-height",
