@@ -812,110 +812,6 @@ magneticCards.forEach((magneticCard) => {
 // **************************** Magnetic hover effect js end ****************************
 
 // ================================ Project showcase start ================================
-// if (window.matchMedia("(min-width: 1400px)").matches) {
-//   gsap.to(".as-portfolio-2-pin", {
-//     scrollTrigger: {
-//       trigger: ".as-portfolio-2-height",
-//       start: "top 10%",
-//       end: "2900px",
-//       pin: ".as-portfolio-2-pin",
-//       pinSpacing: false,
-//       markers: false,
-//     },
-//   });
-
-//   var portfolio2ani23 = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".as-portfolio-2-sec-title",
-//       start: "bottom+=400 bottom",
-//       end: "bottom +100px",
-//       toggleActions: "play none none reverse",
-//       scrub: true,
-//       markers: false,
-//     },
-//   });
-
-// portfolio2ani23.from(".as-portfolio-2-main-wrap", {
-//   scale: 0.25,
-//   yPercent: -70,
-//   x: 40,
-// });
-
-//   var portfolio2ani = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".as-portfolio-2-height",
-//       start: "top 10%",
-//       end: "2200px",
-//       toggleActions: "play none none reverse",
-//       scrub: true,
-//       markers: false,
-//     },
-//   });
-
-//   portfolio2ani.to(
-//     ".as-portfolio-2-item:nth-of-type(1) .as-portfolio-2-item-content",
-//     {
-//       opacity: 0,
-//       duration: 0.5,
-//     },
-//   );
-//   portfolio2ani.to(".as-portfolio-2-item:nth-of-type(1)", {
-//     height: 0,
-//   });
-//   portfolio2ani.to(
-//     ".as-portfolio-2-sm-item-scroll",
-//     {
-//       y: -488,
-//     },
-//     "<",
-//   );
-//   portfolio2ani.to(
-//     ".as-portfolio-2-item:nth-of-type(2) .as-portfolio-2-item-content",
-//     {
-//       opacity: 0,
-//       duration: 0.5,
-//     },
-//   );
-//   portfolio2ani.to(".as-portfolio-2-item:nth-of-type(2)", {
-//     height: 0,
-//   });
-//   portfolio2ani.to(
-//     ".as-portfolio-2-sm-item-scroll",
-//     {
-//       y: -976,
-//     },
-//     "<",
-//   );
-
-//   var portfolio2ani2 = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".as-portfolio-2-height",
-//       start: "top 40%",
-//       end: "bottom bottom",
-//       toggleActions: "play none none reverse",
-//       markers: false,
-//     },
-//   });
-//   portfolio2ani2.from(".as-portfolio-2-sm-item", {
-//     opacity: 0,
-//     duration: 0.7,
-//   });
-
-//   var portfolio2ani24 = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".as-portfolio-2-height",
-//       start: "top 80%",
-//       end: "bottom bottom",
-//       toggleActions: "play none none reverse",
-//       markers: false,
-//     },
-//   });
-//   portfolio2ani24.from(".as-portfolio-2-item-content", {
-//     opacity: 0,
-//     duration: 0.3,
-//   });
-// }
-
 if (window.matchMedia("(min-width: 1400px)").matches) {
   gsap.to(".as-portfolio-2-pin", {
     scrollTrigger: {
@@ -936,13 +832,26 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
       toggleActions: "play none none reverse",
       scrub: true,
       markers: false,
+
+      onEnter: function () {
+        document
+          .querySelector(".as-portfolio-2-main-wrap")
+          .classList.add("your-class");
+      },
+
+      onLeaveBack: function () {
+        document
+          .querySelector(".as-portfolio-2-main-wrap")
+          .classList.remove("your-class");
+      },
     },
   });
 
   portfolio2ani23.from(".as-portfolio-2-main-wrap", {
-    scale: 0.02,
-    yPercent: -70,
-    x: 40,
+    scaleX: 0.15,
+    scaleY: 0.12,
+    yPercent: -64,
+    x: 160,
   });
 
   var portfolio2ani = gsap.timeline({
@@ -1032,8 +941,6 @@ if (window.matchMedia("(min-width: 1400px)").matches) {
     duration: 0.3,
   });
 }
-// ================================ Project showcase end ================================
-
 /* **************************************************************************** 
                           Custom GSAP js start 
 ****************************************************************************  */
