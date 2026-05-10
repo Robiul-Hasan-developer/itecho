@@ -8435,6 +8435,12 @@ svg.radial-progress circle.incomplete {
     pointer-events: none;
 }
 
+.hover-slide-animation-two::after {
+    background: linear-gradient(130deg, transparent 20%, rgba(255, 255, 255, 0.08), transparent 80%);
+    transform: translateX(-120%);
+    transition: 0.8s;
+}
+
 .hover-slide-animation:hover::after {
     transform: translateX(100%);
 }

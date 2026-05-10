@@ -1003,8 +1003,71 @@ if (pricingSwitch && pricingCards.length > 0) {
     });
   });
 }
-
 // ================================ Pricing plan price change Animation End ================================
+
+
+
+//**************************** Card Item animation js End ****************************
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth > 1200) {
+    const wrappers = document.querySelectorAll(".card-animation-wrapper");
+
+    wrappers.forEach((wrapper) => {
+      const items = wrapper.querySelectorAll(".card-animation");
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: wrapper, // ✅ each section individually
+          start: "top 60%",
+          toggleActions: "play none none reverse",
+          markers: false,
+        },
+        defaults: {
+          ease: "power2.out",
+          duration: 1,
+        },
+      });
+
+      tl.from(items[0], {
+        xPercent: 100,
+        rotate: 8,
+      }).from(
+        items[1],
+        {
+          xPercent: 30,
+          rotate: 4.13,
+        },
+        "<",
+      );
+
+      // check if items exist (important for promo section)
+      if (items[2]) {
+        tl.from(
+          items[2],
+          {
+            xPercent: -30,
+            rotate: -6.42,
+          },
+          "<",
+        );
+      }
+
+      if (items[3]) {
+        tl.from(
+          items[3],
+          {
+            xPercent: -100,
+            rotate: -8.15,
+          },
+          "<",
+        );
+      }
+    });
+  }
+});
+//**************************** Card Item animation js End ****************************
+
+
 
 /* **************************************************************************** 
                           Custom GSAP js start 
