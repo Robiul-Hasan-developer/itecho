@@ -572,7 +572,6 @@
     // ============================ testimonial about js start ========================
     var testimonialAboutSlider = new Swiper(".testimonial-about__slider", {
       speed: 2000,
-      // grabCursor: true,
       loop: true,
       slidesPerView: 1,
       spaceBetween: 30,
@@ -678,7 +677,7 @@
     // ========================== service five end ============================
 
     // ================================= new brand one slider slider Start =========================
-    var brandSlider = new Swiper(".new-brand-one-slider", {
+    var brandSliderOne = new Swiper(".new-brand-one-slider", {
       autoplay: {
         delay: 2000,
         disableOnInteraction: false,
@@ -695,72 +694,31 @@
       loopFillGroupWithBlank: true,
       freeMode: true,
       freeModeMomentum: false,
-    breakpoints: {
-      300: {
-        slidesPerView: 2,
-        slidesPerGroup: 1,
+      breakpoints: {
+        300: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+        },
+        575: {
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 4,
+          slidesPerGroup: 2,
+        },
+        992: {
+          slidesPerView: 5,
+          slidesPerGroup: 2,
+        },
+        1200: {
+          slidesPerView: 6,
+          slidesPerGroup: 2, // keeps 3 dots
+        },
       },
-      575: {
-        slidesPerView: 3,
-        slidesPerGroup: 1,
-      },
-      768: {
-        slidesPerView: 4,
-        slidesPerGroup: 2,
-      },
-      992: {
-        slidesPerView: 5,
-        slidesPerGroup: 2,
-      },
-      1200: {
-        slidesPerView: 6,
-        slidesPerGroup: 2, // keeps 3 dots
-      },
-    },
     });
-
-    // var brandSlider = new Swiper(".new-brand-one-slider", {
-    //   loop: true,
-    //   speed: 2000,
-    //   grabCursor: true,
-
-    //   autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: false,
-    //   },
-
-    //   slidesPerView: 6,
-    //   spaceBetween: 20,
-
-    //   pagination: {
-    //     el: ".new-brand-one-slider-pagination",
-    //     clickable: true,
-    //   },
-
-    //   breakpoints: {
-    //     300: {
-    //       slidesPerView: 2,
-    //       slidesPerGroup: 1,
-    //     },
-    //     575: {
-    //       slidesPerView: 3,
-    //       slidesPerGroup: 1,
-    //     },
-    //     768: {
-    //       slidesPerView: 4,
-    //       slidesPerGroup: 2,
-    //     },
-    //     992: {
-    //       slidesPerView: 5,
-    //       slidesPerGroup: 2,
-    //     },
-    //     1200: {
-    //       slidesPerView: 6,
-    //       slidesPerGroup: 2, // keeps 3 dots
-    //     },
-    //   },
-    // });
     // ================================= new brand one slider slider End =========================
+
 
     // ========================== Custom Language select with flag js start ============================
     if ($(".select-selected").length) {
@@ -824,8 +782,8 @@
     // ========================= Counter Up Js End ===================
 
     // ========================== Add Attribute For Bg Image Js Start ====================
-    $(".background-img").css('background', function () {
-      var bg = ('url(' + $(this).data("background-image") + ')');
+    $(".background-img").css("background", function () {
+      var bg = "url(" + $(this).data("background-image") + ")";
       return bg;
     });
     // ========================== Add Attribute For Bg Image Js End =====================

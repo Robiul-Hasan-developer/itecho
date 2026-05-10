@@ -56,6 +56,26 @@
       padding: clamp(1.5rem, -12.1677rem + 32.9177vw, 3.75rem);
     }
   }
+  &-px {
+    &-60-px {
+      padding-inline: clamp(1.5rem, -12.1677rem + 32.9177vw, 3.75rem);
+    }
+  }
+  &-py {
+    &-80-px {
+      padding-block: clamp(2.5rem, -12.1677rem + 32.9177vw, 5rem);
+    }
+  }
+  &-pe {
+    &-60-px {
+      padding-inline-end: clamp(1.5rem, -12.1677rem + 32.9177vw, 3.75rem);
+    }
+  }
+  &-pb {
+    &-60-px {
+      padding-block-end: clamp(1.5rem, -12.1677rem + 32.9177vw, 3.75rem);
+    }
+  }
 }
 
 .py-120 {

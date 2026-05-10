@@ -2630,6 +2630,10 @@ input:focus, input:focus-visible {
     height: 70px;
 }
 
+.tw-h-74-px {
+    height: 74px;
+}
+
 .tw-h-75-px {
     height: 75px;
 }
@@ -4585,6 +4589,10 @@ input:focus, input:focus-visible {
     max-width: 870px;
 }
 
+.max-w-900-px {
+    max-width: 900px;
+}
+
 .max-w-950-px {
     max-width: 950px;
 }
@@ -5453,6 +5461,22 @@ input:focus, input:focus-visible {
 
 .tw-p-60-px {
     padding: clamp(1.5rem, -12.1677rem + 32.9177vw, 3.75rem);
+}
+
+.tw-px-60-px {
+    padding-inline: clamp(1.5rem, -12.1677rem + 32.9177vw, 3.75rem);
+}
+
+.tw-py-80-px {
+    padding-block: clamp(2.5rem, -12.1677rem + 32.9177vw, 5rem);
+}
+
+.tw-pe-60-px {
+    padding-inline-end: clamp(1.5rem, -12.1677rem + 32.9177vw, 3.75rem);
+}
+
+.tw-pb-60-px {
+    padding-block-end: clamp(1.5rem, -12.1677rem + 32.9177vw, 3.75rem);
 }
 
 .py-120 {
@@ -6900,6 +6924,10 @@ input:focus, input:focus-visible {
 
 .tw-leading-1 {
     line-height: 1;
+}
+
+.tw-leading-150 {
+    line-height: 150%;
 }
 
 .tw-leading-06 {
