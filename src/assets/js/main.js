@@ -719,6 +719,32 @@
     });
     // ================================= new brand one slider slider End =========================
 
+    // ================================= new Testimonials slider one Start =========================
+    var newTestimonialsOneSlider = new Swiper(".new-testimonials-one-slider", {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      spaceBetween: 0,
+      autoplay: false,
+      speed: 1500,
+      grabCursor: true,
+      loop: true,
+      slidesPerView: 1,
+      effect: "cube",
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: ".new-testimonials-one-slider-pagination",
+        clickable: true,
+      },
+    });
+    // ================================= new Testimonials slider one End =========================
 
     // ========================== Custom Language select with flag js start ============================
     if ($(".select-selected").length) {
