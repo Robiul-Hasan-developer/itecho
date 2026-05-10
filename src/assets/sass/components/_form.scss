@@ -183,7 +183,7 @@ input[type=number] {
             background-color: #0E59F2;
 
             &::before {
-                inset-inline-start: calc(100% - 38px);
+                inset-inline-start: calc(100% - 40px);
                 transition: .2s linear;
                 background: #fff;
             }
@@ -198,7 +198,7 @@ input[type=number] {
             border-radius: 50%;
             top: 50%;
             transform: translateY(-50%);
-            inset-inline-start: 4px;
+            inset-inline-start: 6px;
             transition: 0.2s linear;
         }
     }

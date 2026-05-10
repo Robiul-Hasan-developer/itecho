@@ -59,4 +59,11 @@
   font-size: 160px
 }
 
+.text-xl-res {
+  font-size: 1rem;
+  @media (min-width: 425px) {
+    font-size: 1.25rem;
+  }
+}
+
 /* Font Size Class End */

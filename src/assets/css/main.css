@@ -576,7 +576,7 @@ input[type=number] {
 }
 
 .form-switch .form-check-input:checked::before {
-    inset-inline-start: calc(100% - 38px);
+    inset-inline-start: calc(100% - 40px);
     transition: 0.2s linear;
     background: #fff;
 }
@@ -590,7 +590,7 @@ input[type=number] {
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
-    inset-inline-start: 4px;
+    inset-inline-start: 6px;
     transition: 0.2s linear;
 }
 
@@ -2499,6 +2499,15 @@ input:focus, input:focus-visible {
     font-size: 160px;
 }
 
+.text-xl-res {
+    font-size: 1rem;
+}
+
+@media (min-width: 425px) {
+    .text-xl-res {
+        font-size: 1.25rem;
+    }
+}
 /* Font Size Class End */
 .font-heading {
     font-family: var(--heading-font);
