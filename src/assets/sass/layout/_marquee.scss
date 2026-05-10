@@ -16,6 +16,13 @@
     min-width: max-content;
 }
 
+.style-two {
+    .js-marquee-wrapper, .js-marquee {
+        gap: 32px;
+    }
+}
+
+
 .cta-four .js-marquee-wrapper {
     gap: 24px;
 }
@@ -32,12 +39,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
+
     @media (max-width: 992px) {
         grid-template-columns: 1fr 1fr;
     }
+
     @media (max-width: 992px) {
         grid-template-columns: 1fr 1fr;
     }
+
     @media (max-width: 652px) {
         grid-template-columns: 1fr;
         justify-content: center;

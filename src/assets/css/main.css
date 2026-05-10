@@ -2085,6 +2085,16 @@ input:focus, input:focus-visible {
     color: #000 !important;
 }
 
+.text-stroke-white {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    transition: 0.5s;
+}
+
+.text-stroke-white:hover {
+    -webkit-text-stroke: 1px #fff;
+}
+
 /* Colors class End */
 /* Hover color class start */
 .hover-text-main-50:hover {
@@ -7841,6 +7851,10 @@ svg.radial-progress circle.incomplete {
     display: flex;
     gap: 64px;
     min-width: max-content;
+}
+
+.style-two .js-marquee-wrapper, .style-two .js-marquee {
+    gap: 32px;
 }
 
 .cta-four .js-marquee-wrapper {

@@ -33,4 +33,15 @@
   color: #000 !important;
 }
 
+
+.text-stroke-white {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  transition: .5s;
+
+  &:hover {
+    -webkit-text-stroke: 1px #fff;
+  }
+}
+
 /* Colors class End */
