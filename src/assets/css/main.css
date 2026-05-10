@@ -422,13 +422,24 @@
 
 /* input File End */
 /* Autofill Css */
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active,
-textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, textarea:-webkit-autofill:active {
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
     -webkit-transition: background-color 5000s ease-in-out 0s;
     transition: background-color 5000s ease-in-out 0s;
 }
 
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill {
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px transparent inset;
     -webkit-text-fill-color: hsl(var(--heading-color)) !important;
     caret-color: hsl(var(--heading-color));
@@ -552,32 +563,34 @@ input[type=number] {
     box-shadow: none !important;
     margin: 0;
     position: relative;
-    background-color: var(--gray-100);
+    background-color: var(--text-brand-secondary);
     border: 0;
     background-image: none !important;
-    width: 30px;
-    height: 18px;
+    width: 92px;
+    height: 44px;
+    float: unset;
 }
 
 .form-switch .form-check-input:checked {
-    background-color: var(--primary-600);
+    background-color: #0E59F2;
 }
 
 .form-switch .form-check-input:checked::before {
-    inset-inline-start: calc(100% - 15px);
+    inset-inline-start: calc(100% - 38px);
     transition: 0.2s linear;
+    background: #fff;
 }
 
 .form-switch .form-check-input::before {
     position: absolute;
     content: "";
-    width: 12px;
-    height: 12px;
-    background: #fff;
+    width: 34px;
+    height: 34px;
+    background: #070220;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
-    inset-inline-start: 3px;
+    inset-inline-start: 4px;
     transition: 0.2s linear;
 }
 
