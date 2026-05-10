@@ -1,0 +1,21 @@
+/* Blog new one css start */
+.new-blog-one__info {
+    position: absolute;
+    inset-inline-start: 0;
+    top: -20px;
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        clip-path: polygon(0 0, 0 0, 100% 100%, 0% 100%);
+        width: 20px;
+        height: 20px;
+        background: inherit;
+        inset-inline-start: 100%;
+        top: 0;
+    }
+}
+
+/* Blog new one css end */
