@@ -758,7 +758,7 @@
       spaceBetween: 16,
       slidesPerView: 1,
       pagination: {
-        el: ".new-brand-one-slider-pagination",
+        el: ".new-blog-one-slider-pagination",
         clickable: true,
       },
       loopFillGroupWithBlank: true,
