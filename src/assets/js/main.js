@@ -746,6 +746,44 @@
     });
     // ================================= new Testimonials slider one End =========================
 
+    // ================================= new brand one slider slider Start =========================
+    var newBlogOneSlider = new Swiper(".new-blog-one-slider", {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      speed: 1500,
+      grabCursor: true,
+      loop: true,
+      spaceBetween: 16,
+      slidesPerView: 1,
+      pagination: {
+        el: ".new-brand-one-slider-pagination",
+        clickable: true,
+      },
+      loopFillGroupWithBlank: true,
+      freeMode: true,
+      freeModeMomentum: false,
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 3,
+        },
+      },
+    });
+    // ================================= new brand one slider slider End =========================
+
     // ========================== Custom Language select with flag js start ============================
     if ($(".select-selected").length) {
       const selected = document.querySelector(".select-selected");
