@@ -684,6 +684,7 @@
       },
       speed: 1500,
       grabCursor: true,
+      spaceBetween: 10,
       loop: true,
       slidesPerView: 6,
       slidesPerGroup: 2,
@@ -718,6 +719,50 @@
       },
     });
     // ================================= new brand one slider slider End =========================
+
+    // ================================= new brand one slider two Start =========================
+    var brandSliderOneTwo = new Swiper(".new-brand-one-slider-two", {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      speed: 1500,
+      grabCursor: true,
+      spaceBetween: 10,
+      loop: true,
+      slidesPerView: 6,
+      slidesPerGroup: 2,
+      pagination: {
+        el: ".new-brand-one-slider-two-pagination",
+        clickable: true,
+      },
+      loopFillGroupWithBlank: true,
+      freeMode: true,
+      freeModeMomentum: false,
+      breakpoints: {
+        300: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+        },
+        575: {
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 4,
+          slidesPerGroup: 2,
+        },
+        992: {
+          slidesPerView: 5,
+          slidesPerGroup: 2,
+        },
+        1200: {
+          slidesPerView: 6,
+          slidesPerGroup: 2, // keeps 3 dots
+        },
+      },
+    });
+    // ================================= new brand one slider two End =========================
 
     // ================================= new Testimonials slider one Start =========================
     var newTestimonialsOneSlider = new Swiper(".new-testimonials-one-slider", {
