@@ -950,29 +950,31 @@ const pricingCards = document.querySelectorAll(".new-pricing-plan-one__item");
 if (pricingSwitch && pricingCards.length > 0) {
   pricingCards.forEach((card) => {
     const priceElement = card.querySelector(".new-pricing-plan-one__price");
-  
+
     // Get original monthly price from HTML
     const monthlyPrice = parseFloat(priceElement.textContent.replace("$", ""));
-  
+
     // Store original monthly price
     priceElement.setAttribute("data-monthly", monthlyPrice);
   });
-  
+
   pricingSwitch.addEventListener("change", function () {
     pricingCards.forEach((card) => {
       const priceElement = card.querySelector(".new-pricing-plan-one__price");
-  
-      const monthlyPrice = parseFloat(priceElement.getAttribute("data-monthly"));
-  
+
+      const monthlyPrice = parseFloat(
+        priceElement.getAttribute("data-monthly"),
+      );
+
       // Multiply by 12 if yearly checked
       const newPrice = this.checked ? monthlyPrice * 12 : monthlyPrice;
-  
+
       // =========================
       // PRICE ANIMATION
       // =========================
       gsap
         .timeline()
-  
+
         .to(priceElement, {
           y: -0,
           opacity: 0.6,
@@ -980,11 +982,11 @@ if (pricingSwitch && pricingCards.length > 0) {
           duration: 0.25,
           ease: "power2.in",
         })
-  
+
         .add(() => {
           priceElement.innerHTML = `$${newPrice.toFixed(2)}`;
         })
-  
+
         .fromTo(
           priceElement,
           {
@@ -1004,8 +1006,6 @@ if (pricingSwitch && pricingCards.length > 0) {
   });
 }
 // ================================ Pricing plan price change Animation End ================================
-
-
 
 //**************************** Card Item animation js End ****************************
 document.addEventListener("DOMContentLoaded", function () {
@@ -1066,7 +1066,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 //**************************** Card Item animation js End ****************************
-
 
 
 /* **************************************************************************** 

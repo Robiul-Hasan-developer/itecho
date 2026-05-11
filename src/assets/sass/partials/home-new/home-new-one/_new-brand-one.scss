@@ -8,6 +8,12 @@
     position: relative;
     margin: 0 !important;
 
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
     &::before {
         position: absolute;
         content: "";
@@ -34,6 +40,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
         transition: .3s;
+        opacity: 40%;
     }
 }
 
@@ -44,7 +51,8 @@
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
-   background-color: var(--text-brand-secondary);
+    background-color: var(--text-brand-secondary);
+    opacity: 1;
 }
 
 .new-brand-one-slider .swiper-slide.swiper-slide-blank {

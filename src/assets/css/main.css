@@ -8285,6 +8285,10 @@ svg.radial-progress circle.incomplete {
     margin: 0 !important;
 }
 
+.swiper-pagination-bullet:hover::after {
+    opacity: 1;
+}
+
 .swiper-pagination-bullet::before {
     position: absolute;
     content: "";
@@ -8311,6 +8315,7 @@ svg.radial-progress circle.incomplete {
     top: 50%;
     transform: translate(-50%, -50%);
     transition: 0.3s;
+    opacity: 40%;
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
@@ -8321,6 +8326,7 @@ svg.radial-progress circle.incomplete {
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
     background-color: var(--text-brand-secondary);
+    opacity: 1;
 }
 
 .new-brand-one-slider .swiper-slide.swiper-slide-blank {
