@@ -1,0 +1,15 @@
+.still-have-question-box {
+    position: absolute;
+    bottom: 0;
+    inset-inline-end: -60px;
+    z-index: 1;
+    @media (min-width: 1599px) {
+        inset-inline-end: -122px;
+    }
+}
+
+.still-have-question-box-wrapper {
+    @media (max-width: 991px) {
+        margin-inline-end: 60px;
+    }
+}

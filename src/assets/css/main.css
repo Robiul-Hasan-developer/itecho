@@ -308,6 +308,10 @@
     transform: rotate(135deg);
 }
 
+.accordion-new-style-two .accordion-item:has(.accordion-collapse.collapse.show) {
+    background: #0E59F2;
+}
+
 /* ================================= Accordion Css End =========================== */
 /* ========================== Button Css Start =============== */
 .button__label {
@@ -1879,6 +1883,10 @@ input:focus, input:focus-visible {
 
 .focus-border-warning-600:focus {
     border-color: var(--warning-600) !important;
+}
+
+.hover-border-black:hover {
+    border-color: #000 !important;
 }
 
 .tw-border-dashed {
@@ -3950,8 +3958,8 @@ input:focus, input:focus-visible {
     }
 }
 
-.tw--ms-20-px {
-    margin-inline-start: -20px;
+.tw--ms-28-px {
+    margin-inline-start: -28px;
 }
 
 .tw-mt--12-px {
@@ -8171,6 +8179,14 @@ svg.radial-progress circle.incomplete {
 }
 
 /* BG color end */
+.border-brand {
+    border-color: #0E59F2 !important;
+}
+
+.border-brand-secondary {
+    border-color: var(--text-brand-secondary) !important;
+}
+
 /* Home new style css end */
 .hover-icon-fill:hover i::before {
     font-family: "Phosphor-Fill";
@@ -8693,6 +8709,24 @@ svg.radial-progress circle.incomplete {
 }
 
 /* Blog new one css end */
+.still-have-question-box {
+    position: absolute;
+    bottom: 0;
+    inset-inline-end: -60px;
+    z-index: 1;
+}
+
+@media (min-width: 1599px) {
+    .still-have-question-box {
+        inset-inline-end: -122px;
+    }
+}
+
+@media (max-width: 991px) {
+    .still-have-question-box-wrapper {
+        margin-inline-end: 60px;
+    }
+}
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;

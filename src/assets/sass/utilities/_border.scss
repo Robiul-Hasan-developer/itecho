@@ -29,6 +29,10 @@
     }
   }
 
+  .hover-border-black:hover {
+    border-color: #000 !important;
+  }
+  
   .tw-border {
     &-dashed {
       border-style: dashed !important;

@@ -143,6 +143,10 @@
         transform: rotate(135deg);
     }
 
+    .accordion-item:has(.accordion-collapse.collapse.show) {
+        background: #0E59F2;
+    }
+
 }
 
 /* ================================= Accordion Css End =========================== */
