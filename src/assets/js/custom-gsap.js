@@ -813,12 +813,12 @@ magneticCards.forEach((magneticCard) => {
 
 // ================================ Project showcase Animation start ================================
 if (window.matchMedia("(min-width: 992px)").matches) {
-  gsap.to(".as-portfolio-2-pin", {
+  gsap.to(".project-showcase-2-pin", {
     scrollTrigger: {
-      trigger: ".as-portfolio-2-height",
+      trigger: ".project-showcase-2-height",
       start: "top 10%",
       end: "2900px",
-      pin: ".as-portfolio-2-pin",
+      pin: ".project-showcase-2-pin",
       pinSpacing: false,
       markers: false,
     },
@@ -826,7 +826,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 
   var portfolio2ani23 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".as-portfolio-2-sec-title",
+      trigger: ".project-showcase-2-sec-title",
       start: "bottom+=400 bottom",
       end: "bottom +100px",
       toggleActions: "play none none reverse",
@@ -835,19 +835,19 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 
       onEnter: function () {
         document
-          .querySelector(".as-portfolio-2-main-wrap")
+          .querySelector(".project-showcase-2-main-wrap")
           .classList.add("your-class");
       },
 
       onLeaveBack: function () {
         document
-          .querySelector(".as-portfolio-2-main-wrap")
+          .querySelector(".project-showcase-2-main-wrap")
           .classList.remove("your-class");
       },
     },
   });
 
-  portfolio2ani23.from(".as-portfolio-2-main-wrap", {
+  portfolio2ani23.from(".project-showcase-2-main-wrap", {
     scaleX: 0.15,
     scaleY: 0.12,
     yPercent: -64,
@@ -856,7 +856,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 
   var portfolio2ani = gsap.timeline({
     scrollTrigger: {
-      trigger: ".as-portfolio-2-height",
+      trigger: ".project-showcase-2-height",
       start: "top 10%",
       end: "2200px",
       toggleActions: "play none none reverse",
@@ -867,7 +867,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 
   // First Item
   portfolio2ani.to(
-    ".as-portfolio-2-item:nth-of-type(1) .as-portfolio-2-item-content",
+    ".project-showcase-2-item:nth-of-type(1) .project-showcase-2-item-content",
     {
       opacity: 0,
       duration: 0.5,
@@ -876,12 +876,12 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     0.1,
   );
 
-  portfolio2ani.to(".as-portfolio-2-item:nth-of-type(1)", {
+  portfolio2ani.to(".project-showcase-2-item:nth-of-type(1)", {
     height: 0,
   });
 
   portfolio2ani.to(
-    ".as-portfolio-2-sm-item-scroll",
+    ".project-showcase-2-sm-item-scroll",
     {
       y: -488,
     },
@@ -890,7 +890,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 
   // Second Item
   portfolio2ani.to(
-    ".as-portfolio-2-item:nth-of-type(2) .as-portfolio-2-item-content",
+    ".project-showcase-2-item:nth-of-type(2) .project-showcase-2-item-content",
     {
       opacity: 0,
       duration: 0.5,
@@ -899,12 +899,12 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     2.4,
   );
 
-  portfolio2ani.to(".as-portfolio-2-item:nth-of-type(2)", {
+  portfolio2ani.to(".project-showcase-2-item:nth-of-type(2)", {
     height: 0,
   });
 
   portfolio2ani.to(
-    ".as-portfolio-2-sm-item-scroll",
+    ".project-showcase-2-sm-item-scroll",
     {
       y: -976,
     },
@@ -913,7 +913,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 
   var portfolio2ani2 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".as-portfolio-2-height",
+      trigger: ".project-showcase-2-height",
       start: "top 40%",
       end: "bottom bottom",
       toggleActions: "play none none reverse",
@@ -921,14 +921,14 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     },
   });
 
-  portfolio2ani2.from(".as-portfolio-2-sm-item", {
+  portfolio2ani2.from(".project-showcase-2-sm-item", {
     opacity: 0,
     duration: 0.7,
   });
 
   var portfolio2ani24 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".as-portfolio-2-height",
+      trigger: ".project-showcase-2-height",
       start: "top 80%",
       end: "bottom bottom",
       toggleActions: "play none none reverse",
@@ -936,7 +936,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     },
   });
 
-  portfolio2ani24.from(".as-portfolio-2-item-content", {
+  portfolio2ani24.from(".project-showcase-2-item-content", {
     opacity: 0,
     duration: 0.3,
   });
