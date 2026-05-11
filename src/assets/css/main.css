@@ -2894,6 +2894,10 @@ input:focus, input:focus-visible {
     gap: clamp(1.5rem, 0.0938rem + 4.5vw, 2.625rem);
 }
 
+.tw-gap-48-px {
+    gap: clamp(1.5rem, 0.0938rem + 4.5vw, 3rem);
+}
+
 .tw-gap-56-px {
     gap: clamp(1.5rem, -4.48rem + 7.98vw, 3.5rem);
 }
