@@ -8736,6 +8736,29 @@ svg.radial-progress circle.incomplete {
         margin-inline-end: 60px;
     }
 }
+/* New footer one css start */
+.hover-effect-link:hover {
+    padding-inline-start: 16px;
+}
+
+.hover-effect-link:hover::before {
+    transform: translateY(-50%) scale(1);
+}
+
+.hover-effect-link::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: var(--text-brand-secondary);
+    border-radius: 50%;
+    top: 50%;
+    inset-inline-start: 0;
+    transform: translateY(-50%) scale(0);
+    transition: 0.3s linear;
+}
+
+/* New footer one css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;

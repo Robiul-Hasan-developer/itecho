@@ -1,0 +1,25 @@
+/* New footer one css start */
+.hover-effect-link {
+    &:hover {
+        padding-inline-start: 16px;
+
+        &::before {
+            transform: translateY(-50%) scale(1);
+        }
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: var(--text-brand-secondary);
+        border-radius: 50%;
+        top: 50%;
+        inset-inline-start: 0;
+        transform: translateY(-50%) scale(0);
+        transition: .3s linear;
+    }
+}
+
+/* New footer one css end */
