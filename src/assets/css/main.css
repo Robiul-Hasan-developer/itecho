@@ -5512,6 +5512,10 @@ input:focus, input:focus-visible {
     padding-inline-end: clamp(1.5rem, -12.1677rem + 32.9177vw, 3.75rem);
 }
 
+.tw-pe-90-px {
+    padding-inline-end: 90px;
+}
+
 .tw-pb-60-px {
     padding-block-end: clamp(1.5rem, -12.1677rem + 32.9177vw, 3.75rem);
 }
@@ -8105,6 +8109,10 @@ svg.radial-progress circle.incomplete {
 .display-5 {
     font-size: clamp(2.5rem, 0.7133rem + 3.5vw, 3.5rem);
     line-height: 110%;
+}
+
+.text-new-neutral-30 {
+    color: #EBECEF;
 }
 
 .text-new-neutral-40 {
