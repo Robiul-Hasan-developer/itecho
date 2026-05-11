@@ -238,7 +238,7 @@
     color: hsl(var(--heading-color));
 }
 
-/* ================================= Accordion Css End =========================== */
+/* Another accordion */
 .accordion-item {
     border: none;
 }
@@ -290,6 +290,25 @@
     background: #1D1934 !important;
 }
 
+/* new accordion style two */
+.accordion-new-style-two .accordion-item {
+    margin-bottom: 20px;
+}
+
+.accordion-new-style-two .accordion-button::after {
+    content: "\e092";
+    font-family: "Phosphor";
+    color: #fff;
+    width: unset;
+    height: unset;
+    background-color: transparent;
+}
+
+.accordion-new-style-two .accordion-button:not(.collapsed)::after {
+    transform: rotate(135deg);
+}
+
+/* ================================= Accordion Css End =========================== */
 /* ========================== Button Css Start =============== */
 .button__label {
     position: relative;
@@ -5984,6 +6003,11 @@ input:focus, input:focus-visible {
 .tw-rounded-3xl {
     border-radius: 1.5rem;
   /* 24px */
+}
+
+.tw-rounded-32-px {
+    border-radius: 2rem !important;
+  /* 32px */
 }
 
 .tw-rounded-top-bottom {

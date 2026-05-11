@@ -64,12 +64,7 @@
     }
 }
 
-/* ================================= Accordion Css End =========================== */
-
-
-
-
-
+/* Another accordion */
 .accordion-item {
     border: none;
 }
@@ -127,3 +122,27 @@
         background: #1D1934 !important;
     }
 }
+
+
+/* new accordion style two */
+.accordion-new-style-two {
+    .accordion-item {
+        margin-bottom: 20px;
+    }
+
+    .accordion-button::after {
+        content: "\E092";
+        font-family: "Phosphor";
+        color: #fff;
+        width: unset;
+        height: unset;
+        background-color: transparent;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        transform: rotate(135deg);
+    }
+
+}
+
+/* ================================= Accordion Css End =========================== */
