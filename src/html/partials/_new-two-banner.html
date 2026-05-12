@@ -1,0 +1,992 @@
+<!-- ============================= new two banner section start ==================================== -->
+<!-- <section class="new-two-banner py-120">
+    <div class="container">
+
+    </div>
+</section> -->
+<!-- ============================= new two banner section end ==================================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================================
+CSS
+========================================= -->
+<style>
+    .hero-banner {
+        position: relative;
+        /* min-height: 100vh; */
+        overflow: hidden;
+        background: #020617;
+    }
+
+    /* =====================================
+    Main Slider
+    ===================================== */
+
+    .hero-slide {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-slide-active .hero-bg img {
+        animation: scaleImage 6s ease;
+    }
+
+    @keyframes scaleImage {
+        0% {
+            transform: scale(1.5);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+    /* overlay */
+    .hero-slide::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(90deg,
+                rgba(3, 7, 18, 0.94) 0%,
+                rgba(3, 7, 18, 0.60) 38%,
+                rgba(3, 7, 18, 0.28) 62%,
+                rgba(3, 7, 18, 0.90) 100%);
+        z-index: 1;
+    }
+
+    /* moving lines */
+    .light-line {
+        position: absolute;
+        left: -10%;
+        width: 120%;
+        height: 2px;
+        background:
+            linear-gradient(to right,
+                transparent,
+                rgba(255, 0, 98, 0.9),
+                rgba(0, 119, 255, 0.9),
+                transparent);
+        z-index: 2;
+        opacity: .55;
+    }
+
+    .light-line.one {
+        top: 32%;
+    }
+
+    .light-line.two {
+        bottom: 24%;
+    }
+
+    /* =====================================
+    Container
+    ===================================== */
+    /* .container {
+        width: 100%;
+        padding-inline: 30px;
+        margin-inline: auto;
+        position: relative;
+        z-index: 5;
+        height: 100%;
+    } */
+
+    .hero-inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    /* =====================================
+    Floating Card
+    ===================================== */
+    .floating-card {
+        width: 273px;
+        height: 273px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(18px);
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .floating-card img {
+        height: 210px;
+        object-fit: cover;
+    }
+
+    .floating-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(to top,
+                rgba(0, 0, 0, 0.95),
+                rgba(0, 0, 0, 0.05));
+        z-index: 1;
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: blue;
+        z-index: 2;
+        font-size: 16px;
+    }
+
+    .floating-card h4 {
+        position: absolute;
+        left: 14px;
+        bottom: 14px;
+        z-index: 2;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    /* =====================================
+    Content
+    ===================================== */
+    .hero-content {
+        width: 100%;
+        position: relative;
+        padding-top: 140px;
+    }
+
+    .hero-description,
+    .hero-top-text,
+    .big-arrow,
+    .hero-title span {
+        opacity: 0;
+    }
+
+    .hero-top-text {
+        font-size: 20px;
+        line-height: 1.3;
+        font-weight: 700;
+        max-width: 500px;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 22px;
+        letter-spacing: 1px;
+        margin-top: 220px;
+    }
+
+    .hero-title {
+        font-size: clamp(85px, 13vw, 220px);
+        line-height: .85;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 2px;
+        position: relative;
+    }
+
+    /* .hero-title span {
+        display: block;
+    } */
+
+    /* arrow */
+    .big-arrow {
+        position: absolute;
+        left: 320px;
+        top: 20px;
+        color: blue;
+        font-size: 150px;
+        z-index: 5;
+    }
+
+    /* description */
+    .hero-description {
+        position: absolute;
+        top: 170px;
+        right: 0;
+        max-width: 290px;
+        color: rgba(255, 255, 255, 0.88);
+        line-height: 1.7;
+        font-size: 15px;
+    }
+
+    /* =====================================
+    Thumbnail Slider
+    ===================================== */
+    .thumb-wrapper {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 360px;
+        z-index: 20;
+        transform: translateY(-50%);
+    }
+
+    .thumbSlider .swiper-slide {
+        width: 96px !important;
+        height: 96px;
+        border-radius: 14px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: .4s;
+        border: 2px solid transparent;
+        position: relative;
+    }
+
+    .thumbSlider .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .thumbSlider .swiper-slide::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top,
+                rgba(0, 0, 0, 0.6),
+                transparent);
+        z-index: 1;
+    }
+
+    .thumbSlider .swiper-slide-thumb-active {
+        opacity: 1;
+        transform: scale(1);
+        border-color: rgba(20, 107, 255, 0.8);
+        box-shadow: 0 0 25px rgba(20, 107, 255, 0.35);
+    }
+
+    /* =====================================
+    Responsive
+    ===================================== */
+    @media (max-width: 1199px) {
+        .hero-description {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .thumb-wrapper {
+            top: auto;
+            bottom: 40px;
+        }
+
+        .big-arrow {
+            left: 220px;
+            font-size: 90px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .container {
+            padding-inline: 20px;
+        }
+
+        .hero-top-text {
+            font-size: 16px;
+        }
+
+        .big-arrow {
+            display: none;
+        }
+
+        .floating-card {
+            width: 120px;
+            top: 20px;
+        }
+
+        .floating-card img {
+            height: 150px;
+        }
+
+        .floating-card h4 {
+            font-size: 14px;
+        }
+
+        .thumb-wrapper {
+            width: calc(100% - 40px);
+            right: 20px;
+        }
+
+        .thumbSlider .swiper-slide {
+            width: 80px !important;
+            height: 80px;
+        }
+    }
+
+
+    /* =====================================
+IMPORTANT FIX
+ADD THIS CSS
+===================================== */
+
+    .hero-title {
+        overflow: hidden;
+    }
+
+    .hero-title span {
+        /* display: block; */
+        overflow: hidden;
+        will-change: transform, opacity;
+    }
+
+    /* remove this if exists */
+    .hero-description,
+    .hero-top-text,
+    .big-arrow,
+    .hero-title span {
+        opacity: 0;
+    }
+</style>
+
+
+
+
+<!-- =========================================
+HTML
+========================================= -->
+<section class="hero-banner">
+
+    <!-- moving light -->
+    <div class="light-line one"></div>
+    <div class="light-line two"></div>
+
+    <!-- =====================================
+    Main Hero Slider
+    ===================================== -->
+    <div class="swiper heroSlider">
+
+        <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide hero-slide">
+
+                <div class="hero-bg">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000&auto=format&fit=crop"
+                        alt="Digital Growth">
+                </div>
+
+                <div class="container max-w-1760-px">
+
+                    <div class="hero-inner z-1">
+
+
+                        <!-- content -->
+                        <div class="hero-content">
+                            <!-- floating card -->
+                            <div class="floating-card">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=900&auto=format&fit=crop"
+                                    alt="Tech Innovation" class="w-100 h-100 object-fit-cover">
+
+                                <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg"
+                                    class="tw-w-12 tw-h-12 bg-primary-new text-brand rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button flex-shrink-0 play-btn">
+                                    <i class="ph-fill ph-play"></i>
+                                </a>
+
+                                <h4>Tech Innovation</h4>
+                            </div>
+
+                            <div class="hero-description">
+                                We provide comprehensive IT solutions designed to help businesses streamline
+                                operations, improve efficiency.
+                            </div>
+
+                            <div class="hero-top-text">
+                                DELIVERING RELIABLE AND SCALABLE IT SERVICES FOR YOUR BUSINESS
+                            </div>
+
+                            <div class="big-arrow">
+                                <i class="ri-arrow-right-up-line"></i>
+                            </div>
+
+                            <h1 class="hero-title font-heading">
+                               DIGITAL GROWTH
+                            </h1>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide hero-slide">
+
+                <div class="hero-bg">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop"
+                        alt="IT Excellence">
+                </div>
+
+                <div class="container max-w-1760-px">
+
+                    <div class="hero-inner z-1">
+
+                        <!-- content -->
+                        <div class="hero-content">
+
+                            <!-- floating card -->
+                            <div class="floating-card">
+                                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=900&auto=format&fit=crop"
+                                    alt="Smart Solutions" class="w-100 h-100 object-fit-cover">
+
+                                <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg"
+                                    class="tw-w-12 tw-h-12 bg-primary-new text-brand rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button flex-shrink-0 play-btn">
+                                    <i class="ph-fill ph-play"></i>
+                                </a>
+
+                                <h4>Smart Solutions</h4>
+                            </div>
+
+                            <div class="hero-description">
+                                Our expert team delivers secure scalable and high-performance technology services for
+                                modern business growth.
+                            </div>
+
+                            <div class="hero-top-text">
+                                SMART TECHNOLOGY SOLUTIONS FOR MODERN CHALLENGES
+                            </div>
+
+                            <div class="big-arrow">
+                                <i class="ri-arrow-right-up-line"></i>
+                            </div>
+
+                            <h1 class="hero-title font-heading">
+                                IT EXCELLENCE
+                            </h1>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide hero-slide">
+
+                <div class="hero-bg">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000&auto=format&fit=crop"
+                        alt="Modern Tech">
+                </div>
+
+                <div class="container max-w-1760-px">
+
+                    <div class="hero-inner z-1">
+
+
+                        <!-- content -->
+                        <div class="hero-content">
+
+                            <!-- floating card -->
+                            <div class="floating-card">
+                                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=900&auto=format&fit=crop"
+                                    alt="Modern Tech" class="w-100 h-100 object-fit-cover">
+
+                                <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg"
+                                    class="tw-w-12 tw-h-12 bg-primary-new text-brand rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button flex-shrink-0 play-btn">
+                                    <i class="ph-fill ph-play"></i>
+                                </a>
+
+                                <h4>Modern Tech</h4>
+                            </div>
+
+
+                            <div class="hero-description">
+                                Improve efficiency and achieve sustainable growth using secure modern technology
+                                solutions.
+                            </div>
+
+                            <div class="hero-top-text">
+                                INNOVATIVE IT SERVICES BUILT FOR PERFORMANCE
+                            </div>
+
+                            <div class="big-arrow">
+                                <i class="ri-arrow-right-up-line"></i>
+                            </div>
+
+                            <h1 class="hero-title font-heading">
+                                MODERN TECH
+                            </h1>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide hero-slide">
+
+                <div class="hero-bg">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2000&auto=format&fit=crop"
+                        alt="Secure Systems">
+                </div>
+
+                <div class="container max-w-1760-px">
+
+                    <div class="hero-inner z-1">
+
+                        <!-- content -->
+                        <div class="hero-content">
+
+                            <!-- floating card -->
+                            <div class="floating-card">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=900&auto=format&fit=crop"
+                                    alt="Secure Systems" class="w-100 h-100 object-fit-cover">
+
+                                <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg"
+                                    class="tw-w-12 tw-h-12 bg-primary-new text-brand rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button flex-shrink-0 play-btn">
+                                    <i class="ph-fill ph-play"></i>
+                                </a>
+
+                                <h4>Secure Systems</h4>
+                            </div>
+
+                            <div class="hero-description">
+                                Powerful digital infrastructure solutions built for scalability security and business
+                                transformation.
+                            </div>
+
+                            <div class="hero-top-text">
+                                FUTURE READY DIGITAL INFRASTRUCTURE SOLUTIONS
+                            </div>
+
+                            <div class="big-arrow">
+                                <i class="ri-arrow-right-up-line"></i>
+                            </div>
+
+                            <h1 class="hero-title font-heading">
+                                SECURE SYSTEMS 
+                            </h1>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =====================================
+    Thumbnail Slider
+    ===================================== -->
+    <div class="thumb-wrapper">
+
+        <div class="swiper thumbSlider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=900&auto=format&fit=crop"
+                        alt="Thumb 1">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=900&auto=format&fit=crop"
+                        alt="Thumb 2">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=900&auto=format&fit=crop"
+                        alt="Thumb 3">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=900&auto=format&fit=crop"
+                        alt="Thumb 4">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+JS
+========================================= -->
+
+
+
+
+
+
+
+
+
+<script>
+    function slideAnimation(slide) {
+
+        const card = slide.querySelector(".floating-card");
+        const description = slide.querySelector(".hero-description");
+        const topText = slide.querySelector(".hero-top-text");
+        const arrow = slide.querySelector(".big-arrow");
+        const title = slide.querySelectorAll(".hero-title span");
+        const heroBgImg = slide.querySelector(".hero-bg img");
+
+        // reset active slide
+        gsap.set(card, {
+            opacity: 0,
+            x: -120,
+            rotate: -10
+        });
+
+        gsap.set(description, {
+            opacity: 0,
+            y: -40
+        });
+
+        gsap.set(topText, {
+            opacity: 0,
+            y: 60
+        });
+
+        gsap.set(title, {
+            opacity: 1,
+            yPercent: 120
+        });
+
+        gsap.set(arrow, {
+            opacity: 0,
+            scale: 0,
+            rotate: -90
+        });
+
+        // animation timeline
+        const tl = gsap.timeline({
+            defaults: {
+                ease: "power4.out"
+            }
+        });
+
+        // floating card
+        tl.to(card, {
+            opacity: 1,
+            x: 0,
+            rotate: 0,
+            duration: 1.1
+        }, 0.1);
+
+        // description
+        tl.to(description, {
+            opacity: 1,
+            y: 0,
+            duration: 1
+        }, 0.3);
+
+        // top text
+        tl.to(topText, {
+            opacity: 1,
+            y: 0,
+            duration: 1
+        }, 0.45);
+
+        // title animation
+        tl.to(title, {
+            yPercent: 0,
+            stagger: 0.12,
+            duration: 1.2,
+            ease: "power4.out"
+        }, 0.65);
+
+        // arrow
+        tl.to(arrow, {
+            opacity: 1,
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            ease: "back.out(2)"
+        }, 1);
+
+        // floating motion
+        gsap.to(card, {
+            y: -16,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+    }
+
+    // =========================================
+    // THUMB FLOATING
+    // =========================================
+    gsap.to(".thumb-wrapper", {
+        y: -12,
+        duration: 4,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+    });
+
+    // =========================================
+    // LIGHT LINE ANIMATION
+    // =========================================
+    gsap.to(".light-line.one", {
+        xPercent: 10,
+        duration: 6,
+        repeat: -1,
+        yoyo: true,
+        ease: "none"
+    });
+
+    gsap.to(".light-line.two", {
+        xPercent: -10,
+        duration: 7,
+        repeat: -1,
+        yoyo: true,
+        ease: "none"
+    });
+
+    // =========================================
+    // PARALLAX
+    // =========================================
+    const hero = document.querySelector(".hero-banner");
+
+    hero.addEventListener("mousemove", (e) => {
+
+        const x = (window.innerWidth / 2 - e.clientX) / 40;
+        const y = (window.innerHeight / 2 - e.clientY) / 40;
+
+        gsap.to(".thumb-wrapper", {
+            x: -x,
+            y: -y,
+            duration: 1.5,
+            ease: "power3.out"
+        });
+    });
+</script>
+
+
+
+
+
+
+
+<!-- <script>
+    // =========================================
+    // THUMB SLIDER
+    // =========================================
+
+    // =========================================
+    // CONTENT ANIMATION FUNCTION
+    // =========================================
+    function animateSlide(slide) {
+
+        // current slide elements
+        const card = slide.querySelector(".floating-card");
+        const description = slide.querySelector(".hero-description");
+        const topText = slide.querySelector(".hero-top-text");
+        const arrow = slide.querySelector(".big-arrow");
+        const titleSpans = slide.querySelectorAll(".hero-title span");
+        const bgImage = slide.querySelector(".hero-bg img");
+
+        // reset current slide only
+        gsap.set(card, {
+            opacity: 0,
+            x: -120,
+            rotate: -10
+        });
+
+        gsap.set(description, {
+            opacity: 0,
+            y: -40
+        });
+
+        gsap.set(topText, {
+            opacity: 0,
+            y: 60
+        });
+
+        gsap.set(titleSpans, {
+            opacity: 0,
+            yPercent: 120
+        });
+
+        gsap.set(arrow, {
+            opacity: 0,
+            scale: 0,
+            rotate: -80
+        });
+
+        // timeline
+        const tl = gsap.timeline({
+            defaults: {
+                ease: "power4.out"
+            }
+        });
+
+        // bg zoom
+        tl.fromTo(bgImage, {
+            scale: 1.15
+        }, {
+            scale: 1,
+            duration: 6,
+            ease: "power2.out"
+        }, 0);
+
+        // floating card
+        tl.to(card, {
+            opacity: 1,
+            x: 0,
+            rotate: 0,
+            duration: 1.2
+        }, 0.1);
+
+        // description
+        tl.to(description, {
+            opacity: 1,
+            y: 0,
+            duration: 1
+        }, 0.3);
+
+        // top text
+        tl.to(topText, {
+            opacity: 1,
+            y: 0,
+            duration: 1
+        }, 0.45);
+
+        // title animation
+        tl.to(titleSpans, {
+            opacity: 1,
+            yPercent: 0,
+            stagger: 0.12,
+            duration: 1.2
+        }, 0.6);
+
+        // arrow animation
+        tl.to(arrow, {
+            opacity: 1,
+            scale: 1,
+            rotate: 0,
+            duration: 1,
+            ease: "back.out(2)"
+        }, 1);
+
+        // floating motion
+        gsap.to(card, {
+            y: -16,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+    }
+
+    // =========================================
+    // THUMB FLOAT
+    // =========================================
+    gsap.to(".thumb-wrapper", {
+        y: -12,
+        duration: 4,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+    });
+
+    // =========================================
+    // LIGHT LINE ANIMATION
+    // =========================================
+    gsap.to(".light-line.one", {
+        xPercent: 10,
+        duration: 6,
+        repeat: -1,
+        yoyo: true,
+        ease: "none"
+    });
+
+    gsap.to(".light-line.two", {
+        xPercent: -10,
+        duration: 7,
+        repeat: -1,
+        yoyo: true,
+        ease: "none"
+    });
+
+    // =========================================
+    // MOUSE PARALLAX
+    // =========================================
+    const hero = document.querySelector(".hero-banner");
+
+    hero.addEventListener("mousemove", (e) => {
+
+        const x = (window.innerWidth / 2 - e.clientX) / 40;
+        const y = (window.innerHeight / 2 - e.clientY) / 40;
+
+        gsap.to(".thumb-wrapper", {
+            x: -x,
+            y: -y,
+            duration: 1.5,
+            ease: "power3.out"
+        });
+
+        gsap.to(".hero-title", {
+            x: -x / 2,
+            y: -y / 2,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+
+    });
+</script> -->
+
+
+
+<!-- =============================  section start ==================================== -->

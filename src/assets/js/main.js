@@ -830,6 +830,236 @@
     });
     // ================================= new brand one slider slider End =========================
 
+    /* ======================================================================================
+                                        New two home js start
+    ======================================================================================= */
+    // const heroSlider = new Swiper(".heroSlider", {
+    //   effect: "fade",
+    //   loop: true,
+    //   speed: 1600,
+    //   autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    //   },
+    //   allowTouchMove: false,
+    // });
+
+    // const thumbSlider = new Swiper(".thumbSlider", {
+    //     slidesPerView: "auto",
+    //     spaceBetween: 16,
+    //     loop: true,
+    //     speed: 4000,
+    //     allowTouchMove: false,
+    //     autoplay: {
+    //         delay: 0,
+    //         disableOnInteraction: false,
+    //     },
+    // });
+
+
+    
+    
+    
+    // const thumbSlider = new Swiper(".thumbSlider", {
+    //   slidesPerView: "auto",
+    //   spaceBetween: 14,
+    //   watchSlidesProgress: true,
+    // });
+
+    // // =========================================
+    // // MAIN HERO SLIDER
+    // // =========================================
+    // const heroSlider = new Swiper(".heroSlider", {
+    //   effect: "fade",
+    //   fadeEffect: {
+    //     crossFade: true,
+    //   },
+    //   loop: true,
+    //   speed: 1200,
+    //   autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    //   },
+    //   autoplay: false,
+    //   thumbs: {
+    //     swiper: thumbSlider,
+    //   },
+
+    //   on: {
+    //     // initial animation
+    //     init: function () {
+    //       animateHeroContent(this.slides[this.activeIndex]);
+    //     },
+
+    //     // every slide change
+    //     slideChangeTransitionStart: function () {
+    //       animateHeroContent(this.slides[this.activeIndex]);
+    //     },
+    //   },
+    // });
+
+
+
+    
+    
+
+    
+    
+    
+    // const thumbSlider = new Swiper(".thumbSlider", {
+    //     slidesPerView: "auto",
+    //     spaceBetween: 14,
+    //     watchSlidesProgress: true,
+    // });
+
+    // // =========================================
+    // // MAIN HERO SLIDER
+    // // =========================================
+    // const heroSlider = new Swiper(".heroSlider", {
+    //     effect: "fade",
+    //     fadeEffect: {
+    //         crossFade: true,
+    //     },
+    //     loop: true,
+    //     speed: 1200,
+
+    //     autoplay: {
+    //         delay: 5000,
+    //         disableOnInteraction: false,
+    //     },
+
+    //     thumbs: {
+    //         swiper: thumbSlider,
+    //     },
+
+    //     on: {
+
+    //         // first load
+    //         init: function () {
+
+    //             const activeSlide = this.slides[this.activeIndex];
+
+    //             animateSlide(activeSlide);
+
+    //         },
+
+    //         // every slide change
+    //         slideChangeTransitionStart: function () {
+
+    //             // hide all previous slide content
+    //             gsap.set(".hero-content > *", {
+    //                 opacity: 0
+    //             });
+
+    //             gsap.set(".floating-card", {
+    //                 opacity: 0
+    //             });
+
+    //         },
+
+    //         // after slide change completed
+    //         slideChangeTransitionEnd: function () {
+
+    //             const activeSlide = this.slides[this.activeIndex];
+
+    //             animateSlide(activeSlide);
+
+    //         }
+
+    //     }
+    // });
+
+
+
+
+
+        // =========================================
+// THUMB SLIDER
+// =========================================
+const thumbSlider = new Swiper(".thumbSlider", {
+    slidesPerView: "auto",
+    spaceBetween: 14,
+    watchSlidesProgress: true,
+});
+
+// =========================================
+// MAIN HERO SLIDER
+// =========================================
+const heroSlider = new Swiper(".heroSlider", {
+    effect: "fade",
+    fadeEffect: {
+        crossFade: true,
+    },
+    speed: 1200,
+    loop: true,
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    autoplay: false,
+
+    thumbs: {
+        swiper: thumbSlider,
+    },
+
+    on: {
+
+        init: function () {
+
+            const currentSlide = this.slides[this.activeIndex];
+
+            slideAnimation(currentSlide);
+
+        },
+
+        slideChangeTransitionStart: function () {
+
+            // hide previous slide contents
+            gsap.set(".swiper-slide .hero-description", {
+                opacity: 0,
+                y: -30
+            });
+
+            gsap.set(".swiper-slide .hero-top-text", {
+                opacity: 0,
+                y: 50
+            });
+
+            gsap.set(".swiper-slide .hero-title span", {
+                opacity: 0,
+                yPercent: 120
+            });
+
+            gsap.set(".swiper-slide .big-arrow", {
+                opacity: 0,
+                scale: 0,
+                rotate: -80
+            });
+
+            gsap.set(".swiper-slide .floating-card", {
+                opacity: 0,
+                x: -100,
+                rotate: -10
+            });
+
+        },
+
+        slideChangeTransitionEnd: function () {
+
+            const currentSlide = this.slides[this.activeIndex];
+
+            slideAnimation(currentSlide);
+
+        }
+    }
+});
+
+
+    /* ======================================================================================
+                                        New two home js end
+    ======================================================================================= */
+
     // ========================== Custom Language select with flag js start ============================
     if ($(".select-selected").length) {
       const selected = document.querySelector(".select-selected");
