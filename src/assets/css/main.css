@@ -5513,7 +5513,7 @@ input:focus, input:focus-visible {
 }
 
 .tw-px-80-px {
-    padding-inline: clamp(1.5rem, -12.1677rem + 32.9177vw, 5rem);
+    padding-inline: clamp(1rem, -9rem + 14vw, 5rem);
 }
 
 .tw-py-80-px {
@@ -8779,6 +8779,13 @@ svg.radial-progress circle.incomplete {
 }
 
 /* New footer one css end */
+/* new header wrapper two css start*/
+@media (max-width: 575px) {
+    .responsive-logo {
+        background-color: transparent;
+    }
+}
+/* new header wrapper two css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;
