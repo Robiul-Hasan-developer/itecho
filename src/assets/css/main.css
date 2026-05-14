@@ -8799,14 +8799,19 @@ svg.radial-progress circle.incomplete {
 }
 /* new header wrapper two css end */
 /* New two service section start */
-.accordion-item {
+.new-two-services {
+  /* Layout for closed state */
+  /* Expanded Body Content */
+}
+
+.new-two-services .accordion-item {
     background-color: transparent;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.accordion-button {
+.new-two-services .accordion-button {
     background-color: transparent !important;
     color: white !important;
     box-shadow: none !important;
@@ -8817,14 +8822,13 @@ svg.radial-progress circle.incomplete {
     border-radius: 0;
 }
 
-/* Layout for closed state */
-.acc-header-content {
+.new-two-services .acc-header-content {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.service-number {
+.new-two-services .service-number {
     width: 120px;
     color: #ddd;
     font-size: 0.9rem;
@@ -8832,7 +8836,7 @@ svg.radial-progress circle.incomplete {
     margin-right: 30px;
 }
 
-.preview-img-container {
+.new-two-services .preview-img-container {
     width: 250px;
     height: 40px;
     border-radius: 20px;
@@ -8841,42 +8845,46 @@ svg.radial-progress circle.incomplete {
     transition: 0.3s;
 }
 
-.preview-img-container img {
+.new-two-services .preview-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.accordion-button:not(.collapsed) .preview-img-container {
+.new-two-services .accordion-button:not(.collapsed) .preview-img-container {
     display: none;
 }
 
-/* Expanded Body Content */
-.accordion-body {
+.new-two-services .accordion-body {
     padding: 24px;
     padding-top: 0;
     display: flex;
     gap: 30px;
-    align-items: center;
 }
 
-.main-service-img {
+@media (max-width: 767px) {
+    .new-two-services .accordion-body {
+        flex-direction: column;
+    }
+}
+
+.new-two-services .main-service-img {
     width: 28%;
     border-radius: 12px;
 }
 
-.service-details {
+.new-two-services .service-details {
     width: 55%;
 }
 
-.badge-group {
+.new-two-services .badge-group {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
-.tech-badge {
+.new-two-services .tech-badge {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     padding: 6px 15px;
@@ -8884,14 +8892,14 @@ svg.radial-progress circle.incomplete {
     color: #ddd;
 }
 
-.arrow-icon {
+.new-two-services .arrow-icon {
     color: yellow;
     font-size: 2rem;
     margin-top: 20px;
     display: block;
 }
 
-.btn-all-services {
+.new-two-services .btn-all-services {
     background-color: blue;
     color: white;
     border-radius: 30px;
@@ -8905,25 +8913,25 @@ svg.radial-progress circle.incomplete {
     transition: 0.3s;
 }
 
-.btn-all-services:hover {
+.new-two-services .btn-all-services:hover {
     background-color: #1b4edb;
     color: white;
     transform: translateY(-2px);
 }
 
-.accordion-button::after {
+.new-two-services .accordion-button::after {
     display: none;
 }
 
-.accordion-item {
+.new-two-services .accordion-item {
     background: #130E29;
 }
 
-.accordion-item:has(.accordion-collapse.collapse.show) {
+.new-two-services .accordion-item:has(.accordion-collapse.collapse.show) {
     background: #1D1934 !important;
 }
 
-.accordion-item:has(.accordion-button[aria-expanded=true]) {
+.new-two-services .accordion-item:has(.accordion-button[aria-expanded=true]) {
     background: #1D1934 !important;
 }
 

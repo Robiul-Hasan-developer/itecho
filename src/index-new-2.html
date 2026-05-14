@@ -2432,9 +2432,9 @@ JS
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne">
                                 <div class="acc-header-content">
-                                    <span class="service-number">Service : 01</span>
+                                    <span class="service-number d-lg-block d-none">Service : 01</span>
                                     <span class="service-title flex-grow-1 h2 text-white">Cloud Solutions</span>
-                                    <div class="preview-img-container">
+                                    <div class="preview-img-container d-md-block d-none">
                                         <img src="assets/images/thumbs/new-two-services-img1.png"
                                             alt="Cloud">
                                     </div>
@@ -2470,9 +2470,9 @@ JS
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo">
                                 <div class="acc-header-content">
-                                    <span class="service-number">Service : 02</span>
+                                    <span class="service-number d-lg-block d-none">Service : 02</span>
                                     <span class="service-title flex-grow-1 h2 text-white">Web Development</span>
-                                    <div class="preview-img-container">
+                                    <div class="preview-img-container d-md-block d-none">
                                         <img src="assets/images/thumbs/new-two-services-img2.png"
                                             alt="Web">
                                     </div>
@@ -2507,9 +2507,9 @@ JS
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree">
                                 <div class="acc-header-content">
-                                    <span class="service-number">Service : 03</span>
+                                    <span class="service-number d-lg-block d-none">Service : 03</span>
                                     <span class="service-title flex-grow-1 h2 text-white">App Development</span>
-                                    <div class="preview-img-container">
+                                    <div class="preview-img-container d-md-block d-none">
                                         <img src="assets/images/thumbs/new-two-services-img3.png"
                                             alt="App">
                                     </div>
@@ -2538,6 +2538,80 @@ JS
                         </div>
                     </div>
 
+                    <!-- Service 04 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour">
+                                <div class="acc-header-content">
+                                    <span class="service-number d-lg-block d-none">Service : 04</span>
+                                    <span class="service-title flex-grow-1 h2 text-white">Cyber Security</span>
+                                    <div class="preview-img-container d-md-block d-none">
+                                        <img src="assets/images/thumbs/new-two-services-img4.png"
+                                            alt="App">
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
+                            <div class="accordion-body">
+                                <img src="assets/images/thumbs/new-two-services-img4.png"
+                                    class="main-service-img" alt="Service Detail">
+                                <div class="service-details">
+                                    <h3 class="text-white tw-mb-5">Cyber Security</h3>
+                                    <p class="description-text text-white">Creating intuitive mobile applications for iOS and
+                                        Android platforms
+                                        to engage your customers anywhere.</p>
+                                    <div class="badge-group">
+                                        <span class="tech-badge bg-black">iOS</span>
+                                        <span class="tech-badge bg-black">Android</span>
+                                        <span class="tech-badge bg-black">Flutter</span>
+                                    </div>
+                                    <a href="#" class="arrow-icon tw-mt-10">
+                                        <img src="assets/images/icon/arrow-big-left-down.png" alt="Icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 05 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive">
+                                <div class="acc-header-content">
+                                    <span class="service-number d-lg-block d-none">Service : 05</span>
+                                    <span class="service-title flex-grow-1 h2 text-white">IT Consulting</span>
+                                    <div class="preview-img-container d-md-block d-none">
+                                        <img src="assets/images/thumbs/new-two-services-img5.png"
+                                            alt="App">
+                                    </div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
+                            <div class="accordion-body">
+                                <img src="assets/images/thumbs/new-two-services-img5.png"
+                                    class="main-service-img" alt="Service Detail">
+                                <div class="service-details">
+                                    <h3 class="text-white tw-mb-5">IT Consulting</h3>
+                                    <p class="description-text text-white">Creating intuitive mobile applications for iOS and
+                                        Android platforms
+                                        to engage your customers anywhere.</p>
+                                    <div class="badge-group">
+                                        <span class="tech-badge bg-black">iOS</span>
+                                        <span class="tech-badge bg-black">Android</span>
+                                        <span class="tech-badge bg-black">Flutter</span>
+                                    </div>
+                                    <a href="#" class="arrow-icon tw-mt-10">
+                                        <img src="assets/images/icon/arrow-big-left-down.png" alt="Icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -2546,65 +2620,6 @@ JS
 </section>
 <!-- ======================== New two services end =============================== -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    // GSAP Animation Logic
-    document.querySelectorAll('.accordion-item').forEach(item => {
-        const collapseElement = item.querySelector('.accordion-collapse');
-
-        // When an item starts to show
-        collapseElement.addEventListener('show.bs.collapse', function () {
-            const body = item.querySelector('.accordion-body');
-            const img = item.querySelector('.main-service-img');
-            const content = item.querySelector('.service-details');
-
-            // Set initial state for animation
-            gsap.set([img, content], { opacity: 0, y: 20 });
-
-            // Animate in
-            gsap.to([img, content], {
-                opacity: 1,
-                y: 0,
-                duration: 0.6,
-                stagger: 0.2,
-                ease: "power2.out"
-            });
-        });
-    });
-
-    // Initial page load animation
-    gsap.from(".main-title", { opacity: 0, x: -50, duration: 1, delay: 0.2 });
-    gsap.from(".description-text text-white", { opacity: 0, x: 50, duration: 1, delay: 0.2 });
-    gsap.from(".accordion-item", {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        stagger: 0.1,
-        delay: 0.5
-    });
-</script>
 
 
 

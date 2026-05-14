@@ -1067,6 +1067,49 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //**************************** Card Item animation js End ****************************
 
+
+//**************************** New two services js Start ****************************
+document.querySelectorAll(".accordion-item").forEach((item) => {
+  const collapseElement = item.querySelector(".accordion-collapse");
+
+  // When an item starts to show
+  collapseElement.addEventListener("show.bs.collapse", function () {
+    const body = item.querySelector(".accordion-body");
+    const img = item.querySelector(".main-service-img");
+    const content = item.querySelector(".service-details");
+
+    // Set initial state for animation
+    gsap.set([img, content], { opacity: 0, y: 20 });
+
+    // Animate in
+    gsap.to([img, content], {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      stagger: 0.2,
+      ease: "power2.out",
+    });
+  });
+});
+
+// Initial page load animation
+gsap.from(".main-title", { opacity: 0, x: -50, duration: 1, delay: 0.2 });
+gsap.from(".description-text text-white", {
+  opacity: 0,
+  x: 50,
+  duration: 1,
+  delay: 0.2,
+});
+gsap.from(".accordion-item", {
+  opacity: 0,
+  y: 30,
+  duration: 0.8,
+  stagger: 0.1,
+  delay: 0.5,
+});
+//**************************** New two services js End ****************************
+
+
 // GSAP
 // gsap.registerPlugin(ScrollTrigger);
 
