@@ -1,24 +1,17 @@
 /* New two service section start */
-.accordion {
-    --bs-accordion-bg: transparent;
-    --bs-accordion-border-color: rgba(255, 255, 255, 0.1);
-    // border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 40px;
-}
 
 .accordion-item {
     background-color: transparent;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
 }
 
 .accordion-button {
     background-color: transparent !important;
     color: white !important;
     box-shadow: none !important;
-    padding: 30px 20px;
+    padding: x24px;
     display: flex;
     align-items: center;
     border: 0;
@@ -40,12 +33,6 @@
     margin-right: 30px;
 }
 
-.service-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    flex-grow: 1;
-}
-
 .preview-img-container {
     width: 250px;
     height: 40px;
@@ -63,19 +50,19 @@
 
 .accordion-button:not(.collapsed) .preview-img-container {
     display: none;
-    /* Hide preview image when open */
 }
 
 /* Expanded Body Content */
 .accordion-body {
-    padding: 40px;
+    padding: 24px;
+    padding-top: 0;
     display: flex;
     gap: 30px;
     align-items: center;
 }
 
 .main-service-img {
-    width: 45%;
+    width: 28%;
     border-radius: 12px;
 }
 
@@ -93,7 +80,7 @@
 .tech-badge {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
-    padding: 4px 15px;
+    padding: 6px 15px;
     font-size: 12px;
     color: #ddd;
 }
@@ -125,18 +112,20 @@
     transform: translateY(-2px);
 }
 
-/* Hide default accordion icon */
 .accordion-button::after {
     display: none;
 }
-
 
 .accordion-item {
     background: #130E29;
 }
 
+.accordion-item:has(.accordion-collapse.collapse.show) {
+    background: #1D1934 !important;
+}
+
 .accordion-item:has(.accordion-button[aria-expanded="true"]) {
-    background: #1D1934;
+    background: #1D1934 !important;
 }
 
 /* New two service section end */
