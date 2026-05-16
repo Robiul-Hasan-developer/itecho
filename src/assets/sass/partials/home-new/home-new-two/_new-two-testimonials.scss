@@ -3,4 +3,17 @@
     background: #0702204D;
     backdrop-filter: blur(20px);
 }
+
+@media (min-width: 1199px) {
+    .new-two-testimonials__left {
+        border-radius: 16px 0 0 16px; 
+        overflow: hidden;
+    }
+    
+    .new-two-testimonials__right {
+        border-radius: 0 16px 16px 0; 
+        overflow: hidden;
+    }
+}
+
 /* =================================== new two testimonials css end ============================= */
