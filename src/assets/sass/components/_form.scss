@@ -168,6 +168,24 @@ input[type=number] {
 .form-switch {
     padding-inline-start: 0;
 
+    &.style-two {
+        .form-check-input {
+            height: 40px;
+            background-color: #0E59F20D;
+            border: 1px solid #0E59F233;
+            width: 74px;
+        }
+
+        .form-check-input::before {
+            background-color: #798090;
+            inset-inline-start: 3px;
+        }
+
+        .form-check-input:checked::before {
+            inset-inline-start: calc(100% - 36px);
+        }
+    }
+
     .form-check-input {
         box-shadow: none !important;
         margin: 0;
@@ -202,6 +220,7 @@ input[type=number] {
             transition: 0.2s linear;
         }
     }
+
 }
 
 /* Switch Css End */

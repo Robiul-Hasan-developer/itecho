@@ -582,6 +582,22 @@ input[type=number] {
     padding-inline-start: 0;
 }
 
+.form-switch.style-two .form-check-input {
+    height: 40px;
+    background-color: #0E59F20D;
+    border: 1px solid #0E59F233;
+    width: 74px;
+}
+
+.form-switch.style-two .form-check-input::before {
+    background-color: #798090;
+    inset-inline-start: 3px;
+}
+
+.form-switch.style-two .form-check-input:checked::before {
+    inset-inline-start: calc(100% - 36px);
+}
+
 .form-switch .form-check-input {
     box-shadow: none !important;
     margin: 0;
@@ -1378,6 +1394,18 @@ input:focus, input:focus-visible {
 
 .tw-bg-main-10 {
     background-color: #0E59F21A;
+}
+
+.bg-warning-10 {
+    background-color: #FF992112;
+}
+
+.bg-warning-50 {
+    background-color: #0E59F20D;
+}
+
+.bg-danger-50 {
+    background-color: #FF21250D;
 }
 
 /* hover bg class end */
