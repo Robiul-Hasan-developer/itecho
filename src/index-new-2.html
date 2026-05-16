@@ -1499,894 +1499,9 @@
 </div>
 <!-- ============================= New header wrapper two end ======================================= -->
         
-        <!-- ============================= new two banner section start ==================================== -->
-<!-- <section class="new-two-banner py-120">
-    <div class="container">
+        
 
-    </div>
-</section> -->
-<!-- ============================= new two banner section end ==================================== -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================================
-CSS
-========================================= -->
-<style>
-    .hero-banner {
-        position: relative;
-        overflow: hidden;
-        background: #020617;
-    }
-
-    /* =====================================
-    Main Slider
-    ===================================== */
-
-    .hero-slide {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hero-bg {
-        position: absolute;
-        inset: 0;
-        overflow: hidden;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .hero-bg img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .swiper-slide-active .hero-bg img {
-        animation: scaleImage 6s ease-in-out;
-    }
-
-    @keyframes scaleImage {
-        0% {
-            transform: scale(1.5);
-        }
-
-        100% {
-            transform: scale(1);
-        }
-    }
-
-
-    /* overlay */
-    .hero-slide::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-            linear-gradient(90deg,
-                rgba(3, 7, 18, 0.94) 0%,
-                rgba(3, 7, 18, 0.60) 38%,
-                rgba(3, 7, 18, 0.28) 62%,
-                rgba(3, 7, 18, 0.90) 100%);
-        z-index: 1;
-    }
-    /* =====================================
-    Container
-    ===================================== */
-    /* .container {
-        width: 100%;
-        padding-inline: 30px;
-        margin-inline: auto;
-        position: relative;
-        z-index: 5;
-        height: 100%;
-    } */
-
-    .hero-inner {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-
-    /* =====================================
-    Floating Card
-    ===================================== */
-    .floating-card {
-        width: 273px;
-        height: 273px;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
-        backdrop-filter: blur(18px);
-        border-radius: 16px;
-        overflow: hidden;
-    }
-
-    .floating-card img {
-        height: 210px;
-        object-fit: cover;
-    }
-
-    .play-btn {
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: blue;
-        z-index: 2;
-        font-size: 16px;
-    }
-
-    .floating-card h4 {
-        position: absolute;
-        left: 14px;
-        bottom: 14px;
-        z-index: 2;
-        color: white;
-        font-size: 18px;
-        font-weight: 700;
-    }
-
-    /* =====================================
-    Content
-    ===================================== */
-    .hero-content {
-        width: 100%;
-        position: relative;
-        padding-top: 140px;
-    }
-
-    .hero-description,
-    .hero-top-text,
-    .big-arrow,
-    .hero-title span {
-        opacity: 0;
-    }
-
-    .hero-top-text {
-        font-size: 20px;
-        line-height: 1.3;
-        font-weight: 700;
-        max-width: 500px;
-        text-transform: uppercase;
-        color: white;
-        margin-bottom: 22px;
-        letter-spacing: 1px;
-        margin-top: 220px;
-    }
-
-    .hero-title {
-        font-size: clamp(85px, 13vw, 240px);
-        line-height: .85;
-        text-transform: uppercase;
-        color: white;
-        letter-spacing: 2px;
-        position: relative;
-    }
-
-
-    /* arrow */
-    .big-arrow {
-        position: absolute;
-        left: 320px;
-        top: 20px;
-        color: blue;
-        font-size: 150px;
-        z-index: 5;
-    }
-
-    /* description */
-    .hero-description {
-        position: absolute;
-        top: 170px;
-        right: 0;
-        max-width: 290px;
-        color: rgba(255, 255, 255, 0.88);
-        line-height: 1.7;
-        font-size: 15px;
-    }
-
-    /* =====================================
-    Thumbnail Slider
-    ===================================== */
-    .thumb-wrapper {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        width: 360px;
-        z-index: 20;
-        transform: translateY(-50%);
-    }
-
-    .thumbSlider .swiper-slide {
-        width: 96px !important;
-        height: 96px;
-        border-radius: 14px;
-        overflow: hidden;
-        cursor: pointer;
-        transition: .4s;
-        border: 2px solid transparent;
-        position: relative;
-    }
-
-    .thumbSlider .swiper-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .thumbSlider .swiper-slide-thumb-active {
-        opacity: 1;
-        transform: scale(1);
-        border-color: rgba(20, 107, 255, 0.8);
-        box-shadow: 0 0 25px rgba(20, 107, 255, 0.35);
-    }
-
-    /* =====================================
-    Responsive
-    ===================================== */
-    @media (max-width: 1199px) {
-        .hero-description {
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-
-        .big-arrow {
-            left: 220px;
-            font-size: 90px;
-        }
-    }
-
-    @media (max-width: 767px) {
-        .container {
-            padding-inline: 20px;
-        }
-
-        .hero-top-text {
-            font-size: 16px;
-        }
-
-        .big-arrow {
-            display: none;
-        }
-
-        .floating-card img {
-            height: 150px;
-        }
-
-        .floating-card h4 {
-            font-size: 14px;
-        }
-
-        .thumbSlider .swiper-slide {
-            width: 80px !important;
-            height: 80px;
-        }
-    }
-
-
-    /* =====================================
-IMPORTANT FIX
-ADD THIS CSS
-===================================== */
-
-    .hero-title {
-        overflow: hidden;
-    }
-
-    .hero-title span {
-        overflow: hidden;
-        will-change: transform, opacity;
-    }
-
-    /* remove this if exists */
-    .hero-description,
-    .hero-top-text,
-    .big-arrow,
-    .hero-title span {
-        opacity: 0;
-    }
-</style>
-
-
-
-
-<!-- =========================================
-HTML
-========================================= -->
-<section class="hero-banner">
-
-    <!-- =====================================
-    Main Hero Slider
-    ===================================== -->
-    <div class="swiper heroSlider">
-
-        <div class="swiper-wrapper">
-
-            <!-- Slide 1 -->
-            <div class="swiper-slide hero-slide">
-
-                <div class="hero-bg">
-                    <img src="assets/images/thumbs/new-two-banner-img1.png"
-                        alt="Digital Growth">
-                </div>
-
-                <div class="container max-w-1760-px">
-
-                    <div class="hero-inner z-1">
-
-
-                        <!-- content -->
-                        <div class="hero-content">
-                            <!-- floating card -->
-                            <div class="floating-card">
-                                <img src="assets/images/thumbs/new-two-banner-img3.png"
-                                    alt="Tech Innovation" class="w-100 h-100 object-fit-cover">
-
-                                <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg"
-                                    class="tw-w-12 tw-h-12 bg-primary-new text-brand rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button flex-shrink-0 play-btn">
-                                    <i class="ph-fill ph-play"></i>
-                                </a>
-
-                                <h4>Tech Innovation</h4>
-                            </div>
-
-                            <div class="hero-description">
-                                We provide comprehensive IT solutions designed to help businesses streamline
-                                operations, improve efficiency.
-                            </div>
-
-                            <div class="hero-top-text">
-                                DELIVERING RELIABLE AND SCALABLE IT SERVICES FOR YOUR BUSINESS
-                            </div>
-
-                            <div class="big-arrow">
-                                <i class="ri-arrow-right-up-line"></i>
-                            </div>
-
-                            <h1 class="hero-title font-heading">
-                               <span>DIGITAL</span>
-                               <span>GROWTH</span>
-                            </h1>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide hero-slide">
-
-                <div class="hero-bg">
-                    <img src="assets/images/thumbs/new-two-banner-img2.png"
-                        alt="IT Excellence">
-                </div>
-
-                <div class="container max-w-1760-px">
-
-                    <div class="hero-inner z-1">
-
-                        <!-- content -->
-                        <div class="hero-content">
-
-                            <!-- floating card -->
-                            <div class="floating-card">
-                                <img src="assets/images/thumbs/new-two-banner-img1.png"
-                                    alt="Smart Solutions" class="w-100 h-100 object-fit-cover">
-
-                                <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg"
-                                    class="tw-w-12 tw-h-12 bg-primary-new text-brand rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button flex-shrink-0 play-btn">
-                                    <i class="ph-fill ph-play"></i>
-                                </a>
-
-                                <h4>Smart Solutions</h4>
-                            </div>
-
-                            <div class="hero-description">
-                                Our expert team delivers secure scalable and high-performance technology services for
-                                modern business growth.
-                            </div>
-
-                            <div class="hero-top-text">
-                                SMART TECHNOLOGY SOLUTIONS FOR MODERN CHALLENGES
-                            </div>
-
-                            <div class="big-arrow">
-                                <i class="ri-arrow-right-up-line"></i>
-                            </div>
-
-                            <h1 class="hero-title font-heading">
-                                <span>IT</span> 
-                                <span>EXCELLENCE</span>
-                            </h1>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide hero-slide">
-
-                <div class="hero-bg">
-                    <img src="assets/images/thumbs/new-two-banner-img3.png"
-                        alt="Modern Tech">
-                </div>
-
-                <div class="container max-w-1760-px">
-
-                    <div class="hero-inner z-1">
-
-
-                        <!-- content -->
-                        <div class="hero-content">
-
-                            <!-- floating card -->
-                            <div class="floating-card">
-                                <img src="assets/images/thumbs/new-two-banner-img2.png"
-                                    alt="Modern Tech" class="w-100 h-100 object-fit-cover">
-
-                                <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg"
-                                    class="tw-w-12 tw-h-12 bg-primary-new text-brand rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button flex-shrink-0 play-btn">
-                                    <i class="ph-fill ph-play"></i>
-                                </a>
-
-                                <h4>Modern Tech</h4>
-                            </div>
-
-
-                            <div class="hero-description">
-                                Improve efficiency and achieve sustainable growth using secure modern technology
-                                solutions.
-                            </div>
-
-                            <div class="hero-top-text">
-                                INNOVATIVE IT SERVICES BUILT FOR PERFORMANCE
-                            </div>
-
-                            <div class="big-arrow">
-                                <i class="ri-arrow-right-up-line"></i>
-                            </div>
-
-                            <h1 class="hero-title font-heading">
-                                <span>MODERN</span> 
-                                <span>TECH</span>
-                            </h1>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="swiper-slide hero-slide">
-
-                <div class="hero-bg">
-                    <img src="assets/images/thumbs/new-two-banner-img2.png"
-                        alt="IT Excellence">
-                </div>
-
-                <div class="container max-w-1760-px">
-
-                    <div class="hero-inner z-1">
-
-                        <!-- content -->
-                        <div class="hero-content">
-
-                            <!-- floating card -->
-                            <div class="floating-card">
-                                <img src="assets/images/thumbs/new-two-banner-img1.png"
-                                    alt="Smart Solutions" class="w-100 h-100 object-fit-cover">
-
-                                <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg"
-                                    class="tw-w-12 tw-h-12 bg-primary-new text-brand rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button flex-shrink-0 play-btn">
-                                    <i class="ph-fill ph-play"></i>
-                                </a>
-
-                                <h4>Smart Solutions</h4>
-                            </div>
-
-                            <div class="hero-description">
-                                Our expert team delivers secure scalable and high-performance technology services for
-                                modern business growth.
-                            </div>
-
-                            <div class="hero-top-text">
-                                SMART TECHNOLOGY SOLUTIONS FOR MODERN CHALLENGES
-                            </div>
-
-                            <div class="big-arrow">
-                                <i class="ri-arrow-right-up-line"></i>
-                            </div>
-
-                            <h1 class="hero-title font-heading">
-                                <span>IT</span> 
-                                <span>EXCELLENCE</span>
-                            </h1>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <!-- =====================================
-    Thumbnail Slider
-    ===================================== -->
-    <div class="thumb-wrapper">
-
-        <div class="swiper thumbSlider">
-
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <img src="assets/images/thumbs/new-two-banner-img1.png"
-                        alt="Thumb 1">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/images/thumbs/new-two-banner-img2.png"
-                        alt="Thumb 2">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/images/thumbs/new-two-banner-img3.png"
-                        alt="Thumb 3">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/images/thumbs/new-two-banner-img2.png"
-                        alt="Thumb 4">
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================================
-JS
-========================================= -->
-
-
-
-
-
-
-<script>
-    function slideAnimation(slide) {
-
-        const card = slide.querySelector(".floating-card");
-        const description = slide.querySelector(".hero-description");
-        const topText = slide.querySelector(".hero-top-text");
-        const arrow = slide.querySelector(".big-arrow");
-        const title = slide.querySelectorAll(".hero-title span");
-        const heroBgImg = slide.querySelector(".hero-bg img");
-
-        // reset active slide
-        gsap.set(card, {
-            opacity: 0,
-            x: -120,
-            rotate: -10
-        });
-
-        gsap.set(description, {
-            opacity: 0,
-            y: -40
-        });
-
-        gsap.set(topText, {
-            opacity: 0,
-            y: 60
-        });
-
-        gsap.set(title, {
-            opacity: 1,
-            yPercent: 120
-        });
-
-        gsap.set(arrow, {
-            opacity: 0,
-            scale: 0,
-            rotate: -90
-        });
-
-        // animation timeline
-        const tl = gsap.timeline({
-            defaults: {
-                ease: "power4.out"
-            }
-        });
-
-        // floating card
-        tl.to(card, {
-            opacity: 1,
-            x: 0,
-            rotate: 0,
-            duration: 1.1
-        }, 0.1);
-
-        // description
-        tl.to(description, {
-            opacity: 1,
-            y: 0,
-            duration: 1
-        }, 0.3);
-
-        // top text
-        tl.to(topText, {
-            opacity: 1,
-            y: 0,
-            duration: 1
-        }, 0.45);
-
-        // title animation
-        tl.to(title, {
-            yPercent: 0,
-            stagger: 0.12,
-            duration: 1.2,
-            ease: "power4.out"
-        }, 0.65);
-
-        // arrow
-        tl.to(arrow, {
-            opacity: 1,
-            scale: 1,
-            rotate: 0,
-            duration: 1,
-            ease: "back.out(2)"
-        }, 1);
-
-        // floating motion
-        gsap.to(card, {
-            y: -16,
-            duration: 3,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
-        });
-
-    }
-
-    // =========================================
-    // THUMB FLOATING
-    // =========================================
-    gsap.to(".thumb-wrapper", {
-        y: -12,
-        duration: 4,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut"
-    });
-
-    // =========================================
-    // PARALLAX
-    // =========================================
-    const hero = document.querySelector(".hero-banner");
-
-    hero.addEventListener("mousemove", (e) => {
-
-        const x = (window.innerWidth / 2 - e.clientX) / 40;
-        const y = (window.innerHeight / 2 - e.clientY) / 40;
-
-        gsap.to(".thumb-wrapper", {
-            x: -x,
-            y: -y,
-            duration: 1.5,
-            ease: "power3.out"
-        });
-    });
-</script>
-<!-- =============================  section start ==================================== -->
-
-        <!-- ============================= New Two features section start =============================== -->
-<section class="py-120 new-two-key-features">
-    <div class="container">
-        <div class="tw-mb-16">
-            <div class="row gy-4">
-                <div class="col-xl-4">
-                    <div class="">
-                        <div class="d-flex align-items-center tw-gap-2">
-                            <span class="d-flex tw-text-2xl text-brand">
-                                <i class="ph-bold ph-sparkle"></i>
-                            </span>
-                            <span class="tw-text-lg text-brand">
-                                Our Key Features
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-8">
-                    <div class="">
-                        <h2 class="display-5 text-white fw-semibold text-reveal-two tw-leading-75"> Discover the
-                            features that make us stand out and Focused on quality, security, and performance</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="row gy-4">
-            <div class="col-lg-4" data-speed="1.1">
-                <div class="row gy-4">
-                    <div class="col-lg-12 col-md-6">
-                        <div
-                            class="tw-p-42-px border tw-rounded-2xl border-brand-20 position-relative text-center border border-brand-20 z-1">
-                            <img src="assets/images/bg/new-two-key-features-bg1.png" alt="BG"
-                                class="position-absolute top-0 start-0 w-100 h-100 z-n1 object-fit-cover">
-                            <div class="bg-brand-secondary tw-py-205 tw-px-3 rounded-pill d-inline-flex tw-gap-1">
-                                <span class="tw-text-sm text-heading d-flex">
-                                    <i class="ph-fill ph-star"></i>
-                                </span>
-                                <span class="tw-text-sm text-heading d-flex">
-                                    <i class="ph-fill ph-star"></i>
-                                </span>
-                                <span class="tw-text-sm text-heading d-flex">
-                                    <i class="ph-fill ph-star"></i>
-                                </span>
-                                <span class="tw-text-sm text-heading d-flex">
-                                    <i class="ph-fill ph-star"></i>
-                                </span>
-                                <span class="tw-text-sm text-heading d-flex">
-                                    <i class="ph-fill ph-star-half"></i>
-                                </span>
-                            </div>
-                            <div class="tw-my-4">
-                                <div class="d-flex align-items-center tw-gap-2">
-                                    <h2 class="h1 text-heading tw-mt-2 fw-bold">8.54K <span class="text-danger">+</span>
-                                    </h2>
-                                    <h2 class="h4 fw-medium">Satisfied Clients</h2>
-                                </div>
-                                <div class="d-flex align-items-center tw-gap-4">
-                                    <div class="d-inline-flex align-items-center pointer-events-auto tw-my-6">
-                                        <div
-                                            class="pointer-events-auto tw-w-10 tw-h-10 rounded-circle overflow-hidden border border-white tw-duration-300 hover-scale-14 tw-hover-z-4 position-relative z-0">
-                                            <img src="assets/images/thumbs/client-img1.png" alt="Client Image"
-                                                class="w-100 h-100 object-fit-cover">
-                                        </div>
-                                        <div
-                                            class="pointer-events-auto tw-w-10 tw-h-10 rounded-circle overflow-hidden border border-white tw-duration-300 hover-scale-14 tw-hover-z-4 position-relative tw--ms-18-px z-1">
-                                            <img src="assets/images/thumbs/client-img2.png" alt="Client Image"
-                                                class="w-100 h-100 object-fit-cover">
-                                        </div>
-                                        <div
-                                            class="pointer-events-auto tw-w-10 tw-h-10 rounded-circle overflow-hidden border border-white tw-duration-300 hover-scale-14 tw-hover-z-4 position-relative tw--ms-18-px z-1">
-                                            <img src="assets/images/thumbs/client-img3.png" alt="Client Image"
-                                                class="w-100 h-100 object-fit-cover">
-                                        </div>
-                                        <div
-                                            class="pointer-events-auto tw-w-10 tw-h-10 rounded-circle overflow-hidden border border-white tw-duration-300 hover-scale-14 tw-hover-z-4 position-relative tw--ms-18-px z-1 bg-brand text-white d-flex justify-content-center align-items-center">
-                                            <i class="ph-bold ph-plus"></i>
-                                        </div>
-                                    </div>
-                                    <p class="text-start text-new-neutral-700">Join <span class="fw-bold">15,145+</span>
-                                        others loving worldwide customers</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-6">
-                        <div
-                            class="tw-px-8 tw-py-6 border tw-rounded-2xl border-brand-20 position-relative border border-brand-20 z-1">
-                            <img src="assets/images/bg/new-two-key-features-bg2.png" alt="BG"
-                                class="position-absolute top-0 start-0 w-100 h-100 z-n1 object-fit-cover">
-                            <div class="">
-                                <h2 class="h3 text-white tw-mb-6">Best Quality Products</h2>
-                                <div class="">
-                                    <a href="contact.html" class="">
-                                        <img src="assets/images/thumbs/new-two-key-features-img1.png" alt="Image">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div
-                    class="border border-white-20 tw-p-3 tw-rounded-xl position-relative overflow-hidden z-1 item-overlay-gradient group group-item h-100 item-overlay-gradient-radial">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
-                        <img src="assets/images/thumbs/new-two-key-features-img2.png" alt="Image"
-                            class="w-100 h-100 object-fit-cover group-hover-item-scale-12 tw-duration-500">
-                    </div>
-
-                    <div
-                        class="d-flex flex-column align-items-start justify-content-between tw-p-5 z-1 position-relative h-100">
-                        <h2 class="h3 text-white tw-mb-4">24/7 Creativity Services</h2>
-                        <p class="text-white fw-medium max-w-280-px text-end ms-auto">Our 24/7 Creativity Services are
-                            designed to keep your projects at the forefront of innovation.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4" data-speed="1.1">
-                <div
-                    class="border border-brand-20 tw-p-8 tw-rounded-xl position-relative overflow-hidden z-1 group group-item h-100">
-                    <img src="assets/images/bg/new-two-key-features-bg22.png" alt="BG"
-                        class="position-absolute top-0 start-0 w-100 h-100 z-n1 object-fit-cover">
-
-
-                    <div class="">
-                        <h2 class="h3 text-heading tw-mb-4">Robotic Automation</h2>
-                        <p class="text-heading fw-medium">Clients-focused data are centric
-                            energistically
-                            communicate
-                            into installed done.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="tw-mt-10 d-flex justify-content-center">
-            <div class="custom-fade-animation" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
-                <a href="contact.html"
-                    class="link-group style-two d-inline-flex align-items-center gap-2 gap-0 group group-item bg-main-600 text-white tw-p-2 rounded-pill group-hover-bg-white overflow-hidden">
-                    <span
-                        class="button-icon-two bg-white text-brand tw-w-9 tw-h-9 rounded-circle d-flex justify-content-center align-items-center tw-duration-500">
-                        <i class="ph-bold ph-arrow-right"></i>
-                    </span>
-                    <span class="fw-bold h6 tw-duration-500 text-white">
-                        Our Mission Vision
-                    </span>
-                    <span
-                        class="button-icon-one bg-white text-brand tw-w-9 tw-h-9 rounded-circle d-flex justify-content-center align-items-center tw-duration-500">
-                        <i class="ph-bold ph-arrow-right"></i>
-                    </span>
-                </a>
-            </div>
-        </div>
-
-
-    </div>
-</section>
-<!-- ============================= New Two features section end =============================== -->
+        
 
         
 
@@ -2456,14 +1571,13 @@ JS
                                 </div>
                             </div>
                         </div>
-                        <div class="tw-mt-10">
-                            <div class="d-flex flex-column tw-gap-3">
+                        <div class="tw-mt-10 d-flex tw-gap-6 align-items-center">
+                            <div class="d-flex flex-column tw-gap-3 flex-shrink-0">
                                 <div class="d-flex align-items-center tw-gap-3">
                                     <span class="tw-text-xl text-main-600 d-flex">
                                         <i class="ph-bold ph-check-circle"></i>
                                     </span>
-                                    <span
-                                        class="fw-semibold h5 text-new-neutral-500 font-body">
+                                    <span class="fw-semibold h5 text-new-neutral-500 font-body">
                                         Secure Systems Plus
                                     </span>
                                 </div>
@@ -2471,8 +1585,7 @@ JS
                                     <span class="tw-text-xl text-main-600 d-flex">
                                         <i class="ph-bold ph-check-circle"></i>
                                     </span>
-                                    <span
-                                        class="fw-semibold h5 text-new-neutral-500 font-body">
+                                    <span class="fw-semibold h5 text-new-neutral-500 font-body">
                                         Innovative Solutions
                                     </span>
                                 </div>
@@ -2480,8 +1593,7 @@ JS
                                     <span class="tw-text-xl text-main-600 d-flex">
                                         <i class="ph-bold ph-check-circle"></i>
                                     </span>
-                                    <span
-                                        class="fw-semibold h5 text-new-neutral-500 font-body">
+                                    <span class="fw-semibold h5 text-new-neutral-500 font-body">
                                         Innovative Solutions
                                     </span>
                                 </div>
@@ -2489,10 +1601,73 @@ JS
                                     <span class="tw-text-xl text-main-600 d-flex">
                                         <i class="ph-bold ph-check-circle"></i>
                                     </span>
-                                    <span
-                                        class="fw-semibold h5 text-new-neutral-500 font-body">
+                                    <span class="fw-semibold h5 text-new-neutral-500 font-body">
                                         Sustainable Growth
                                     </span>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="new-two-about-item-wrapper">
+                                    <div
+                                        class="new-two-about-item card-1 is-expanded tw-p-6 tw-rounded-xl border border-brand-20 position-relative z-1 animation-item">
+                                        <span
+                                            class="serialize-number display-4 text-brand-light font-heading fw-bold position-absolute top-0 tw-end-0 tw-mt-6 tw-me-6 hover-text-brand z-n1">01</span>
+                                        <img src="assets/images/bg/new-two-about-item-bg.png" alt="BG"
+                                            class="position-absolute top-0 tw-start-0 w-100 h-100 z-n1">
+                                        <span
+                                            class="tw-w-14 tw-h-14 rounded-circle bg-white tw-shadow-six tw-text-3xl d-flex justify-content-center align-items-center text-brand">
+                                            <i class="ph ph-lightbulb-filament animate__heartBeat"></i>
+                                        </span>
+                                        <div class="new-two-about-item__content tw-mt-10">
+                                            <h2 class="h4">Innovation</h2>
+                                            <p class="tw-mt-3 text-new-neutral-700">We continuously adopt modern
+                                                technologies &
+                                                innovative approaches to
+                                                deliver smart and future-ready IT solutions. Our focus on innovation
+                                                helps
+                                                businesses.</p>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="new-two-about-item card-2 tw-p-6 tw-rounded-xl border border-brand-20 position-relative z-1 animation-item">
+                                        <span
+                                            class="serialize-number display-4 text-brand-light font-heading fw-bold position-absolute top-0 tw-end-0 tw-mt-6 tw-me-6 hover-text-brand z-n1">02</span>
+                                        <img src="assets/images/bg/new-two-about-item-bg.png" alt="BG"
+                                            class="position-absolute top-0 tw-start-0 w-100 h-100 z-n1">
+                                        <span
+                                            class="tw-w-14 tw-h-14 rounded-circle bg-white tw-shadow-six tw-text-3xl d-flex justify-content-center align-items-center text-brand">
+                                            <i class="ph ph-handshake animate__heartBeat"></i>
+                                        </span>
+                                        <div class="new-two-about-item__content tw-mt-10">
+                                            <h2 class="h4">Reliability</h2>
+                                            <p class="tw-mt-3 text-new-neutral-700">We build relationships based on
+                                                trust,
+                                                ensuring your
+                                                mission-critical infrastructure is secure, functional, and consistently
+                                                performing.</p>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="new-two-about-item card-3 tw-p-6 tw-rounded-xl border border-brand-20 position-relative z-1 animation-item">
+                                        <span
+                                            class="serialize-number display-4 text-brand-light font-heading fw-bold position-absolute top-0 tw-end-0 tw-mt-6 tw-me-6 hover-text-brand z-n1">03</span>
+                                        <img src="assets/images/bg/new-two-about-item-bg.png" alt="BG"
+                                            class="position-absolute top-0 tw-start-0 w-100 h-100 z-n1">
+                                        <span
+                                            class="tw-w-14 tw-h-14 rounded-circle bg-white tw-shadow-six tw-text-3xl d-flex justify-content-center align-items-center text-brand">
+                                            <i class="ph ph-headset animate__heartBeat"></i>
+                                        </span>
+                                        <div class="new-two-about-item__content tw-mt-10">
+                                            <h2 class="h4">Support</h2>
+                                            <p class="tw-mt-3 text-new-neutral-700">Our dedicated support engineers are
+                                                operational around the clock to
+                                                track, isolate, and debug any technical hurdles blocking your progress.
+                                            </p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -2508,6 +1683,166 @@ JS
     </div>
 </section>
 <!-- ============================ New Two About section end ================================== -->
+
+
+
+
+
+
+
+
+
+<script>
+    const aboutItems = document.querySelectorAll('.new-two-about-item');
+
+    aboutItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            // Clear state across sister elements
+            aboutItems.forEach(i => i.classList.remove('is-expanded'));
+
+            // Set hover target to active status
+            item.classList.add('is-expanded');
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<style>
+    /* Base wrappers and setup */
+    .new-two-about-item-wrapper {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        max-width: 900px;
+        height: 320px;
+        margin: 50px auto;
+        font-family: sans-serif;
+        overflow: hidden;
+    }
+
+    /* The core transition engine */
+    .new-two-about-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        cursor: pointer;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+
+        /* Initial layout distribution: Flex handles the automatic sizing */
+        flex: 1;
+        transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease;
+    }
+
+    /* Expanded State (Triggered via class injected by JS) */
+    .new-two-about-item.active {
+        flex: 5;
+        /* Expands to take up the majority of the room */
+        cursor: default;
+    }
+
+    /* Elements inside a COLLAPSED card */
+    .new-two-about-item:not(.active) .card-content-text {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        height: 0;
+    }
+
+    .new-two-about-item:not(.active) .card-title-vertical {
+        display: block;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        white-space: nowrap;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        color: #1e293b;
+    }
+
+    /* Elements inside an EXPANDED card */
+    .new-two-about-item.active .card-content-text {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.4s ease 0.2s;
+        /* Slight delay for smoother visual flow */
+    }
+
+    .new-two-about-item.active .card-title-vertical {
+        display: none;
+    }
+
+    /* Custom color variants based on your image mockup */
+    .card-blue {
+        background-color: #e0e7ff;
+        border-color: #c7d2fe;
+    }
+
+    .card-orange {
+        background-color: #ffedd5;
+        border-color: #fed7aa;
+    }
+
+    .card-pink {
+        background-color: #fce7f3;
+        border-color: #fbcfe8;
+    }
+
+    /* Icon styling tweaks based on colors */
+    .card-blue .icon-box i {
+        color: #2563eb;
+    }
+
+    .card-orange .icon-box i {
+        color: #ea580c;
+    }
+
+    .card-pink .icon-box i {
+        color: #db2777;
+    }
+</style>
+
+
+
+
+
+
+
+<script>
+    const cards = document.querySelectorAll('.new-two-about-item');
+
+    cards.forEach(card => {
+        // Use 'mouseenter' instead of CSS hover to manage state transitions cleanly
+        card.addEventListener('mouseenter', () => {
+            // Strip the active class from whichever card currently has it
+            cards.forEach(c => c.classList.remove('active'));
+
+            // Assign active status to the currently targeted card
+            card.classList.add('active');
+        });
+    });
+</script> -->    
 
 
 

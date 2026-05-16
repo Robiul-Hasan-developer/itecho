@@ -6259,6 +6259,10 @@ input:focus, input:focus-visible {
     box-shadow: 0px 0px 2px 0px #00000040;
 }
 
+.tw-shadow-six {
+    box-shadow: 0px 6px 30px 0px #00000014;
+}
+
 .shadow__card::before {
     position: absolute;
     content: "";
@@ -8155,6 +8159,10 @@ svg.radial-progress circle.incomplete {
     color: #404A60;
 }
 
+.text-new-neutral-700 {
+    color: #222E48;
+}
+
 /* Text color start */
 .text-brand {
     color: #0E59F2;
@@ -8940,6 +8948,98 @@ svg.radial-progress circle.incomplete {
 }
 
 /* New two service section end */
+/* New two about css start */
+.new-two-about-item-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    height: 340px;
+    overflow: hidden;
+}
+
+.new-two-about-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+    overflow: hidden;
+    transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease;
+}
+
+.new-two-about-item.is-expanded {
+    flex: 4;
+    cursor: default;
+}
+
+.new-two-about-item .new-two-about-item__content {
+    transition: opacity 0.3s ease;
+}
+
+.new-two-about-item:not(.is-expanded) .new-two-about-item__content {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    height: 0;
+    margin-top: 0 !important;
+}
+
+.new-two-about-item::after {
+    content: var(--card-title);
+    display: block;
+    writing-mode: vertical-lr;
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 24px;
+    margin-bottom: 24px;
+    transform: translateX(50%) rotate(-180deg);
+}
+
+.new-two-about-item.is-expanded::after {
+    display: none;
+}
+
+.card-1 {
+    background-color: #e0e7ff;
+    --card-title: "Innovation";
+}
+
+.card-1 span.text-brand i {
+    color: #2563eb;
+}
+
+.card-2 {
+    background-color: #ffedd5;
+    --card-title: "Reliability";
+}
+
+.card-2 span.text-brand i {
+    color: #ea580c;
+}
+
+.card-3 {
+    background-color: #fce7f3;
+    --card-title: "Support";
+}
+
+.card-3 span.text-brand i {
+    color: #db2777;
+}
+
+.serialize-number {
+    opacity: 0;
+}
+
+.new-two-about-item.is-expanded .serialize-number {
+    opacity: 24%;
+}
+
+/* New two about css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;
