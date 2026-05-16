@@ -1,71 +1,76 @@
 // border
 @each $color, $shades in $colors {
-    @each $shade, $value in $shades {
-      .border-#{$color}-#{$shade} {
-        border-color: var(--#{$color}-#{$shade}) !important;
-      }
+  @each $shade, $value in $shades {
+    .border-#{$color}-#{$shade} {
+      border-color: var(--#{$color}-#{$shade}) !important;
     }
+  }
 }
 
 // hover border
 @each $color, $shades in $colors {
-    @each $shade, $value in $shades {
-      .hover-border-#{$color}-#{$shade} {
-        &:hover {
-            border-color: var(--#{$color}-#{$shade}) !important;
-        }
+  @each $shade, $value in $shades {
+    .hover-border-#{$color}-#{$shade} {
+      &:hover {
+        border-color: var(--#{$color}-#{$shade}) !important;
       }
     }
   }
+}
 
 // focus border
 @each $color, $shades in $colors {
-    @each $shade, $value in $shades {
-      .focus-border-#{$color}-#{$shade} {
-        &:focus {
-            border-color: var(--#{$color}-#{$shade}) !important;
-        }
+  @each $shade, $value in $shades {
+    .focus-border-#{$color}-#{$shade} {
+      &:focus {
+        border-color: var(--#{$color}-#{$shade}) !important;
       }
     }
   }
+}
 
-  .hover-border-black:hover {
-    border-color: #000 !important;
-  }
-  
-  .tw-border {
-    &-dashed {
-      border-style: dashed !important;
-    }
-  }
-  
-  .border-transparent {
-    border-color: transparent !important;
-  }
+.hover-border-black:hover {
+  border-color: #000 !important;
+}
 
-  .tw-focus-shadow-none:focus {
-    box-shadow: none;
+.tw-border {
+  &-dashed {
+    border-style: dashed !important;
   }
-  .tw-border-black-eight {
-    border: 1px solid #00000014
-  }
+}
 
-  .tw-border-deshad {
-    border: 1px dashed #0E59F2;
-    width: 99px;
-    height: 99px;
-  }
+.border-transparent {
+  border-color: transparent !important;
+}
 
+.tw-focus-shadow-none:focus {
+  box-shadow: none;
+}
 
-  .tw-clip-path-one {
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  }
+.tw-border-black-eight {
+  border: 1px solid #00000014
+}
+
+.tw-border-deshad {
+  border: 1px dashed #0E59F2;
+  width: 99px;
+  height: 99px;
+}
 
 
-  .border-white-20 {
-    border-color: #FFFFFF33 !important;
-  }
+.tw-clip-path-one {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
 
-  .border-brand-20 {
-    border-color: #0E59F23D !important;
-  }
+
+.border-white-20 {
+  border-color: #FFFFFF33 !important;
+}
+
+.border-brand-20 {
+  border-color: #0E59F23D !important;
+}
+
+.border-new-neutral-40 {
+  border-color: #DFE0E4 !important;
+}
