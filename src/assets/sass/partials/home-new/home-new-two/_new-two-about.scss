@@ -8,7 +8,7 @@
 }
 
 .new-two-about-item {
-    flex: 1;
+    flex: .7;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -47,7 +47,7 @@
     bottom: 0;
     margin-bottom: 24px;
     margin-bottom: 24px;
-    transform: translateX(50%) rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .new-two-about-item.is-expanded::after {
@@ -81,12 +81,28 @@
     color: #db2777;
 }
 
-.serialize-number {
+.serialize-number, .new-two-item-bg {
     opacity: 0;
+    visibility: hidden;
 }
 
-.new-two-about-item.is-expanded .serialize-number {
-    opacity: 24%;
+.new-two-about-item.is-expanded .serialize-number, .new-two-about-item.is-expanded .new-two-item-bg {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.new-two-about__images {
+    @media (min-width: 1200px) {
+        position: absolute;
+        inset-inline-start: 54%;
+        max-width: 45%;
+        top: 0;
+    }
+    @media (max-width: 1400px) {
+        inset-inline-start: 58%;
+    }
 }
 
 /* New two about css end */

@@ -2679,6 +2679,10 @@ input:focus, input:focus-visible {
     height: 74px;
 }
 
+.tw-h-180-px {
+    height: 180px;
+}
+
 .tw-h-75-px {
     height: 75px;
 }
@@ -4758,6 +4762,10 @@ input:focus, input:focus-visible {
 
 .max-w-70-percent {
     max-width: 70%;
+}
+
+.max-w-58-percent {
+    max-width: 58%;
 }
 
 /* Max width Css Class End */
@@ -8958,7 +8966,7 @@ svg.radial-progress circle.incomplete {
 }
 
 .new-two-about-item {
-    flex: 1;
+    flex: 0.7;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -8997,7 +9005,7 @@ svg.radial-progress circle.incomplete {
     bottom: 0;
     margin-bottom: 24px;
     margin-bottom: 24px;
-    transform: translateX(50%) rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .new-two-about-item.is-expanded::after {
@@ -9031,14 +9039,30 @@ svg.radial-progress circle.incomplete {
     color: #db2777;
 }
 
-.serialize-number {
+.serialize-number, .new-two-item-bg {
     opacity: 0;
+    visibility: hidden;
 }
 
-.new-two-about-item.is-expanded .serialize-number {
-    opacity: 24%;
+.new-two-about-item.is-expanded .serialize-number, .new-two-about-item.is-expanded .new-two-item-bg {
+    opacity: 1;
+    visibility: visible;
 }
 
+@media (min-width: 1200px) {
+    .new-two-about__images {
+        position: absolute;
+        inset-inline-start: 54%;
+        max-width: 45%;
+        top: 0;
+    }
+}
+
+@media (max-width: 1400px) {
+    .new-two-about__images {
+        inset-inline-start: 58%;
+    }
+}
 /* New two about css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
