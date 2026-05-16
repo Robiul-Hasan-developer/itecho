@@ -1110,142 +1110,46 @@ gsap.from(".accordion-item", {
 //**************************** New two services js End ****************************
 
 
-// GSAP
-// gsap.registerPlugin(ScrollTrigger);
+// **************************** Section to title zoom and item upper js End ****************************
+gsap.matchMedia().add("(min-width: 1200px)", () => {
+  const portfolioArea = document.querySelector(".sticky-section");
+  const portfolioText = document.querySelector(".sticky-section-text");
 
-// Background zoom
-// gsap.to(".hero-bg img", {
-//   scale: 1,
-//   duration: 2.5,
-//   ease: "power3.out",
-// });
+  if (portfolioArea && portfolioText) {
+    // Timeline
+    let portfolioline = gsap.timeline({
+      scrollTrigger: {
+        trigger: portfolioArea,
+        start: "top center-=400",
+        pin: portfolioText,
+        end: "bottom bottom+=10",
+        markers: false,
+        pinSpacing: false,
+        scrub: 1,
+      },
+    });
 
-// // Main timeline
-// const timeLines = gsap.timeline({
-//   defaults: {
-//     ease: "power4.out",
-//   },
-// });
+    portfolioline.to(portfolioText, { scale: 1.2, duration: 1 });
+    portfolioline.to(portfolioText, { scale: 1.2, duration: 1 });
+    portfolioline.to(portfolioText, { scale: 1.2, duration: 1 });
+    portfolioline.to(portfolioText, { scale: 1.2, duration: 1 });
+    portfolioline.to(portfolioText, { scale: 1.2, duration: 1 }, "+=2");
 
-// timeLines.from(".floating-card.left", {
-//   x: -120,
-//   opacity: 0,
-//   rotate: -10,
-//   duration: 1.2,
-// })
+    // Opacity scroll animation
+    gsap.to(portfolioText, {
+      scrollTrigger: {
+        trigger: portfolioArea,
+        start: "top center-=100",
+        end: "bottom bottom+=10",
+        scrub: 1,
+      },
+      opacity: 0,
+    });
+  }
+});
+// **************************** Section to title zoom and item upper js End ****************************
 
-//   .from(
-//     ".hero-top-text",
-//     {
-//       y: 80,
-//       opacity: 0,
-//       duration: 1,
-//     },
-//     "-=0.8",
-//   )
 
-//   .from(
-//     ".hero-description",
-//     {
-//       y: -50,
-//       opacity: 0,
-//       duration: 1,
-//     },
-//     "-=0.7",
-//   )
-
-//   .from(
-//     ".hero-title span",
-//     {
-//       yPercent: 120,
-//       opacity: 0,
-//       stagger: 0.15,
-//       duration: 1.2,
-//     },
-//     "-=0.7",
-//   )
-
-//   .from(
-//     ".arrow-icon",
-//     {
-//       scale: 0,
-//       rotate: -120,
-//       opacity: 0,
-//       duration: 1,
-//     },
-//     "-=1",
-//   )
-
-//   .from(
-//     ".mini-slider-wrapper",
-//     {
-//       x: 150,
-//       opacity: 0,
-//       duration: 1,
-//     },
-//     "-=1",
-//   );
-
-// // Floating animation
-// gsap.to(".floating-card.left", {
-//   y: -20,
-//   duration: 3,
-//   repeat: -1,
-//   yoyo: true,
-//   ease: "sine.inOut",
-// });
-
-// gsap.to(".mini-slider-wrapper", {
-//   y: -15,
-//   duration: 4,
-//   repeat: -1,
-//   yoyo: true,
-//   ease: "sine.inOut",
-// });
-
-// // Moving light streaks
-// gsap.to(".line-one", {
-//   xPercent: 20,
-//   duration: 5,
-//   repeat: -1,
-//   yoyo: true,
-//   ease: "none",
-// });
-
-// gsap.to(".line-two", {
-//   xPercent: -20,
-//   duration: 6,
-//   repeat: -1,
-//   yoyo: true,
-//   ease: "none",
-// });
-
-// // Mouse parallax
-// const hero = document.querySelector(".hero-banner");
-
-// hero.addEventListener("mousemove", (e) => {
-//   const x = (window.innerWidth / 2 - e.clientX) / 30;
-//   const y = (window.innerHeight / 2 - e.clientY) / 30;
-
-//   gsap.to(".hero-bg img", {
-//     x: -x,
-//     y: -y,
-//     duration: 1.5,
-//     ease: "power2.out",
-//   });
-
-//   gsap.to(".floating-card.left", {
-//     x: x,
-//     y: y,
-//     duration: 1.5,
-//   });
-
-//   gsap.to(".mini-slider-wrapper", {
-//     x: -x,
-//     y: -y,
-//     duration: 1.5,
-//   });
-// });
 
 /* **************************************************************************** 
                           Custom GSAP js start 
