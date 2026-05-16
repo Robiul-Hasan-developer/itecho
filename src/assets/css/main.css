@@ -9129,6 +9129,13 @@ svg.radial-progress circle.incomplete {
 }
 
 /* new two case studies css end */
+/* =================================== new two testimonials css start ============================= */
+.bg-black-blur {
+    background: #0702204D;
+    backdrop-filter: blur(20px);
+}
+
+/* =================================== new two testimonials css end ============================= */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;
