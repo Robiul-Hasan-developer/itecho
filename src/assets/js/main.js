@@ -830,6 +830,29 @@
     });
     // ================================= new brand one slider slider End =========================
 
+      // ========================= New two testimonials Slider Js Start =====================
+    var newTwoTestimonialsSmallThumbsSlider = new Swiper(".new-two-testimonials-small-thumbs-slider", {
+      loop: true,
+      spaceBetween: 0,
+      slidesPerView: 5,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    var newTwoTestimonialsContentSlider = new Swiper(".new-two-testimonials-content-slider", {
+      loop: true,
+      spaceBetween: 0,
+      effect: "fade",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: newTwoTestimonialsSmallThumbsSlider,
+      },
+    });
+    // ========================= New two testimonials Slider Js End =====================
+
     /* ======================================================================================
                                         New two home js start
     ======================================================================================= */
