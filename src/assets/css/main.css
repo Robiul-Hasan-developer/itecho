@@ -1955,6 +1955,10 @@ input:focus, input:focus-visible {
     border-color: #DFE0E4 !important;
 }
 
+.border-brand-secondary-three {
+    border-color: #FF2125 !important;
+}
+
 /* Colors class start */
 .text-main-50 {
     color: var(--main-50);
@@ -9336,6 +9340,13 @@ svg.radial-progress circle.incomplete {
 }
 
 /* ================================= New two team end ==================================== */
+/* new two blog css start */
+.new-two-blog__content {
+    background: linear-gradient(0deg, rgba(14, 89, 242, 0.06), rgba(14, 89, 242, 0.06));
+    border: 1px solid #0E59F233;
+}
+
+/* new two blog css end */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;
