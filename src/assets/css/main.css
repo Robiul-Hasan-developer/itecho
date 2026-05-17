@@ -9163,11 +9163,11 @@ svg.radial-progress circle.incomplete {
     }
 }
 
-.swiper-slide-thumb-active img {
+.swiper-slide-active img {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border: 2px solid blue;
+    border: 2px solid #0E59F2;
     border-radius: 50%;
 }
 
