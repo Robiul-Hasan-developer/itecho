@@ -1,4 +1,14 @@
 /* ================================= New two team start ==================================== */
+.new-two-team__content {
+    transform: translateY(100%);
+}
+
+.new-two-team__item:hover .new-two-team__content {
+    transform: translateY(0);
+}
+
+
+
 .on-hover-animation-item li {
     transform: scale(0);
 }
