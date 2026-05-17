@@ -8258,6 +8258,10 @@ svg.radial-progress circle.incomplete {
     background-color: #FF2125;
 }
 
+.hover-bg-brand-secondary-three:hover {
+    background-color: #FF2125 !important;
+}
+
 .bg-brand-one {
     background-color: #130E29;
 }
@@ -9163,7 +9167,7 @@ svg.radial-progress circle.incomplete {
     }
 }
 
-.swiper-slide-active img {
+.swiper-slide-thumb-active img {
     width: 80px;
     height: 80px;
     object-fit: cover;
@@ -9278,6 +9282,40 @@ svg.radial-progress circle.incomplete {
 }
 
 /* Active slider animation css end */
+/* ================================= New two team start ==================================== */
+.on-hover-animation-item li {
+    transform: scale(0);
+}
+
+.on-hover-animation-item li:nth-child(1) {
+    transition-delay: 0.1s !important;
+}
+
+.on-hover-animation-item li:nth-child(2) {
+    transition-delay: 0.2s !important;
+}
+
+.on-hover-animation-item li:nth-child(3) {
+    transition-delay: 0.3s !important;
+}
+
+.on-hover-animation-item li:nth-child(4) {
+    transition-delay: 0.4s !important;
+}
+
+.on-hover-animation-item li:nth-child(5) {
+    transition-delay: 0.5s !important;
+}
+
+.on-hover-animation-item li:nth-child(6) {
+    transition-delay: 0.6s !important;
+}
+
+.on-hover-item:hover .on-hover-animation-item li {
+    transform: scale(1);
+}
+
+/* ================================= New two team end ==================================== */
 /* ====================================== Custom Language select with flag css start ============================== */
 .select-box {
     position: relative;
