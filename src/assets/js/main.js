@@ -917,6 +917,45 @@
     });
     // ================================= new brand one slider slider End =========================
 
+    // ================================= new  Two Team slider Start =========================
+    var newBlogOneSlider = new Swiper(".new-two-blog-slider", {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      autoplay: false,
+      speed: 1500,
+      grabCursor: true,
+      loop: true,
+      spaceBetween: 24,
+      slidesPerView: 1,
+      pagination: {
+        el: ".new-two-team-slider-pagination",
+        clickable: true,
+      },
+      loopFillGroupWithBlank: true,
+      freeMode: true,
+      freeModeMomentum: false,
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 3,
+        },
+      },
+    });
+    // ================================= new  Two Team slider End =========================
+
     /* ======================================================================================
                                         New two home js start
     ======================================================================================= */
