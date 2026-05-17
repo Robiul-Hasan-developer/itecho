@@ -295,6 +295,21 @@
     }
     // ====================== Marquee Js End ========================
 
+    // ====================== Marquee Js Start ========================
+    if ($(".marquee_right").length) {
+      $(".marquee_right").marquee({
+        speed: 50,
+        gap: 0,
+        delayBeforeStart: 0,
+        direction: $("html").attr("dir") === "rtl" ? "right" : "left",
+        duplicated: true,
+        pauseOnHover: true,
+        startVisible: true,
+        direction: "right",
+      });
+    }
+    // ====================== Marquee Js End ========================
+
     // ========================= magnific Popup Js Start =====================
     $(".play-button").magnificPopup({
       type: "iframe",
