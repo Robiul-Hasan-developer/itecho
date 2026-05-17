@@ -6151,6 +6151,14 @@ input:focus, input:focus-visible {
     transform: rotate(260deg);
 }
 
+.rotate-4-deg {
+    transform: rotate(4deg);
+}
+
+.rotate--4-deg {
+    transform: rotate(-4deg);
+}
+
 /* Rotate Css End */
 /* Hover Scale Css start */
 .tw-scale-04 {
