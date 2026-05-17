@@ -149,4 +149,9 @@
 
 }
 
+
+.style-two-three .accordion-item:has(.accordion-collapse.collapse.show) {
+    background: linear-gradient(156.81deg, rgba(14, 89, 242, 0.07) 14.99%, rgba(255, 33, 37, 0.07) 81.8%);
+}
+
 /* ================================= Accordion Css End =========================== */

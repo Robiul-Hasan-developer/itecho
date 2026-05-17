@@ -312,6 +312,10 @@
     background: #0E59F2;
 }
 
+.style-two-three .accordion-item:has(.accordion-collapse.collapse.show) {
+    background: linear-gradient(156.81deg, rgba(14, 89, 242, 0.07) 14.99%, rgba(255, 33, 37, 0.07) 81.8%);
+}
+
 /* ================================= Accordion Css End =========================== */
 /* ========================== Button Css Start =============== */
 .button__label {
@@ -4730,6 +4734,10 @@ input:focus, input:focus-visible {
 
 .max-w-1660-px {
     max-width: 1660px;
+}
+
+.max-w-1600-px {
+    max-width: 1600px;
 }
 
 .max-w-1700-px {
