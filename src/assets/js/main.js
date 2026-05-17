@@ -830,27 +830,37 @@
     });
     // ================================= new brand one slider slider End =========================
 
-      // ========================= New two testimonials Slider Js Start =====================
-    var newTwoTestimonialsSmallThumbsSlider = new Swiper(".new-two-testimonials-small-thumbs-slider", {
-      loop: true,
-      spaceBetween: 0,
-      slidesPerView: 5,
-      freeMode: true,
-      watchSlidesProgress: true,
-    });
+    // ========================= New two testimonials Slider Js Start =====================
+    var newTwoTestimonialsSmallThumbsSlider = new Swiper(
+      ".new-two-testimonials-small-thumbs-slider",
+      {
+        loop: true,
+        spaceBetween: 0,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: ".new-two-testimonials-button-next",
+          prevEl: ".new-two-testimonials-button-prev",
+        },
+      },
+    );
 
-    var newTwoTestimonialsContentSlider = new Swiper(".new-two-testimonials-content-slider", {
-      loop: true,
-      spaceBetween: 0,
-      effect: "fade",
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+    var newTwoTestimonialsContentSlider = new Swiper(
+      ".new-two-testimonials-content-slider",
+      {
+        loop: true,
+        spaceBetween: 0,
+        effect: "fade",
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: newTwoTestimonialsSmallThumbsSlider,
+        },
       },
-      thumbs: {
-        swiper: newTwoTestimonialsSmallThumbsSlider,
-      },
-    });
+    );
     // ========================= New two testimonials Slider Js End =====================
 
     /* ======================================================================================
@@ -929,23 +939,21 @@
     });
     // --------------------- New two Banner slider end ----------------------
 
-    
     // --------------------- New two About js start ----------------------
     const aboutItems = document.querySelectorAll(".new-two-about-item");
 
-    if(aboutItems) {
+    if (aboutItems) {
       aboutItems.forEach((item) => {
         item.addEventListener("mouseenter", () => {
           // Clear state across sister elements
           aboutItems.forEach((i) => i.classList.remove("is-expanded"));
-  
+
           // Set hover target to active status
           item.classList.add("is-expanded");
         });
       });
     }
     // --------------------- New two About js end ----------------------
-
 
     /* ======================================================================================
                                         New two home js end

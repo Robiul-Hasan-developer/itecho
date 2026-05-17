@@ -4,16 +4,41 @@
     backdrop-filter: blur(20px);
 }
 
-@media (min-width: 1199px) {
+@media (max-width: 991px) {
     .new-two-testimonials__left {
-        border-radius: 16px 0 0 16px; 
+        border-radius: 16px;
         overflow: hidden;
     }
-    
+
     .new-two-testimonials__right {
-        border-radius: 0 16px 16px 0; 
+        border-radius: 16px;
         overflow: hidden;
     }
 }
+
+@media (min-width: 992px) {
+    .new-two-testimonials__left {
+        border-radius: 16px 0 0 16px;
+        overflow: hidden;
+    }
+
+    .new-two-testimonials__right {
+        border-radius: 0 16px 16px 0;
+        overflow: hidden;
+    }
+}
+
+.swiper-slide-thumb-active img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid blue;
+    border-radius: 50%;
+}
+
+.new-two-testimonials-small-thumbs-slider .swiper-wrapper {
+    align-items: center;
+}
+
 
 /* =================================== new two testimonials css end ============================= */
