@@ -863,6 +863,45 @@
     );
     // ========================= New two testimonials Slider Js End =====================
 
+    // ================================= new brand one slider slider Start =========================
+    var newBlogOneSlider = new Swiper(".new-two-team-slider", {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      autoplay: false,
+      speed: 1500,
+      grabCursor: true,
+      loop: true,
+      spaceBetween: 0,
+      slidesPerView: 1,
+      pagination: {
+        el: ".new-two-team-slider-pagination",
+        clickable: true,
+      },
+      loopFillGroupWithBlank: true,
+      freeMode: true,
+      freeModeMomentum: false,
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+        },
+        575: {
+          slidesPerView: 1,
+        },
+        576: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    });
+    // ================================= new brand one slider slider End =========================
+
     /* ======================================================================================
                                         New two home js start
     ======================================================================================= */

@@ -60,4 +60,16 @@
     display: none;
 }
 
+.style-two .swiper-pagination-bullet::after {
+    background: #404A60;
+}
+
+.style-two .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    background-color: #0E59F2;
+}
+
+.style-two .swiper-pagination-bullet::before {
+    border: 1px solid #0E59F2;
+}
+
 /* ============================= New brand slider one css end ============================== */
