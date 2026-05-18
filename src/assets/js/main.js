@@ -1149,4 +1149,23 @@
     }
   });
   // ========================= Header Sticky tw0 Js End===================
+
+  //  ==================== bottom blur shadow js start ====================
+  $(window).on("scroll", function () {
+    if (
+      $(window).scrollTop() + $(window).height() >=
+      $(document).height() - 5
+    ) {
+      $(".blur-bottom-shadow").css({
+        opacity: "0",
+        visibility: "hidden",
+      });
+    } else {
+      $(".blur-bottom-shadow").css({
+        opacity: "1",
+        visibility: "visible",
+      });
+    }
+  });
+  //  ==================== bottom blur shadow js end ====================
 })(jQuery);
