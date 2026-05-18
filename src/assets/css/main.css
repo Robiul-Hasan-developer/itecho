@@ -7452,6 +7452,15 @@ input:focus, input:focus-visible {
 }
 
 /* Header Menu and Submenu Css End */
+.new-two-header-wrapper {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    z-index: 9;
+    width: 100%;
+    inset-inline-end: 0;
+}
+
 /* ================================= Header Css End =========================== */
 /* Mega menu css start */
 .mega-menu {
@@ -9062,7 +9071,13 @@ svg.radial-progress circle.incomplete {
 .hero-content {
     width: 100%;
     position: relative;
-    padding-top: 140px;
+    padding-top: 280px;
+}
+
+@media (max-width: 575px) {
+    .hero-content {
+        padding-top: 200px;
+    }
 }
 
 .hero-description,

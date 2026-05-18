@@ -113,7 +113,10 @@
 .hero-content {
     width: 100%;
     position: relative;
-    padding-top: 140px;
+    padding-top: 280px;
+    @media (max-width: 575px) {
+        padding-top: 200px;
+    }
 }
 
 .hero-description,
