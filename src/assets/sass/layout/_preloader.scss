@@ -1,71 +1,214 @@
 /* ================================= preload Css Start =========================== */
-
-.loader-mask {
+.preloader {
   position: fixed;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  inset-block-end: 0;
-  background-color: #fff;
-  z-index: 99999;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #050816;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: 1s ease;
 }
 
-.loader {
+/* Blur Background Glow */
+.preloader::before {
+  content: "";
   position: absolute;
-  inset-inline-start: 50%;
-  inset-block-start: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 0;
-  display: inline-block;
-  margin: -25px 0 0 -25px;
-  text-indent: -9999em;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #00ffc84b, transparent 70%);
+  animation: pulseGlow 3s infinite ease-in-out;
 }
 
-.loader div {
-  background-color: var(--main-600);
-  display: inline-block;
-  float: none;
+/* Main Loader Wrapper */
+.loader-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Outer Ring */
+.ring {
   position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  width: 60px;
-  height: 60px;
-  opacity: 0.5;
   border-radius: 50%;
-  -webkit-animation: ballPulseDouble 2s ease-in-out infinite;
-  animation: ballPulseDouble 2s ease-in-out infinite;
+  border: 2px solid transparent;
 }
 
-.loader div:last-child {
-  -webkit-animation-delay: -1s;
-  animation-delay: -1s;
+.ring-1 {
+  width: 220px;
+  height: 220px;
+  border-top: 2px solid #FF9921;
+  border-bottom: 2px solid #FF9921;
+  animation: rotate 4s linear infinite;
 }
 
-@-webkit-keyframes ballPulseDouble {
+.ring-2 {
+  width: 185px;
+  height: 185px;
+  border-left: 2px solid #0E59F2;
+  border-right: 2px solid #0E59F2;
+  animation: rotateReverse 3s linear infinite;
+}
+
+.ring-3 {
+  width: 140px;
+  height: 140px;
+  border-top: 2px solid #00f5d4;
+  border-bottom: 2px solid #00f5d4;
+  animation: rotate 2s linear infinite;
+}
+
+/* Center Logo */
+.loader-logo {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.loader-logo .icon {
+  font-size: 54px;
+  color: #FF9921;
+  display: flex;
+  justify-content: center;
+  animation: float 2s ease-in-out infinite;
+}
+
+.loader-logo .name {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.loading-text {
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  min-width: max-content;
+  display: flex;
+  gap: 4px;
+}
+
+.loading-text span {
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+}
+
+.loading-text span:nth-child(2) {
+  animation-delay: .1s;
+}
+
+.loading-text span:nth-child(3) {
+  animation-delay: .2s;
+}
+
+.loading-text span:nth-child(4) {
+  animation-delay: .3s;
+}
+
+.loading-text span:nth-child(5) {
+  animation-delay: .4s;
+}
+
+.loading-text span:nth-child(6) {
+  animation-delay: .5s;
+}
+
+.loading-text span:nth-child(7) {
+  animation-delay: .6s;
+}
+
+/* ===========================
+    Animations
+=========================== */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes float {
+
   0%,
   100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    transform: translateY(0px);
   }
+
   50% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    transform: translateY(-10px);
   }
 }
 
-@keyframes ballPulseDouble {
+@keyframes pulseGlow {
+
   0%,
   100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  50% {
-    -webkit-transform: scale(1);
     transform: scale(1);
+    opacity: .6;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
   }
 }
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: .5;
+  }
+
+  50% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+/* ===========================
+    Hide Animation
+=========================== */
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Demo Content */
+.demo-content {
+  padding: 120px;
+  color: #fff;
+  text-align: center;
+}
+
 /* ================================= preload Css End ===========================  */

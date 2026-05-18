@@ -1156,8 +1156,12 @@
   // ==========================================
 
   // ========================= Preloader Js Start =====================
-  $(window).on("load", function () {
-    $(".loader-mask").fadeOut();
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+
+    setTimeout(() => {
+      preloader.classList.add("hide");
+    }, 1000);
   });
   // ========================= Preloader Js End=====================
 
