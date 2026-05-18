@@ -1,0 +1,269 @@
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+    background: #020617;
+}
+
+/* =====================================
+    Main Slider
+    ===================================== */
+
+.hero-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide-active .hero-bg img {
+    animation: scaleImage 6s ease-in-out;
+}
+
+@keyframes scaleImage {
+    0% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* overlay */
+.hero-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(270deg, #070220 0%, rgba(7, 2, 32, 0.4) 16.06%, rgba(7, 2, 32, 0.1) 35.09%, rgba(7, 2, 32, 0) 50.16%, rgba(7, 2, 32, 0.1) 64.54%, rgba(7, 2, 32, 0.4) 83.79%, #070220 100%);
+    z-index: 1;
+}
+
+/* =====================================
+    Container
+    ===================================== */
+.hero-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* =====================================
+    Floating Card
+    ===================================== */
+.floating-card {
+    width: 273px;
+    height: 273px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(18px);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.floating-card img {
+    height: 210px;
+    object-fit: cover;
+}
+
+.play-btn {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    z-index: 2;
+    font-size: 16px;
+}
+
+.floating-card h4 {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    z-index: 2;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* =====================================
+    Content
+    ===================================== */
+.hero-content {
+    width: 100%;
+    position: relative;
+    padding-top: 140px;
+}
+
+.hero-description,
+.hero-top-text,
+.big-arrow,
+.hero-title span {
+    opacity: 0;
+}
+
+.hero-top-text {
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+    max-width: 500px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+    margin-top: 220px;
+}
+
+.hero-title {
+    font-size: clamp(85px, 13vw, 240px);
+    line-height: .85;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+
+/* arrow */
+.big-arrow {
+    position: absolute;
+    left: 320px;
+    top: 20px;
+    color: blue;
+    font-size: 150px;
+    z-index: 5;
+}
+
+/* description */
+.hero-description {
+    position: absolute;
+    top: 170px;
+    right: 0;
+    max-width: 290px;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* =====================================
+    Thumbnail Slider
+    ===================================== */
+.thumb-wrapper {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 360px;
+    z-index: 20;
+    transform: translateY(-50%);
+}
+
+.thumbSlider .swiper-slide {
+    width: 96px !important;
+    height: 96px;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .4s;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.thumbSlider .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbSlider .swiper-slide-thumb-active {
+    opacity: 1;
+    transform: scale(1);
+    border-color: rgba(20, 107, 255, 0.8);
+    box-shadow: 0 0 25px rgba(20, 107, 255, 0.35);
+}
+
+/* =====================================
+    Responsive
+    ===================================== */
+@media (max-width: 1199px) {
+    .hero-description {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+
+    .big-arrow {
+        left: 220px;
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding-inline: 20px;
+    }
+
+    .hero-top-text {
+        font-size: 16px;
+    }
+
+    .big-arrow {
+        display: none;
+    }
+
+    .floating-card img {
+        height: 150px;
+    }
+
+    .floating-card h4 {
+        font-size: 14px;
+    }
+
+    .thumbSlider .swiper-slide {
+        width: 80px !important;
+        height: 80px;
+    }
+}
+
+
+/* =====================================
+IMPORTANT FIX
+ADD THIS CSS
+===================================== */
+
+.hero-title {
+    overflow: hidden;
+}
+
+.hero-title span {
+    overflow: hidden;
+    will-change: transform, opacity;
+}
+
+/* remove this if exists */
+.hero-description,
+.hero-top-text,
+.big-arrow,
+.hero-title span {
+    opacity: 0;
+}

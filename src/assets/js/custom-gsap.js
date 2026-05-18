@@ -1067,7 +1067,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //**************************** Card Item animation js End ****************************
 
-
 //**************************** New two services js Start ****************************
 document.querySelectorAll(".accordion-item").forEach((item) => {
   const collapseElement = item.querySelector(".accordion-collapse");
@@ -1109,7 +1108,6 @@ gsap.from(".accordion-item", {
 });
 //**************************** New two services js End ****************************
 
-
 // **************************** Section to title zoom and item upper js End ****************************
 gsap.matchMedia().add("(min-width: 1200px)", () => {
   const portfolioArea = document.querySelector(".sticky-section");
@@ -1149,7 +1147,145 @@ gsap.matchMedia().add("(min-width: 1200px)", () => {
 });
 // **************************** Section to title zoom and item upper js End ****************************
 
+function slideAnimation(slide) {
+  const card = slide.querySelector(".floating-card");
+  const description = slide.querySelector(".hero-description");
+  const topText = slide.querySelector(".hero-top-text");
+  const arrow = slide.querySelector(".big-arrow");
+  const title = slide.querySelectorAll(".hero-title span");
+  const heroBgImg = slide.querySelector(".hero-bg img");
 
+  // reset active slide
+  gsap.set(card, {
+    opacity: 0,
+    x: -120,
+    rotate: -10,
+  });
+
+  gsap.set(description, {
+    opacity: 0,
+    y: -40,
+  });
+
+  gsap.set(topText, {
+    opacity: 0,
+    y: 60,
+  });
+
+  gsap.set(title, {
+    opacity: 1,
+    yPercent: 120,
+  });
+
+  gsap.set(arrow, {
+    opacity: 0,
+    scale: 0,
+    rotate: -90,
+  });
+
+  // animation timeline
+  const tl = gsap.timeline({
+    defaults: {
+      ease: "power4.out",
+    },
+  });
+
+  // floating card
+  tl.to(
+    card,
+    {
+      opacity: 1,
+      x: 0,
+      rotate: 0,
+      duration: 1.1,
+    },
+    0.1,
+  );
+
+  // description
+  tl.to(
+    description,
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+    },
+    0.3,
+  );
+
+  // top text
+  tl.to(
+    topText,
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+    },
+    0.45,
+  );
+
+  // title animation
+  tl.to(
+    title,
+    {
+      yPercent: 0,
+      stagger: 0.12,
+      duration: 1.2,
+      ease: "power4.out",
+    },
+    0.65,
+  );
+
+  // arrow
+  tl.to(
+    arrow,
+    {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
+      duration: 1,
+      ease: "back.out(2)",
+    },
+    1,
+  );
+
+  // floating motion
+  gsap.to(card, {
+    y: -16,
+    duration: 3,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+  });
+}
+
+// =========================================
+// THUMB FLOATING
+// =========================================
+gsap.to(".thumb-wrapper", {
+  y: -12,
+  duration: 4,
+  repeat: -1,
+  yoyo: true,
+  ease: "sine.inOut",
+});
+
+// =========================================
+// PARALLAX
+// =========================================
+const hero = document.querySelector(".hero-banner");
+
+hero.addEventListener("mousemove", (e) => {
+  const x = (window.innerWidth / 2 - e.clientX) / 40;
+  const y = (window.innerHeight / 2 - e.clientY) / 40;
+
+  gsap.to(".thumb-wrapper", {
+    x: -x,
+    y: -y,
+    duration: 1.5,
+    ease: "power3.out",
+  });
+});
 
 /* **************************************************************************** 
                           Custom GSAP js start 
