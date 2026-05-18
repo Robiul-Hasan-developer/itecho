@@ -8971,16 +8971,17 @@ svg.radial-progress circle.incomplete {
 .hero-slide {
     position: relative;
     overflow: hidden;
+    margin-bottom: -20px;
 }
 
 .hero-bg {
     position: absolute;
-    inset: 0;
     overflow: hidden;
     left: 0;
+    bottom: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% + 20px);
 }
 
 .hero-bg img {
@@ -9009,6 +9010,9 @@ svg.radial-progress circle.incomplete {
     inset: 0;
     background: linear-gradient(270deg, #070220 0%, rgba(7, 2, 32, 0.4) 16.06%, rgba(7, 2, 32, 0.1) 35.09%, rgba(7, 2, 32, 0) 50.16%, rgba(7, 2, 32, 0.1) 64.54%, rgba(7, 2, 32, 0.4) 83.79%, #070220 100%);
     z-index: 1;
+    left: 0;
+    bottom: 0;
+    top: 0;
 }
 
 /* =====================================
