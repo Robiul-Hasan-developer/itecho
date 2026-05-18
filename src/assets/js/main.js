@@ -916,6 +916,91 @@
       },
     });
     // ================================= new brand one slider slider End =========================
+    
+
+// ========================== working process six js start ===========================
+    var workingProcesSixSlider = new Swiper(".working-proces-six__slider", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+        delay: 100,
+        disableOnInteraction: false
+      },
+      autoplay: true,
+      speed: 4000,
+    });
+// ========================== working process six js end ===========================
+
+
+
+// ========================== company projects six js start ===========================
+  var companmPprojectsSixSlider = new Swiper(".company-projects-six__slider", {
+   autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
+    autoplay: true,
+    speed: 1500,
+    spaceBetween: 30,
+    grabCursor: true,
+    loop: true,
+    slidesPerView: 4,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1199: {
+        slidesPerView: 3,
+      },
+      1399: {
+        slidesPerView: 4,
+      },
+    }
+  });
+// ========================== company projects six js end ===========================
+
+
+// ========================== testimonial six js end ===========================
+  var companmPprojectsSixSlider = new Swiper(".testimonial-six__slider", {
+   autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
+    autoplay: true,
+    speed: 1500,
+    spaceBetween: 30,
+    grabCursor: true,
+    loop: true,
+    slidesPerView: 3,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 2,
+      },
+      1199: {
+        slidesPerView: 3,
+      },
+    }
+  });
+// ========================== testimonial six js end ===========================
+    
 
     // ================================= new  Two Team slider Start =========================
     var newBlogOneSlider = new Swiper(".new-two-blog-slider", {
@@ -1161,7 +1246,7 @@
 
     setTimeout(() => {
       preloader.classList.add("hide");
-    }, 1000);
+    }, 100);
   });
   // ========================= Preloader Js End=====================
 

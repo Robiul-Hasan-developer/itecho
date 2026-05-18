@@ -1,19 +1,24 @@
 @@include('../partials/_template-top.html', {
-    'pageClass': ''
+'pageClass': ''
 })
 
-    @@include('../partials/_header-inner.html')
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+        @@include('../partials/_header-inner.html')
 
-    @@include('../partials/_breadcrumb.html', {
+        @@include('../partials/_breadcrumb.html', {
         'breadcrumbTitle': 'Blog Grid',
         'breadcrumbText': 'Blog Grid'
-    })
+        })
 
-    @@include('../partials/_blog-grid.html')
-    
-    @@include('../partials/_footer-four.html')
+        @@include('../partials/_blog-grid.html')
 
-    @@include('../partials/_template-bottom.html')
+        @@include('../partials/_footer-four.html')
+    </div>
+</div>
 
-    </body>
+@@include('../partials/_template-bottom.html')
+
+</body>
+
 </html>

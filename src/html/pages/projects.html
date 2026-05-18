@@ -1,19 +1,24 @@
 @@include('../partials/_template-top.html', {
-    'pageClass': ''
+'pageClass': ''
 })
 
-    @@include('../partials/_header-inner.html')
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+        @@include('../partials/_header-inner.html')
 
-    @@include('../partials/_breadcrumb.html', {
+        @@include('../partials/_breadcrumb.html', {
         'breadcrumbTitle': 'Projects',
         'breadcrumbText': 'Projects'
-    })
-    
-    @@include('../partials/_projects.html')
-    
-    @@include('../partials/_footer-four.html')
+        })
 
-    @@include('../partials/_template-bottom.html')
+        @@include('../partials/_projects.html')
 
-    </body>
+        @@include('../partials/_footer-four.html')
+    </div>
+</div>
+
+@@include('../partials/_template-bottom.html')
+
+</body>
+
 </html>

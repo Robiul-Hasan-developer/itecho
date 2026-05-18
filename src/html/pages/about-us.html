@@ -1,35 +1,40 @@
 @@include('../partials/_template-top.html', {
-    'pageClass': ''
+'pageClass': ''
 })
 
-    @@include('../partials/_header-inner.html')
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+        @@include('../partials/_header-inner.html')
 
-    @@include('../partials/_breadcrumb.html', {
+        @@include('../partials/_breadcrumb.html', {
         'breadcrumbTitle': 'About us',
         'breadcrumbText': 'About us'
-    })
+        })
 
-    <div class="bg-neutral-30 pt-120">
+        <div class="bg-neutral-30 pt-120">
 
-        @@include('../partials/_about-us.html')
+            @@include('../partials/_about-us.html')
 
+        </div>
+
+        @@include('../partials/_our-company-about.html')
+
+        @@include('../partials/_work-process-about.html')
+
+        @@include('../partials/_team-about.html')
+
+        @@include('../partials/_company-projects-about.html')
+
+        @@include('../partials/_testimonial-about.html')
+
+        @@include('../partials/_brand-about-slider.html')
+
+        @@include('../partials/_footer-four.html')
     </div>
+</div>
 
-    @@include('../partials/_our-company-about.html')
-    
-    @@include('../partials/_work-process-about.html')
+@@include('../partials/_template-bottom.html')
 
-    @@include('../partials/_team-about.html')
+</body>
 
-    @@include('../partials/_company-projects-about.html')
-    
-    @@include('../partials/_testimonial-about.html')
-
-    @@include('../partials/_brand-about-slider.html')
-    
-    @@include('../partials/_footer-four.html')
-
-    @@include('../partials/_template-bottom.html')
-
-    </body>
 </html>
