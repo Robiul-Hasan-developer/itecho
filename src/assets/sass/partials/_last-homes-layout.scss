@@ -1,0 +1,443 @@
+// ============== why chooses us css start ================
+.choose-us__card-one::after {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 -16px 0px #fff;
+    border-radius: 50%;
+    transform: rotate(-224deg);
+    bottom: 1px;
+    inset-inline-start: -35px;
+}
+.choose-us__card-one::before {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 -16px 0px #Fff;
+    border-radius: 50%;
+    transform: rotate(133deg);
+    top: -34px;
+    inset-inline-end: 0px;
+}
+// ============== why chooses us css end ================
+
+
+
+
+// ================== working process css start =====================
+.working-process-six__card-one::after {
+  position: absolute;
+  content: "";
+   width: 36px;
+  height: 36px;
+  box-shadow: 0 -16px 0px #F4F6F8;
+  border-radius: 20%;
+  transform: rotate(21deg);
+  top: 59px;
+  inset-inline-start: -37px;
+}
+.working-process-six__card-one::before {
+  position: absolute;
+  content: "";
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 -16px 0px #F4F6F8;
+  border-radius: 20%;
+  transform: rotate(-30deg);
+  top: 59px;
+  inset-inline-end: -37px;
+}
+
+
+.working-process-six__card-two::after {
+    position: absolute;
+    content: "";
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 -16px 0px #F4F6F8;
+    border-radius: 40%;
+    transform: rotate(126deg);
+    top: -30px;
+    inset-inline-start: -13px;
+}
+.working-process-six__card-two::before {
+    position: absolute;
+    content: "";
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 -16px 0px #F4F6F8;
+    border-radius: 32%;
+    transform: rotate(53deg);
+    top: 48px;
+    inset-inline-end: 28px;
+}
+
+
+
+.working-process-six__card-three::after {
+    position: absolute;
+    content: "";
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 -16px 0px #F4F6F8;
+    border-radius: 40%;
+    transform: rotate(-126deg);
+    top: -30px;
+    inset-inline-start: 28px;
+}
+.working-process-six__card-three::before {
+    position: absolute;
+    content: "";
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 -16px 0px #F4F6F8;
+    border-radius: 32%;
+    transform: rotate(-53deg);
+    top: 47px;
+    inset-inline-end: -12px;
+}
+// ================== working process css start =====================
+
+
+
+// ======================== box shadow css start ============================
+.tw-shadow-six {
+  box-shadow: 0px 8px 39px 18px #E5E5E5;
+}
+// ======================== box shadow css end ============================
+
+
+
+
+// ========================== background css start ====================
+.tw-bg-gradient-6 {
+    background: linear-gradient(270deg, rgba(244, 246, 248, 0) 0%, #F4F6F8 36.66%);
+}
+.tw-bg-gradient-blog-7 {
+  background: linear-gradient(180deg, rgba(14, 89, 242, 0) 0%, #0E59F2 89.22%);
+}
+.tw-bg-gradient-8 {
+  background: linear-gradient(0deg, #DBDBDB 0.04%, #FFFFFF 100%);
+}
+// ========================== background css end ====================
+
+// ================ Transform css start ===================
+.tw-transform-roted {
+  transform: rotate(270deg);
+}
+.tw-transform-roted-180 {
+  transform: rotate(180deg);
+}
+.tw-transform-roted-47 {
+  transform: rotate(47deg);
+}
+// ================ Transform css end ===================
+
+
+// =========== max width css start =================
+.max-w {
+    &-904-px {
+      max-width: 904px;
+    }
+    &-400-px {
+      max-width: 400px;
+    }
+}
+// =========== max width css end =================
+
+
+// ================ width css start ===============
+.tw-w {
+    &-307-px {
+    width: 307px;
+  }
+}
+// ================ width css end ===============
+
+
+// ================ height css start ===============
+.tw-h {
+   &-307-px {
+    height: 307px;
+  }
+   &-101-px {
+    height: 101px;
+  }
+   &-180-px {
+    height: 180px;
+  }
+}
+// ================ height css end ===============
+
+
+// ================= padding css start ===============
+.tw-pt-91-px {
+  padding-top: 91px;
+}
+
+.tw-pb-120-px-media {
+    @media (max-width: 1638px) {
+        padding-bottom: 120px;
+    }
+    @media (max-width: 1199px) {
+        padding-bottom: 80px;
+    }
+    @media (max-width: 992px) {
+        padding-bottom: 60px;
+    }
+}
+.pt-180 {
+  padding-block-start: 80px;
+  @media (min-width: 576px) {
+    padding-block-start: 100px;
+  }
+  @media (min-width: 992px) {
+    padding-block-start: 120px;
+  }
+  @media (min-width: 1199px) {
+    padding-block-start: 140px;
+  }
+  @media (min-width: 1399px) {
+    padding-block-start: 180px;
+  }
+}
+// ================= padding css end ===============
+
+
+// ================== margin css start ====================
+.tw-mb--44-px {
+  margin-bottom: -44px;
+}
+
+.tw-mb--80-px {
+  margin-bottom: -80px;
+  @media (max-width: 1199px) {
+    margin-bottom: -50px;
+  }
+}
+
+.tw-mb--12-px {
+  margin-bottom: -12px;
+}
+
+.tw-mt--8-px {
+  margin-top: -8px;
+}
+
+.tw-me--40-px {
+  margin-right: -40px;
+}
+
+.tw-ms-121-px {
+  margin-left: 121px;
+}
+
+.tw-mb-100-px {
+  margin-bottom: 100px;
+}
+
+
+.tw-mb-180-px {
+  margin-bottom: 180px;
+}
+
+
+.tw-mb-270-px {
+  margin-bottom: 270px;
+}
+
+
+.tw-me--26-px {
+  margin-right: -26px;
+}
+
+.tw-ms--26-px {
+  margin-left: -26px;
+}
+
+.tw-mt--190-px {
+  margin-top: -190px;
+}
+
+.tw-me--20-px {
+  margin-right: -20px;
+}
+// ================== margin css end ====================
+
+
+// ================= border css start ================
+.tw-border-dashed-3-px {
+    border: 3px dashed #0E59F233 !important;
+}
+// ================= border css end =================
+
+
+// ================== rounded css start ===================
+.tw-border-radius-media {
+    @media (max-width: 768px) {
+        border-radius: 20px !important;
+    }
+}
+// ================== rounded css end ===================
+
+
+
+// ================ click path start ================
+.tw-click-path-6 {
+  clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+}
+
+.tw-click-path-7 {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+// ================ click path end ================
+
+
+
+
+// ======================== top header plag css start ========================
+.select-box {
+  width: 193px;
+  position: relative;
+}
+
+.selected {
+  background: #fff;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.options {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border-top: none;
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.option:hover {
+  background: #eee;
+}
+
+img.flag {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+}
+// ======================== top header plag css end ========================
+
+
+
+
+// ======================= integration six css start ========================
+.integration-section {
+  background: #f7f8fa;
+}
+
+/* Center Icon */
+.center-icon {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.center-icon img {
+  width: 95px;
+}
+
+/* Line */
+.line-wrapper {
+  position: relative;
+}
+
+.horizontal-line {
+  width: 68%;
+  height: 3px;
+  background: #cfe8f6;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+}
+
+/* Icon Box */
+.icon-box {
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  font-size: 30px;
+  color: #0d6efd;
+  position: relative;
+}
+
+/* Vertical line from main line */
+.icon-box::before {
+  content: "";
+  position: absolute;
+  top: -29px;
+  width: 3px;
+  height: 32px;
+  background: #cfe8f6;
+  z-index: -1;
+}
+
+
+.intergration-six-img::before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  width: 3px;
+  height: 32px;
+  background: #cfe8f6;
+  z-index: -1;
+}
+// ======================= integration six css end ========================
+
+
+
+// ====================== saven digital css start ===========================
+.degital-bg-one {
+  width: 260px;
+  height: 260px;
+  background-color: #E8E8E8;
+}
+.degital-bg-two {
+  width: 230px;
+  height: 230px;
+  background: linear-gradient(0deg, #DBDBDB 0.01%, #FFFFFF 100%);
+}
+.degital-bg-three {
+  width: 210px;
+  height: 210px;
+  background: #0E59F2;
+  color: #fff;
+}
+
+// ====================== saven digital css end ===========================
