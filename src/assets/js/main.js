@@ -930,7 +930,7 @@
       spaceBetween: 24,
       slidesPerView: 1,
       pagination: {
-        el: ".new-two-team-slider-pagination",
+        el: ".new-two-blog-slider-pagination",
         clickable: true,
       },
       loopFillGroupWithBlank: true,
@@ -1051,6 +1051,37 @@
     /* ======================================================================================
                                         New two home js end
     ======================================================================================= */
+
+    var SavenTestimonialSlider = new Swiper(".saven-testimonial__slider", {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      autoplay: true,
+      speed: 1500,
+      spaceBetween: 30,
+      grabCursor: true,
+      loop: true,
+      slidesPerView: 3,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 2,
+        },
+        1199: {
+          slidesPerView: 3,
+        },
+      },
+    });
 
     // ========================== Custom Language select with flag js start ============================
     if ($(".select-selected").length) {

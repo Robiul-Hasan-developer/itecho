@@ -813,133 +813,137 @@ magneticCards.forEach((magneticCard) => {
 
 // ================================ Project showcase Animation start ================================
 if (window.matchMedia("(min-width: 992px)").matches) {
-  gsap.to(".project-showcase-2-pin", {
-    scrollTrigger: {
-      trigger: ".project-showcase-2-height",
-      start: "top 10%",
-      end: "2900px",
-      pin: ".project-showcase-2-pin",
-      pinSpacing: false,
-      markers: false,
-    },
-  });
+  const showcaseSection = document.querySelector(".project-showcase-2-height");
 
-  var portfolio2ani23 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".project-showcase-2-sec-title",
-      start: "bottom+=400 bottom",
-      end: "bottom +100px",
-      toggleActions: "play none none reverse",
-      scrub: true,
-      markers: false,
-
-      onEnter: function () {
-        document
-          .querySelector(".project-showcase-2-main-wrap")
-          .classList.add("your-class");
+  if (showcaseSection) {
+    gsap.to(".project-showcase-2-pin", {
+      scrollTrigger: {
+        trigger: ".project-showcase-2-height",
+        start: "top 10%",
+        end: "2900px",
+        pin: ".project-showcase-2-pin",
+        pinSpacing: false,
+        markers: false,
       },
+    });
 
-      onLeaveBack: function () {
-        document
-          .querySelector(".project-showcase-2-main-wrap")
-          .classList.remove("your-class");
+    var portfolio2ani23 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".project-showcase-2-sec-title",
+        start: "bottom+=400 bottom",
+        end: "bottom +100px",
+        toggleActions: "play none none reverse",
+        scrub: true,
+        markers: false,
+
+        onEnter: function () {
+          document
+            .querySelector(".project-showcase-2-main-wrap")
+            .classList.add("your-class");
+        },
+
+        onLeaveBack: function () {
+          document
+            .querySelector(".project-showcase-2-main-wrap")
+            .classList.remove("your-class");
+        },
       },
-    },
-  });
+    });
 
-  portfolio2ani23.from(".project-showcase-2-main-wrap", {
-    scaleX: 0.15,
-    scaleY: 0.12,
-    yPercent: -64,
-    x: 160,
-  });
+    portfolio2ani23.from(".project-showcase-2-main-wrap", {
+      scaleX: 0.15,
+      scaleY: 0.12,
+      yPercent: -64,
+      x: 160,
+    });
 
-  var portfolio2ani = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".project-showcase-2-height",
-      start: "top 10%",
-      end: "2200px",
-      toggleActions: "play none none reverse",
-      scrub: true,
-      markers: false,
-    },
-  });
+    var portfolio2ani = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".project-showcase-2-height",
+        start: "top 10%",
+        end: "2200px",
+        toggleActions: "play none none reverse",
+        scrub: true,
+        markers: false,
+      },
+    });
 
-  // First Item
-  portfolio2ani.to(
-    ".project-showcase-2-item:nth-of-type(1) .project-showcase-2-item-content",
-    {
+    // First Item
+    portfolio2ani.to(
+      ".project-showcase-2-item:nth-of-type(1) .project-showcase-2-item-content",
+      {
+        opacity: 0,
+        duration: 0.5,
+        immediateRender: false,
+      },
+      0.1,
+    );
+
+    portfolio2ani.to(".project-showcase-2-item:nth-of-type(1)", {
+      height: 0,
+    });
+
+    portfolio2ani.to(
+      ".project-showcase-2-sm-item-scroll",
+      {
+        y: -488,
+      },
+      "<",
+    );
+
+    // Second Item
+    portfolio2ani.to(
+      ".project-showcase-2-item:nth-of-type(2) .project-showcase-2-item-content",
+      {
+        opacity: 0,
+        duration: 0.5,
+        immediateRender: false,
+      },
+      2.4,
+    );
+
+    portfolio2ani.to(".project-showcase-2-item:nth-of-type(2)", {
+      height: 0,
+    });
+
+    portfolio2ani.to(
+      ".project-showcase-2-sm-item-scroll",
+      {
+        y: -976,
+      },
+      "<",
+    );
+
+    var portfolio2ani2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".project-showcase-2-height",
+        start: "top 40%",
+        end: "bottom bottom",
+        toggleActions: "play none none reverse",
+        markers: false,
+      },
+    });
+
+    portfolio2ani2.from(".project-showcase-2-sm-item", {
       opacity: 0,
-      duration: 0.5,
-      immediateRender: false,
-    },
-    0.1,
-  );
+      duration: 0.7,
+    });
 
-  portfolio2ani.to(".project-showcase-2-item:nth-of-type(1)", {
-    height: 0,
-  });
+    var portfolio2ani24 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".project-showcase-2-height",
+        start: "top 80%",
+        end: "bottom bottom",
+        toggleActions: "play none none reverse",
+        markers: false,
+      },
+    });
 
-  portfolio2ani.to(
-    ".project-showcase-2-sm-item-scroll",
-    {
-      y: -488,
-    },
-    "<",
-  );
-
-  // Second Item
-  portfolio2ani.to(
-    ".project-showcase-2-item:nth-of-type(2) .project-showcase-2-item-content",
-    {
+    portfolio2ani24.from(".project-showcase-2-item-content", {
       opacity: 0,
-      duration: 0.5,
-      immediateRender: false,
-    },
-    2.4,
-  );
-
-  portfolio2ani.to(".project-showcase-2-item:nth-of-type(2)", {
-    height: 0,
-  });
-
-  portfolio2ani.to(
-    ".project-showcase-2-sm-item-scroll",
-    {
-      y: -976,
-    },
-    "<",
-  );
-
-  var portfolio2ani2 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".project-showcase-2-height",
-      start: "top 40%",
-      end: "bottom bottom",
-      toggleActions: "play none none reverse",
-      markers: false,
-    },
-  });
-
-  portfolio2ani2.from(".project-showcase-2-sm-item", {
-    opacity: 0,
-    duration: 0.7,
-  });
-
-  var portfolio2ani24 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".project-showcase-2-height",
-      start: "top 80%",
-      end: "bottom bottom",
-      toggleActions: "play none none reverse",
-      markers: false,
-    },
-  });
-
-  portfolio2ani24.from(".project-showcase-2-item-content", {
-    opacity: 0,
-    duration: 0.3,
-  });
+      duration: 0.3,
+    });
+  }
 }
 // ================================ Project showcase Animation End ================================
 
@@ -1068,44 +1072,46 @@ document.addEventListener("DOMContentLoaded", function () {
 //**************************** Card Item animation js End ****************************
 
 //**************************** New two services js Start ****************************
-document.querySelectorAll(".accordion-item").forEach((item) => {
-  const collapseElement = item.querySelector(".accordion-collapse");
+const descriptionText = document.querySelector(".description-text");
 
-  // When an item starts to show
-  collapseElement.addEventListener("show.bs.collapse", function () {
-    const body = item.querySelector(".accordion-body");
-    const img = item.querySelector(".main-service-img");
-    const content = item.querySelector(".service-details");
-
-    // Set initial state for animation
-    gsap.set([img, content], { opacity: 0, y: 20 });
-
-    // Animate in
-    gsap.to([img, content], {
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      stagger: 0.2,
-      ease: "power2.out",
+if (descriptionText) {
+  document.querySelectorAll(".accordion-item").forEach((item) => {
+    const collapseElement = item.querySelector(".accordion-collapse");
+    // When an item starts to show
+    collapseElement.addEventListener("show.bs.collapse", function () {
+      const body = item.querySelector(".accordion-body");
+      const img = item.querySelector(".main-service-img");
+      const content = item.querySelector(".service-details");
+  
+      // Set initial state for animation
+      gsap.set([img, content], { opacity: 0, y: 20 });
+  
+      // Animate in
+      gsap.to([img, content], {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: "power2.out",
+      });
     });
   });
-});
-
-// Initial page load animation
-gsap.from(".main-title", { opacity: 0, x: -50, duration: 1, delay: 0.2 });
-gsap.from(".description-text text-white", {
-  opacity: 0,
-  x: 50,
-  duration: 1,
-  delay: 0.2,
-});
-gsap.from(".accordion-item", {
-  opacity: 0,
-  y: 30,
-  duration: 0.8,
-  stagger: 0.1,
-  delay: 0.5,
-});
+  
+  // Initial page load animation
+  gsap.from(".description-text.text-white", {
+    opacity: 0,
+    x: 50,
+    duration: 1,
+    delay: 0.2,
+  });
+  gsap.from(".accordion-item", {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    stagger: 0.1,
+    delay: 0.5,
+  });
+}
 //**************************** New two services js End ****************************
 
 // **************************** Section to title zoom and item upper js End ****************************
@@ -1262,30 +1268,33 @@ function slideAnimation(slide) {
 // =========================================
 // THUMB FLOATING
 // =========================================
-gsap.to(".thumb-wrapper", {
-  y: -12,
-  duration: 4,
-  repeat: -1,
-  yoyo: true,
-  ease: "sine.inOut",
-});
+const thumbWrapper = document.querySelector('.thumb-wrapper');
 
-// =========================================
-// PARALLAX
-// =========================================
-const hero = document.querySelector(".hero-banner");
-
-hero.addEventListener("mousemove", (e) => {
-  const x = (window.innerWidth / 2 - e.clientX) / 40;
-  const y = (window.innerHeight / 2 - e.clientY) / 40;
-
+if(thumbWrapper) {
+  
   gsap.to(".thumb-wrapper", {
-    x: -x,
-    y: -y,
-    duration: 1.5,
-    ease: "power3.out",
+    y: -12,
+    duration: 4,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
   });
-});
+  
+  // PARALLAX
+  const hero = document.querySelector(".hero-banner");
+  
+  hero.addEventListener("mousemove", (e) => {
+    const x = (window.innerWidth / 2 - e.clientX) / 40;
+    const y = (window.innerHeight / 2 - e.clientY) / 40;
+  
+    gsap.to(".thumb-wrapper", {
+      x: -x,
+      y: -y,
+      duration: 1.5,
+      ease: "power3.out",
+    });
+  });
+}
 
 /* **************************************************************************** 
                           Custom GSAP js start 
