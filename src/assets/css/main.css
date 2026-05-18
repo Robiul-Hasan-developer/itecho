@@ -2594,6 +2594,10 @@ input:focus, input:focus-visible {
     font-size: 160px;
 }
 
+.text-200 {
+    font-size: 200px;
+}
+
 .text-xl-res {
     font-size: 1rem;
 }
@@ -6016,6 +6020,16 @@ input:focus, input:focus-visible {
         padding-top: 90px;
     }
 }
+
+.py-80 {
+    padding-block: 60px;
+}
+
+@media (min-width: 992px) {
+    .py-80 {
+        padding-block: 80px;
+    }
+}
 /* ================================= Padding Css End =========================== */
 /* Placeholder Classes Start */
 .tw-placeholder-text-neutral-100::placeholder {
@@ -8899,6 +8913,10 @@ svg.radial-progress circle.incomplete {
     inset-inline-start: 0;
     transform: translateY(-50%) scale(0);
     transition: 0.3s linear;
+}
+
+.favicon-max {
+    max-width: 13%;
 }
 
 /* New footer one css end */
