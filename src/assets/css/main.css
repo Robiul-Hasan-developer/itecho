@@ -7478,11 +7478,11 @@ input:focus, input:focus-visible {
 }
 /* Header Menu and Submenu Css Start */
 .nav-menu__item.activePage > a {
-    color: var(--main-600) !important;
+    color: #FF9921 !important;
 }
 
 .nav-menu__item.activePage > a::before {
-    color: var(--main-600);
+    color: #FF9921;
 }
 
 .nav-menu__item:hover > a {
@@ -7512,7 +7512,7 @@ input:focus, input:focus-visible {
 
 @media (min-width: 992px) {
     .has-submenu:hover > a::before {
-        color: var(--main-600);
+        color: #FF9921;
         transform: translateY(-50%) rotate(180deg);
     }
 }

@@ -59,10 +59,10 @@
   &__item {
     &.activePage {
       >a {
-        color: var(--main-600) !important;
+        color: #FF9921 !important;
 
         &::before {
-          color: var(--main-600);
+          color: #FF9921;
         }
       }
     }
@@ -102,7 +102,7 @@
     >a {
       &::before {
         @media (min-width: 992px) {
-          color: var(--main-600);
+          color: #FF9921;
           transform: translateY(-50%) rotate(180deg);
         }
       }

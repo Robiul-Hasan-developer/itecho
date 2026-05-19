@@ -1231,7 +1231,7 @@
 
     // ========================== Add Attribute For Bg Image Js Start ====================
     $(".background-img").css("background", function () {
-      var bg = "url(" + $(this).data("background-image") + ")";
+      var bg = "url(" + $(this).data("background") + ")";
       return bg;
     });
     // ========================== Add Attribute For Bg Image Js End =====================

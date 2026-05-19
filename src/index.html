@@ -1405,40 +1405,44 @@
 
         <!-- ============================ New Banner one section start ================================ -->
 <section class="new-banner-one position-relative z-1 overflow-hidden">
-    <div class="position-absolute top-0 start-0 w-100 h-100 z-n1">
-        <img src="assets/images/bg/new-banner-bg.png" alt="Banner BG" class="w-100 h-100 object-fit-cover">
+    <div class="image-distortion position-absolute top-0 start-0 w-100 h-100 z-n1 bg-img"
+        data-background="assets/images/bg/new-banner-bg.png">
     </div>
+    
     <div class="position-absolute top-50 translate-middle-y start-0 z-n1 max-w-17-percent">
         <img src="assets/images/shape/round-trinagle-shape.png" alt="Shape" data-speed="1.4">
     </div>
 
-    <div class="position-absolute tw-end-0 bottom-0 z-n1 tw-mb-15 tw-pb-15 tw-me-15 tw-pe-15">
+    <div class="position-absolute tw-end-0 bottom-0 z-n1 tw-mb-15 tw-pb-15 tw-me-15 tw-pe-15 pointer-event-none">
         <div class="me-xxl-5 pe-xxl-5">
             <div class="item-rotate-on-scroll">
-                <img src="assets/images/shape/star-four-shape.png" alt="Start Shape" class="animation-rotate-right tw-duration-200">
+                <img src="assets/images/shape/star-four-shape.png" alt="Start Shape"
+                    class="animation-rotate-right tw-duration-200">
             </div>
         </div>
     </div>
 
-    <div class="container max-w-1560-px">
-        <div class="position-relative py-120 z-1">
+    <div class="container max-w-1560-px pointer-event-none">
+        <div class="position-relative py-120 z-1 pointer-event-none">
 
-            <div class="position-absolute tw-end-0 bottom-0 z-n1 tw-me--14-px tw-mb--40-px max-w-70-percent d-sm-flex d-none">
+            <div
+                class="position-absolute tw-end-0 bottom-0 z-n1 tw-me--14-px tw-mb--40-px max-w-70-percent d-sm-flex d-none pointer-event-none">
                 <img src="assets/images/thumbs/new-banner-big-img.png" alt="Banner Big Image" data-speed=".9">
             </div>
 
-            <div class="position-absolute tw-end-0 top-0 z-n1 tw-mt-15 tw-me-15">
+            <div class="position-absolute tw-end-0 top-0 z-n1 tw-mt-15 tw-me-15 pointer-event-none">
                 <img src="assets/images/thumbs/new-banner-small-img.png" alt="Big Image"
                     class="move-on-cursor-hover tw-duration-200" data-value="2">
             </div>
 
 
-            <div class="max-w-950-px">
+            <div class="max-w-950-px pointer-event-auto">
                 <h1 class="display-1 fw-bold text-white tw-leading-11 splitTextStyleOne">
-                    <span class="text-brand-secondary text-decoration-underline fw-medium">Next-Gen</span> 
+                    <span class="text-brand-secondary text-decoration-underline fw-medium">Next-Gen</span>
                     <span class="stroke-black">IT</span>
                     <br>
-                    <span class="banner-bottom-title stroke-black text-to-right md-text-to-left-none tw-ms-6">AI Solutions</span>
+                    <span class="banner-bottom-title stroke-black text-to-right md-text-to-left-none tw-ms-6">AI
+                        Solutions</span>
                 </h1>
 
                 <div class="tw-mt-17 d-flex justify-content-evenly max-w-600-px">
@@ -2420,7 +2424,7 @@
 
                     <div class="project-showcase-2-big-item position-relative">
                         <div class="project-showcase-2-item bg-cover background-img"
-                            data-background-image="assets/images/thumbs/new-project-showcase-one-img1.png">
+                            data-background="assets/images/thumbs/new-project-showcase-one-img1.png">
                             <div class="project-showcase-2-item-content">
                                 <p class="desc-max-width text-white">We developed an advanced AI-powered chatbot
                                     designed to automate customer support </p>
@@ -2429,7 +2433,7 @@
                             </div>
                         </div>
                         <div class="project-showcase-2-item bg-cover background-img"
-                            data-background-image="assets/images/thumbs/new-project-showcase-one-img2.png">
+                            data-background="assets/images/thumbs/new-project-showcase-one-img2.png">
                             <div class="project-showcase-2-item-content">
                                 <p class="desc-max-width text-white">We developed an advanced AI-powered chatbot
                                     designed to automate customer support </p>
@@ -2438,7 +2442,7 @@
                             </div>
                         </div>
                         <div class="project-showcase-2-item bg-cover background-img"
-                            data-background-image="assets/images/thumbs/new-project-showcase-one-img3.png">
+                            data-background="assets/images/thumbs/new-project-showcase-one-img3.png">
                             <div class="project-showcase-2-item-content">
                                 <p class="desc-max-width text-white">We developed an advanced AI-powered chatbot
                                     designed to automate customer support </p>
@@ -3863,6 +3867,10 @@
 <script src="assets/js/counter-up.main.js"></script>
 <!-- magific popup -->
 <script src="assets/js/magific-popup.js"></script>
+
+<!-- <script type="module" src="assets/js/distortion-img.js"></script> -->
+<script type="module" src="./assets/js/distortion-img.js"></script>
+
 
 <!-- main js -->
 <script src="assets/js/main.js"></script>
