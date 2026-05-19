@@ -145,6 +145,7 @@
 
     .accordion-item:has(.accordion-collapse.collapse.show) {
         background: #0E59F2;
+        border-color: #0E59F2 !important;
     }
 
 }
