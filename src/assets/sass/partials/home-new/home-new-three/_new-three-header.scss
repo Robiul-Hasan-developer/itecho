@@ -1,0 +1,30 @@
+/* New three header css start */
+.header-bg-pill-style {
+    border: 1px solid #FF992133;
+    box-shadow: 0px 2px 30px 0px #FF992133;
+    padding: 12px;
+    border-radius: 50rem;
+
+    .nav-menu__link {
+        padding-inline: 20px;
+        padding-block: 8px;
+        border-radius: 50rem;
+
+    }
+
+    .activePage>a {
+        background-color: var(--text-brand-secondary) !important;
+        color: #070220 !important;
+
+        &::before {
+            color: #070220;
+            inset-inline-end: 16px;
+        }
+    }
+
+    .has-submenu.activePage>a {
+        padding-inline-end: 40px;
+    }
+
+}
+/* New three header css end */
