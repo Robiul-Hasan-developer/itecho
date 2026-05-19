@@ -1973,6 +1973,10 @@ input:focus, input:focus-visible {
     border-color: #FF2125 !important;
 }
 
+.hover-border-effect:hover {
+    border-color: #ffffff98 !important;
+}
+
 /* Colors class start */
 .text-main-50 {
     color: var(--main-50);
